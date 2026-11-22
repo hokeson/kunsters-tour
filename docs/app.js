@@ -192,25 +192,25 @@ async function recordDetail(key){
 
 /* ---------- PRAVIDLA (z PDF propozic) ---------- */
 const RULES=[
- {year:2017,planned:5,counted:4,drop:1,place:'40/30/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále ×2',fee:'zdarma (jen fee)',tie:'–'},
+ {year:2017,planned:5,plannedNote:'5 (finále 13.–14. 10. dvoudenní = 6 výsledků)',plannedN:6,counted:4,drop:2,place:'40/30/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále ×2',fee:'zdarma (jen fee)',tie:'–',note:'Finále 13. 10. s přespáním a přesahem do soboty – v almanachu jako 2 výsledky.'},
  {year:2018,planned:6,counted:4,drop:2,place:'45/30/20/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'zdarma (jen fee)',tie:'–'},
  {year:2019,planned:7,counted:4,drop:3,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'–',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'zdarma (jen fee)',tie:'Kunratice, pak horší HCP vyhrává'},
- {year:2020,missing:1},
+ {year:2020,planned:7,counted:5,drop:2,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'2 000 Kč',tie:'Kunratice, pak horší HCP vyhrává',note:'Plus INDOOR turnaj 28. 2. 2020 (mimo 7 turnajů). Dvoudenní finále 2.–3. 10.'},
  {year:2021,planned:7,counted:5,drop:2,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'2 000 Kč',tie:'Kunratice, pak horší HCP vyhrává'},
  {year:2022,planned:8,counted:5,drop:3,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'2 500 Kč',tie:'Kunratice, pak horší HCP vyhrává'},
  {year:2023,planned:8,counted:5,drop:3,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'3 000 Kč',tie:'Kunratice, pak horší HCP vyhrává'},
- {year:2024,planned:8,counted:5,drop:3,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 000 Kč',tie:'nižší HCP vyhrává'},
+ {year:2024,planned:8,counted:5,drop:3,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 000 Kč',tie:'nižší HCP vyhrává',note:'Turnaj na Slapech byl zrušen – odehráno 7 turnajů.'},
  {year:2025,planned:9,counted:6,drop:3,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 500 Kč',tie:'nižší HCP vyhrává'},
  {year:2026,planned:9,counted:5,drop:4,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 500 Kč',tie:'nižší HCP vyhrává'}];
 const CHANGES=[
- [2017,'První ročník: 5 turnajů, počítají se 4 nejlepší výsledky. Body za 1.–5. místo (40/30/15/10/5), za par 2, birdie 10, eagle 30, hole-in-one 40. Majkl Cup ×1,5 a finále ×2. Účast zdarma.'],
+ [2017,'První ročník: 5 turnajů (finále 13. 10. s přespáním a přesahem do soboty, takže v almanachu 6 výsledků), počítají se 4 nejlepší výsledky. Body za 1.–5. místo (40/30/15/10/5), za par 2, birdie 10, eagle 30, hole-in-one 40. Majkl Cup ×1,5 a finále ×2. Účast zdarma.'],
  [2018,'Finále je dvoudenní: první den ×1,75, druhý den ×2. Body se dávají za 1.–6. místo (45/30/20/15/10/5).'],
  [2019,'Body za 1.–8. místo (50/35/25/20/15/10/5/3). Par nově za 3 body, přibyl albatros (35) a hole-in-one stoupl na 50. Pravidlo pro rovnost: nejdřív trvalé bydliště v Kunraticích, pak vyhrává hráč s horším HCP.'],
- [2020,'Propozice pro rok 2020 nemáme k dispozici.'],
- [2021,'Počítá se 5 nejlepších výsledků. Nově srážky za slabý výsledek: 19–15 STB −5 bodů, 14–10 STB −10, 9 STB a méně −20. Vítěz turnaje rozděluje 10 bodů ostatním. Startovné 2 000 Kč. Kromě 7 turnajů ještě INDOOR.'],
+ [2020,'7 turnajů (plus INDOOR), počítá se 5 nejlepších – škrtají se 2. Nově srážky za mizernou hru: 19–15 STB −5 bodů, 14–10 STB −10, 9 STB a méně −20. Vítěz turnaje dočasně získává zelené sako Kunsters, musí v něm přijet na další turnaj, a rozděluje 10 bodů ostatním. Startovné 2 000 Kč. Říjnové finále dvoudenní s přespáním.'],
+ [2021,'Stejný formát jako 2020: 7 turnajů plus INDOOR, počítá se 5 nejlepších, srážky za slabé STB a 10 bodů k rozdělení od vítěze. Startovné 2 000 Kč.'],
  [2022,'8 turnajů, počítá se 5 nejlepších (škrtají se 3). Startovné 2 500 Kč. Buggy jen ze zdravotních důvodů.'],
  [2023,'Startovné 3 000 Kč. Putovní kokarda hrdosti pro vítěze a prasátko potupy pro posledního. Rozdělování 10 bodů vítězem už v propozicích není.'],
- [2024,'Méně bodů za hru: par 2, birdie 5. Majkl Cup už bez koeficientu, finále jen ×1,25 a ×1,5. Pravidlo pro rovnost se otočilo: lepší umístění má hráč s nižším HCP a kritérium Kunratic zmizelo.'],
+ [2024,'Turnaj na Slapech byl zrušen, odehráno 7 z 8 turnajů. Méně bodů za hru: par 2, birdie 5. Majkl Cup už bez koeficientu, finále jen ×1,25 a ×1,5. Pravidlo pro rovnost se otočilo: lepší umístění má hráč s nižším HCP a kritérium Kunratic zmizelo.'],
  [2025,'9 turnajů, počítá se 6 nejlepších. Startovné 3 500 Kč.'],
  [2026,'Jubilejní 10. ročník: 9 turnajů, ale počítá se jen 5 nejlepších (škrtají se 4).']];
 async function rulesPage(){
@@ -218,9 +218,9 @@ async function rulesPage(){
   const rows=RULES.map(r=>Object.assign({played:cnt[r.year]},r));
   const v=x=>x==null?'–':String(x);
   app.innerHTML='<h1>Vývoj pravidel</h1><p class="muted">Podle PDF propozic jednotlivých ročníků. Do ročníkového pořadí se započítávají jen nejlepší výsledky, ostatní se škrtají.</p>'+
-   '<div class="scroll"><table class="rules"><thead><tr><th>Rok</th><th class="n">Turnajů v propozicích</th><th class="n">Odehráno (almanach)</th><th class="n">Počítá se nejlepších</th><th class="n">Škrtá se</th><th>Body za umístění</th><th class="n">Par</th><th class="n">Birdie</th><th class="n">Eagle</th><th class="n">Albatros</th><th class="n">HIO</th><th>Srážky za STB 19–15 / 14–10 / ≤9</th><th>Koeficienty</th><th>Startovné</th><th>Při rovnosti</th></tr></thead><tbody>'+
-   rows.map(r=>r.missing?'<tr><td><a href="#/sezona/'+r.year+'">'+r.year+'</a></td><td class="n">?</td><td class="n">'+v(r.played)+'</td><td colspan="12" class="muted">Propozice nejsou k dispozici</td></tr>':
-    '<tr><td><a href="#/sezona/'+r.year+'">'+r.year+'</a></td><td class="n">'+r.planned+'</td><td class="n'+(r.played!==r.planned?' warn':'')+'">'+v(r.played)+'</td><td class="n big">'+r.counted+'</td><td class="n">'+r.drop+'</td><td>'+r.place+'</td><td class="n">'+r.par+'</td><td class="n">'+r.birdie+'</td><td class="n">'+r.eagle+'</td><td class="n">'+v(r.alb)+'</td><td class="n">'+r.hio+'</td><td>'+r.low+'</td><td>'+r.coef+'</td><td>'+r.fee+'</td><td>'+r.tie+'</td></tr>').join('')+
+   '<div class="fit"><table class="rules"><thead><tr><th>Rok</th><th class="n">Turnajů v propozicích</th><th class="n">Odehráno (almanach)</th><th class="n">Počítá se nejlepších</th><th class="n">Škrtá se</th><th>Body za umístění</th><th class="n">Par</th><th class="n">Birdie</th><th class="n">Eagle</th><th class="n">Albatros</th><th class="n">HIO</th><th>Srážky za STB 19–15 / 14–10 / ≤9</th><th>Koeficienty</th><th>Startovné</th><th>Při rovnosti</th><th>Poznámka</th></tr></thead><tbody>'+
+   rows.map(r=>r.missing?'<tr><td><a href="#/sezona/'+r.year+'">'+r.year+'</a></td><td class="n">?</td><td class="n">'+v(r.played)+'</td><td colspan="13" class="muted">Propozice nejsou k dispozici</td></tr>':
+    '<tr><td><a href="#/sezona/'+r.year+'">'+r.year+'</a></td><td class="n">'+(r.plannedNote||r.planned)+'</td><td class="n'+(r.played!==(r.plannedN||r.planned)?' warn':'')+'">'+v(r.played)+'</td><td class="n big">'+r.counted+'</td><td class="n">'+r.drop+'</td><td>'+r.place+'</td><td class="n">'+r.par+'</td><td class="n">'+r.birdie+'</td><td class="n">'+r.eagle+'</td><td class="n">'+v(r.alb)+'</td><td class="n">'+r.hio+'</td><td>'+r.low+'</td><td>'+r.coef+'</td><td>'+r.fee+'</td><td>'+r.tie+'</td><td class="small">'+esc(r.note||'')+'</td></tr>').join('')+
    '</tbody></table></div><p class="muted small">„Škrtá se“ = kolik nejhorších výsledků škrtne hráč, který odehraje všechny turnaje z propozic. Zvýrazněný počet odehraných turnajů se liší od plánu v propozicích.</p>'+
    '<h2>Co se kdy měnilo</h2><div class="timeline">'+CHANGES.map(([y,t])=>'<div class="tl"><div class="y">'+y+'</div><div>'+esc(t)+'</div></div>').join('')+'</div>';
 }
@@ -301,7 +301,7 @@ function paint(sec,h){const y=(h[0]==='sezona'||h[0]==='turnaj')&&YC[h[1]]?+h[1]
 function nav(cur){const n=document.getElementById('nav');if(n)n.innerHTML=NAV.map(([k,l])=>'<a href="#/'+k+'"'+(cur===k?' class="on"':'')+'>'+l+'</a>').join('');}
 async function route(){
   const h=location.hash.replace(/^#\/?/,'').split('/');
-  const sec={t:'',sezona:'sezony',turnaj:'turnaje',hrac:'hraci',rekord:'rekordy'}[h[0]]??h[0];nav(sec);paint(sec,h);
+  const sec={t:'',sezona:'sezony',turnaj:'turnaje',hrac:'hraci',rekord:'rekordy'}[h[0]]??h[0];nav(sec);paint(sec,h);if(document.body)document.body.classList.toggle('wide',h[0]==='pravidla');
   try{
     if(h[0]==='t'&&h[1]&&h[2]==='p') await player(h[1],h[3]);
     else if(h[0]==='t'&&h[1]) await tournament(h[1]);

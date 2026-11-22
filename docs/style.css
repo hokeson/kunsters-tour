@@ -67,7 +67,7 @@ h3{font-size:15px;margin:18px 0 8px}
 /* ===== Vzhled podle PDF propozic Kunsters ===== */
 :root{--g:#005e43;--g2:#e6efe0;--cream:#ffefd3;--lime:#b5d334;--yel:#ffe500;--bg:#87998c;--line:#e6dcc6;--mut:#5f6b64}
 body{font-family:"Barlow Semi Condensed",system-ui,"Segoe UI",sans-serif;font-size:16px;background:var(--bg);transition:background-color .5s;min-height:100vh;display:flex;flex-direction:column}
-body::before{content:"";position:fixed;right:-140px;bottom:-60px;width:560px;height:560px;background:url(img/logo-512.png?v=16) no-repeat center/contain;opacity:.13;pointer-events:none;z-index:0}
+body::before{content:"";position:fixed;right:-140px;bottom:-60px;width:560px;height:560px;background:url(img/logo-512.png?v=17) no-repeat center/contain;opacity:.13;pointer-events:none;z-index:0}
 h1,h2,h3,.kpi .v,.card .t,.brand .bt{font-family:Dosis,"Barlow Semi Condensed",sans-serif;letter-spacing:.02em}
 h1{color:var(--g);font-weight:800;font-size:30px}
 h2{color:var(--g);font-weight:700;font-size:21px}
@@ -94,8 +94,8 @@ td.warn{background:#fff2b3;font-weight:700}
 .tl{display:grid;grid-template-columns:70px 1fr;gap:12px;background:#fffdf8;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
 .tl .y{font-family:Dosis,sans-serif;font-weight:800;font-size:22px;color:var(--g)}
 /* pozadí: tráva přes celou šířku a míček-jahoda na týčku vpravo (fixně, za obsahem) */
-.bgball{position:fixed;left:max(28px,calc(50% - 760px));bottom:34px;width:118px;height:222px;background:url(img/balltee.png?v=16) no-repeat center bottom/contain;z-index:0;pointer-events:none}
-.bggrass{position:fixed;left:0;right:0;bottom:0;height:72px;background:url(img/grass.png?v=16) repeat-x left bottom/auto 72px;z-index:0;pointer-events:none}
+.bgball{position:fixed;left:max(28px,calc(50% - 760px));bottom:34px;width:118px;height:222px;background:url(img/balltee.png?v=17) no-repeat center bottom/contain;z-index:0;pointer-events:none}
+.bggrass{position:fixed;left:0;right:0;bottom:0;height:72px;background:url(img/grass.png?v=17) repeat-x left bottom/auto 72px;z-index:0;pointer-events:none}
 .foot{position:relative;z-index:1;max-width:none;margin:28px 0 0;padding:0 16px 84px;color:#fff;background:transparent}
 .foot .fin{max-width:1140px;margin:0 auto;background:rgba(0,94,67,.94);border-radius:14px;padding:14px 22px 16px;box-shadow:0 6px 24px rgba(0,0,0,.12)}
 .foot .motto{font-family:Dosis,sans-serif;font-weight:700;font-size:22px}

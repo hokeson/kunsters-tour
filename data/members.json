@@ -1,6 +1,29 @@
 {
-  "note": "Replace/extend with confirmed 22 members exported from KUNSTERS_CUP_MASTER.xlsx. golferIds are the authoritative matching key; Tomáš Kliment historical golferId 181073 maps to 175098; Jan Šíp 168119 is NOT the member and must be ignored.",
-  "aliases": {"181073":175098},
-  "ignoredGolferIds":[168119],
-  "members":[]
+  "note": "22 members exported from KUNSTERS_CUP_MASTER.xlsx (list Členové) on 2026-11-22. golferIds are the authoritative matching key; Tomáš Kliment historical golferId 181073 maps to 175098; Jan Šíp 168119 is NOT the member and must be ignored. Majkl Cup participants are not Kunsters guests.",
+  "aliases": {"181073": 175098},
+  "ignoredGolferIds": [168119],
+  "members": [
+    {"name": "OPATRNÝ Tomáš", "golferId": 58652, "historicalGolferIds": [], "cgfNumbers": ["18001251"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2026-10-04", "kunratice": false, "active2027": true},
+    {"name": "HRUŠKA Petr", "golferId": 48759, "historicalGolferIds": [], "cgfNumbers": ["18001564"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2026-10-04", "kunratice": true, "active2027": true},
+    {"name": "JANEČEK Karel", "golferId": 197634, "historicalGolferIds": [], "cgfNumbers": ["18004287"], "firstCgfDate": "2019-04-26", "lastCgfDate": "2026-10-04", "kunratice": true, "active2027": true},
+    {"name": "ČERMÁK Jan", "golferId": 27065, "historicalGolferIds": [], "cgfNumbers": ["18001546"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2026-09-18", "kunratice": true, "active2027": true},
+    {"name": "KERZEL Jan", "golferId": 174213, "historicalGolferIds": [], "cgfNumbers": ["18002978"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2026-10-04", "kunratice": true, "active2027": true},
+    {"name": "MAJER Josef", "golferId": 174857, "historicalGolferIds": [], "cgfNumbers": ["18002444"], "firstCgfDate": "2017-08-18", "lastCgfDate": "2026-10-04", "kunratice": true, "active2027": true},
+    {"name": "PLAČEK Michal", "golferId": 166389, "historicalGolferIds": [], "cgfNumbers": ["01005739", "18002663"], "firstCgfDate": "2017-08-18", "lastCgfDate": "2026-06-05", "kunratice": true, "active2027": true},
+    {"name": "ŠÍP Jan", "golferId": 165216, "historicalGolferIds": [], "cgfNumbers": ["18002809"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2026-10-04", "kunratice": true, "active2027": true},
+    {"name": "BAUER Michal", "golferId": 611, "historicalGolferIds": [], "cgfNumbers": ["18001030"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2026-10-04", "kunratice": true, "active2027": true},
+    {"name": "KRACÍK Marek", "golferId": 67223, "historicalGolferIds": [], "cgfNumbers": ["09805544"], "firstCgfDate": "2017-08-18", "lastCgfDate": "2026-08-28", "kunratice": true, "active2027": true},
+    {"name": "POLÁK Tomáš", "golferId": 39830, "historicalGolferIds": [], "cgfNumbers": ["18001262"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2026-10-04", "kunratice": true, "active2027": true},
+    {"name": "KLIMENT Tomáš", "golferId": 175098, "historicalGolferIds": [181073], "cgfNumbers": ["18002455", "18002981", "21300264"], "firstCgfDate": "2017-05-26", "lastCgfDate": "2023-10-01", "kunratice": true, "active2027": true},
+    {"name": "HALAMA Jiří", "golferId": 101268, "historicalGolferIds": [], "cgfNumbers": ["18002758"], "firstCgfDate": "2017-09-22", "lastCgfDate": "2018-06-02", "kunratice": true, "active2027": true},
+    {"name": "BAREŠ Roman", "golferId": 214190, "historicalGolferIds": [], "cgfNumbers": ["05002515", "09403946", "12201424"], "firstCgfDate": "2021-10-09", "lastCgfDate": "2026-10-04", "kunratice": false, "active2027": true},
+    {"name": "SOUKUP Jaroslav", "golferId": 106220, "historicalGolferIds": [], "cgfNumbers": ["00902115"], "firstCgfDate": "2024-04-19", "lastCgfDate": "2025-09-28", "kunratice": false, "active2027": true},
+    {"name": "HLAVATÝ Jan", "golferId": 8713, "historicalGolferIds": [], "cgfNumbers": ["18001214"], "firstCgfDate": "2018-06-02", "lastCgfDate": "2026-10-04", "kunratice": false, "active2027": true},
+    {"name": "FÜRST Petr", "golferId": 213372, "historicalGolferIds": [], "cgfNumbers": ["18005908"], "firstCgfDate": "2022-06-10", "lastCgfDate": "2026-05-15", "kunratice": false, "active2027": true},
+    {"name": "TEMR Jan", "golferId": 170678, "historicalGolferIds": [], "cgfNumbers": ["06801757"], "firstCgfDate": "2025-05-16", "lastCgfDate": "2026-10-04", "kunratice": false, "active2027": true},
+    {"name": "SUDÍK Jan", "golferId": 158187, "historicalGolferIds": [], "cgfNumbers": ["01008672"], "firstCgfDate": "2026-04-24", "lastCgfDate": "2026-10-04", "kunratice": false, "active2027": true},
+    {"name": "SCHREIBER Pavel", "golferId": 50743, "historicalGolferIds": [], "cgfNumbers": ["00301393", "18000371"], "firstCgfDate": "2018-06-02", "lastCgfDate": "2026-10-04", "kunratice": false, "active2027": true},
+    {"name": "ROZÍNEK Martin", "golferId": 225111, "historicalGolferIds": [], "cgfNumbers": ["21300356"], "firstCgfDate": "2025-06-13", "lastCgfDate": "2026-10-04", "kunratice": false, "active2027": true},
+    {"name": "WAGNER Arnošt", "golferId": 2051, "historicalGolferIds": [], "cgfNumbers": ["05100928"], "firstCgfDate": "2025-05-30", "lastCgfDate": "2026-10-03", "kunratice": false, "active2027": true}
+  ]
 }

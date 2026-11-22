@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T10:58:28.889Z",
+  "generatedAt": "2026-11-22T12:45:49.384Z",
   "tournamentId": 1300152020,
   "categoryId": 377389,
   "players": [
@@ -9,12 +9,15 @@
       "golferId": 174213,
       "name": "KERZEL Jan",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=174213",
+      "stbTotal": 0,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -22,15 +25,19 @@
           "hole": 2,
           "par": 5,
           "strokes": null,
-          "stb": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
           "relativeToPar": null,
-          "type": null
+          "type": "PICKED UP"
         },
         {
           "hole": 3,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -38,7 +45,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -46,7 +55,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -54,7 +65,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -62,7 +75,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -70,7 +85,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -78,7 +95,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -86,7 +105,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -94,7 +115,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -102,7 +125,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -110,7 +135,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -118,7 +145,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -126,7 +155,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -134,7 +165,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -142,7 +175,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -150,7 +185,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 2,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": -1,
           "type": "BIRDIE"
         }
@@ -162,12 +199,15 @@
       "golferId": 174857,
       "name": "MAJER Josef",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=174857",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -175,7 +215,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -183,7 +225,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -191,7 +235,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -199,7 +245,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -207,7 +255,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -215,7 +265,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -223,7 +275,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -231,7 +285,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -239,7 +295,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -247,7 +305,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -255,7 +315,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -263,7 +325,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -271,7 +335,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -279,7 +345,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -287,7 +355,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -295,7 +365,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -303,7 +375,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         }
@@ -315,12 +389,15 @@
       "golferId": 58652,
       "name": "OPATRNÝ Tomáš",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=58652",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -328,7 +405,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -336,7 +415,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -344,7 +425,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -352,7 +435,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -360,7 +445,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -368,7 +455,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -376,7 +465,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -384,7 +475,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -392,7 +485,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -400,7 +495,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -408,7 +505,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -416,7 +515,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -424,7 +525,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -432,7 +535,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -440,7 +545,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -448,7 +555,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -456,7 +565,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         }
@@ -468,12 +579,15 @@
       "golferId": 170678,
       "name": "TEMR Jan",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=170678",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -481,7 +595,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -489,7 +605,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -497,7 +615,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -505,7 +625,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -513,7 +635,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -521,7 +645,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -529,7 +655,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -537,7 +665,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -545,7 +675,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -553,7 +685,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -561,7 +695,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -569,7 +705,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -577,7 +715,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -585,7 +725,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -593,7 +735,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -601,7 +745,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -609,7 +755,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         }
@@ -621,12 +769,15 @@
       "golferId": 197634,
       "name": "JANEČEK Karel",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=197634",
+      "stbTotal": 0,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -634,7 +785,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -642,7 +795,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -650,7 +805,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -658,7 +815,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -666,7 +825,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -674,7 +835,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -682,7 +845,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -690,7 +855,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -698,7 +865,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -706,7 +875,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -714,15 +885,19 @@
           "hole": 12,
           "par": 4,
           "strokes": null,
-          "stb": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
           "relativeToPar": null,
-          "type": null
+          "type": "PICKED UP"
         },
         {
           "hole": 13,
           "par": 3,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 5,
           "type": null
         },
@@ -730,7 +905,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -738,7 +915,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -746,7 +925,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -754,7 +935,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -762,7 +945,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         }
@@ -774,12 +959,15 @@
       "golferId": 39830,
       "name": "POLÁK Tomáš",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=39830",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -787,7 +975,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -795,7 +985,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -803,7 +995,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -811,7 +1005,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -819,7 +1015,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -827,7 +1025,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -835,7 +1035,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -843,7 +1045,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -851,7 +1055,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -859,7 +1065,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -867,7 +1075,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -875,7 +1085,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -883,7 +1095,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -891,7 +1105,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -899,7 +1115,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -907,7 +1125,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -915,7 +1135,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         }
@@ -927,12 +1149,15 @@
       "golferId": 2051,
       "name": "WAGNER Arnošt",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=2051",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -940,7 +1165,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -948,7 +1175,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -956,7 +1185,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -964,7 +1195,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -972,7 +1205,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -980,7 +1215,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -988,7 +1225,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -996,7 +1235,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1004,7 +1245,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1012,7 +1255,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1020,7 +1265,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1028,7 +1275,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 3,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1036,7 +1285,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1044,7 +1295,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1052,7 +1305,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1060,7 +1315,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1068,7 +1325,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         }
@@ -1080,12 +1339,15 @@
       "golferId": 8713,
       "name": "HLAVATÝ Jan",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=8713",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1093,7 +1355,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1101,7 +1365,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1109,7 +1375,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1117,7 +1385,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1125,7 +1395,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1133,7 +1405,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1141,7 +1415,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1149,7 +1425,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1157,7 +1435,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1165,7 +1445,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1173,7 +1455,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1181,7 +1465,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1189,7 +1475,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1197,7 +1485,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1205,7 +1495,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1213,7 +1505,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 9,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 5,
           "type": null
         },
@@ -1221,7 +1515,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         }
@@ -1233,12 +1529,15 @@
       "golferId": 50743,
       "name": "SCHREIBER Pavel",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=50743",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1246,7 +1545,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1254,7 +1555,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1262,7 +1565,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1270,7 +1575,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1278,7 +1585,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1286,7 +1595,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 9,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1294,7 +1605,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1302,7 +1615,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1310,7 +1625,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 9,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1318,7 +1635,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1326,7 +1645,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1334,7 +1655,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1342,7 +1665,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 13,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 8,
           "type": null
         },
@@ -1350,7 +1675,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1358,7 +1685,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1366,7 +1695,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1374,7 +1705,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         }
@@ -1386,12 +1719,15 @@
       "golferId": 165216,
       "name": "ŠÍP Jan",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=165216",
+      "stbTotal": 0,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1399,7 +1735,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 11,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 6,
           "type": null
         },
@@ -1407,7 +1745,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1415,7 +1755,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1423,7 +1765,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1431,7 +1775,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1439,7 +1785,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 11,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 6,
           "type": null
         },
@@ -1447,7 +1795,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1455,7 +1805,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1463,7 +1815,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1471,7 +1825,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1479,7 +1835,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1487,7 +1845,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1495,7 +1855,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1503,7 +1865,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1511,7 +1875,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1519,15 +1885,19 @@
           "hole": 17,
           "par": 4,
           "strokes": null,
-          "stb": null,
+          "hcpStrokes": 3,
+          "stb": 0,
+          "pickedUp": true,
           "relativeToPar": null,
-          "type": null
+          "type": "PICKED UP"
         },
         {
           "hole": 18,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         }
@@ -1539,12 +1909,15 @@
       "golferId": 48759,
       "name": "HRUŠKA Petr",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=48759",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1552,7 +1925,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1560,7 +1935,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1568,7 +1945,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1576,7 +1955,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1584,7 +1965,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1592,7 +1975,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1600,7 +1985,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1608,7 +1995,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1616,7 +2005,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1624,7 +2015,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1632,7 +2025,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1640,7 +2035,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1648,7 +2045,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 9,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1656,7 +2055,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1664,7 +2065,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1672,7 +2075,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1680,7 +2085,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         }
@@ -1692,12 +2099,15 @@
       "golferId": 611,
       "name": "BAUER Michal",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=611",
+      "stbTotal": null,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 10,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 6,
           "type": null
         },
@@ -1705,7 +2115,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1713,7 +2125,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1721,7 +2135,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1729,7 +2145,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1737,7 +2155,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1745,7 +2165,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1753,7 +2175,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1761,7 +2185,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1769,7 +2195,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1777,7 +2205,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1785,7 +2215,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 9,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 5,
           "type": null
         },
@@ -1793,7 +2225,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1801,7 +2235,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 9,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1809,7 +2245,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1817,7 +2255,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1825,7 +2265,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1833,7 +2275,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         }
@@ -1845,12 +2289,15 @@
       "golferId": 158187,
       "name": "SUDÍK Jan",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=158187",
+      "stbTotal": 0,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1858,7 +2305,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1866,7 +2315,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1874,7 +2325,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1882,7 +2335,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1890,7 +2345,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1898,7 +2355,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -1906,7 +2365,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1914,7 +2375,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1922,7 +2385,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1930,7 +2395,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1938,7 +2405,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1946,7 +2415,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -1954,15 +2425,19 @@
           "hole": 14,
           "par": 5,
           "strokes": null,
-          "stb": null,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": true,
           "relativeToPar": null,
-          "type": null
+          "type": "PICKED UP"
         },
         {
           "hole": 15,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -1970,7 +2445,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -1978,7 +2455,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -1986,7 +2465,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 0,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         }
@@ -1998,12 +2479,15 @@
       "golferId": 214190,
       "name": "BAREŠ Roman",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=214190",
+      "stbTotal": 0,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2011,7 +2495,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 10,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 5,
           "type": null
         },
@@ -2019,7 +2505,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -2027,7 +2515,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2035,7 +2525,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 4,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 0,
           "type": "PAR"
         },
@@ -2043,7 +2535,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2051,7 +2545,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 9,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -2059,15 +2555,19 @@
           "hole": 8,
           "par": 3,
           "strokes": null,
-          "stb": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
           "relativeToPar": null,
-          "type": null
+          "type": "PICKED UP"
         },
         {
           "hole": 9,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -2075,7 +2575,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -2083,7 +2585,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -2091,7 +2595,9 @@
           "hole": 12,
           "par": 4,
           "strokes": 9,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 5,
           "type": null
         },
@@ -2099,7 +2605,9 @@
           "hole": 13,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2107,15 +2615,19 @@
           "hole": 14,
           "par": 5,
           "strokes": null,
-          "stb": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
           "relativeToPar": null,
-          "type": null
+          "type": "PICKED UP"
         },
         {
           "hole": 15,
           "par": 4,
           "strokes": 10,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 6,
           "type": null
         },
@@ -2123,7 +2635,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -2131,7 +2645,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 9,
+          "hcpStrokes": 3,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 5,
           "type": null
         },
@@ -2139,7 +2655,9 @@
           "hole": 18,
           "par": 3,
           "strokes": 5,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         }
@@ -2151,12 +2669,15 @@
       "golferId": 225111,
       "name": "ROZÍNEK Martin",
       "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=225111",
+      "stbTotal": 0,
       "holes": [
         {
           "hole": 1,
           "par": 4,
           "strokes": 8,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -2164,7 +2685,9 @@
           "hole": 2,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2172,7 +2695,9 @@
           "hole": 3,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2180,7 +2705,9 @@
           "hole": 4,
           "par": 3,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -2188,7 +2715,9 @@
           "hole": 5,
           "par": 4,
           "strokes": 7,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 3,
           "type": null
         },
@@ -2196,7 +2725,9 @@
           "hole": 6,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2204,7 +2735,9 @@
           "hole": 7,
           "par": 5,
           "strokes": 7,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2212,7 +2745,9 @@
           "hole": 8,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -2220,7 +2755,9 @@
           "hole": 9,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2228,7 +2765,9 @@
           "hole": 10,
           "par": 5,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -2236,7 +2775,9 @@
           "hole": 11,
           "par": 4,
           "strokes": 6,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 2,
           "type": null
         },
@@ -2244,15 +2785,19 @@
           "hole": 12,
           "par": 4,
           "strokes": null,
-          "stb": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
           "relativeToPar": null,
-          "type": null
+          "type": "PICKED UP"
         },
         {
           "hole": 13,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -2260,7 +2805,9 @@
           "hole": 14,
           "par": 5,
           "strokes": 9,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 4,
           "type": null
         },
@@ -2268,7 +2815,9 @@
           "hole": 15,
           "par": 4,
           "strokes": 9,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 5,
           "type": null
         },
@@ -2276,7 +2825,9 @@
           "hole": 16,
           "par": 4,
           "strokes": 5,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         },
@@ -2284,7 +2835,9 @@
           "hole": 17,
           "par": 4,
           "strokes": 10,
+          "hcpStrokes": 2,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 6,
           "type": null
         },
@@ -2292,10 +2845,224 @@
           "hole": 18,
           "par": 3,
           "strokes": 4,
+          "hcpStrokes": 1,
           "stb": null,
+          "pickedUp": false,
           "relativeToPar": 1,
           "type": null
         }
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 58652,
+      "name": "OPATRNÝ Tomáš",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 170678,
+      "name": "TEMR Jan",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 2051,
+      "name": "WAGNER Arnošt",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 8713,
+      "name": "HLAVATÝ Jan",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 50743,
+      "name": "SCHREIBER Pavel",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 165216,
+      "name": "ŠÍP Jan",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 158187,
+      "name": "SUDÍK Jan",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 214190,
+      "name": "BAREŠ Roman",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
+      ]
+    },
+    {
+      "golferId": 225111,
+      "name": "ROZÍNEK Martin",
+      "problem": "řádek Stableford nenalezen",
+      "rowsFound": [
+        "",
+        "delka m",
+        "index",
+        "par",
+        "skore",
+        "hcp rany",
+        "stable­ford netto"
       ]
     }
   ]

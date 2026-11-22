@@ -1,0 +1,2549 @@
+{
+  "generatedAt": "2026-11-22T23:31:59.571Z",
+  "tournamentId": 1300144934,
+  "categoryId": 3610,
+  "tournament": {
+    "name": "KUNSTERS CUP 2025",
+    "venue": "Golf Resort Lázně Bohdaneč",
+    "date": "12. 09. 2025",
+    "category": "Stableford netto",
+    "format": "Stableford",
+    "withHcp": "Ano",
+    "hcpAdjusted": "Ano"
+  },
+  "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-kategorie?id=1300144934&categoryId=3610",
+  "players": [
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=174857",
+      "rank": 1,
+      "rankLabel": "1",
+      "memberNumber": "18002444",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 23.4,
+      "hcpAfter": 23,
+      "playingHcp": 26,
+      "tournamentHcp": 26,
+      "officialScore": 38,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 38,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": null,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": true,
+          "relativeToPar": null,
+          "type": "PICKED UP"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 3,
+          "hcpStrokes": 2,
+          "stb": 5,
+          "pickedUp": false,
+          "relativeToPar": -1,
+          "type": "BIRDIE"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": -1,
+          "type": "BIRDIE"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=197634",
+      "rank": 2,
+      "rankLabel": "2",
+      "memberNumber": "18004287",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 30.8,
+      "hcpAfter": 30.4,
+      "playingHcp": 35,
+      "tournamentHcp": 35,
+      "officialScore": 36,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 36,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 9,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
+          "relativeToPar": null,
+          "type": "PICKED UP"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 170678,
+      "name": "TEMR Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=170678",
+      "rank": 3,
+      "rankLabel": "3",
+      "memberNumber": "06801757",
+      "club": "AGEL Golf Mstětice",
+      "clubCode": "AGMST",
+      "hcpBefore": 16.5,
+      "hcpAfter": 16.6,
+      "playingHcp": 18,
+      "tournamentHcp": 18,
+      "officialScore": 36,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 36,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 106220,
+      "name": "SOUKUP Jaroslav",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=106220",
+      "rank": 4,
+      "rankLabel": "4",
+      "memberNumber": "00902115",
+      "club": "Golf Club Praha",
+      "clubCode": "GCPRH",
+      "hcpBefore": 20.6,
+      "hcpAfter": 20.3,
+      "playingHcp": 23,
+      "tournamentHcp": 23,
+      "officialScore": 36,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 36,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 8713,
+      "name": "HLAVATÝ Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=8713",
+      "rank": 5,
+      "rankLabel": "5",
+      "memberNumber": "18001214",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 25.7,
+      "hcpAfter": 25.7,
+      "playingHcp": 29,
+      "tournamentHcp": 29,
+      "officialScore": 33,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 33,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 8,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": null,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": true,
+          "relativeToPar": null,
+          "type": "PICKED UP"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=39830",
+      "rank": 6,
+      "rankLabel": "6",
+      "memberNumber": "18001262",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 17.4,
+      "hcpAfter": 17.7,
+      "playingHcp": 19,
+      "tournamentHcp": 19,
+      "officialScore": 32,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 32,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 9,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 3,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 214190,
+      "name": "BAREŠ Roman",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=214190",
+      "rank": 7,
+      "rankLabel": "7",
+      "memberNumber": "05002515",
+      "club": "Golf Club Beřovice",
+      "clubCode": "GCBER",
+      "hcpBefore": 38.3,
+      "hcpAfter": 38.6,
+      "playingHcp": 44,
+      "tournamentHcp": 44,
+      "officialScore": 31,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 31,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 9,
+          "hcpStrokes": 3,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 3,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 7,
+          "hcpStrokes": 3,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 3,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 9,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 3,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 6,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=174213",
+      "rank": 8,
+      "rankLabel": "8",
+      "memberNumber": "18002978",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 28.1,
+      "hcpAfter": 28.5,
+      "playingHcp": 32,
+      "tournamentHcp": 32,
+      "officialScore": 29,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 29,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 10,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 5,
+          "type": "OTHER"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 10,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 5,
+          "type": "OTHER"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 9,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 9,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 11,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 6,
+          "type": "OTHER"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 165216,
+      "name": "ŠÍP Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=165216",
+      "rank": 9,
+      "rankLabel": "9",
+      "memberNumber": "18002809",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 33.8,
+      "hcpAfter": 33.8,
+      "playingHcp": 38,
+      "tournamentHcp": 38,
+      "officialScore": 25,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 25,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 5,
+          "type": "OTHER"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 10,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 5,
+          "type": "OTHER"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 10,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 5,
+          "type": "OTHER"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 10,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 6,
+          "type": "OTHER"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 10,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 5,
+          "type": "OTHER"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 50743,
+      "name": "SCHREIBER Pavel",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=50743",
+      "rank": 10,
+      "rankLabel": "10",
+      "memberNumber": "18000371",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 36.5,
+      "hcpAfter": 36.7,
+      "playingHcp": 42,
+      "tournamentHcp": 42,
+      "officialScore": 23,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 23,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 11,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 6,
+          "type": "OTHER"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 8,
+          "hcpStrokes": 3,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 3,
+          "stb": 4,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
+          "relativeToPar": null,
+          "type": "PICKED UP"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
+          "relativeToPar": null,
+          "type": "PICKED UP"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": null,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": true,
+          "relativeToPar": null,
+          "type": "PICKED UP"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 9,
+          "hcpStrokes": 3,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 6,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 3,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=611",
+      "rank": 11,
+      "rankLabel": "11",
+      "memberNumber": "18001030",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 23.5,
+      "hcpAfter": 23.9,
+      "playingHcp": 26,
+      "tournamentHcp": 26,
+      "officialScore": 23,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 23,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 10,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 5,
+          "type": "OTHER"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 2,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 12,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 8,
+          "type": "OTHER"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 4,
+          "type": "OTHER"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300144934,
+      "categoryId": 3610,
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300144934&categoryId=3610&golferId=48759",
+      "rank": 12,
+      "rankLabel": "12",
+      "memberNumber": "18001564",
+      "club": "Loreta Golf Club Pyšely",
+      "clubCode": "LGCPY",
+      "hcpBefore": 19.7,
+      "hcpAfter": 19.7,
+      "playingHcp": 22,
+      "tournamentHcp": 22,
+      "officialScore": 23,
+      "round": {
+        "round": 1,
+        "date": "12. 09. 2025",
+        "course": "Lázně Bohdaneč 2024",
+        "gameType": "Stableford - Netto",
+        "tee": "YELLOW",
+        "par": 73,
+        "cr": 71,
+        "sr": 135,
+        "pcc": 0
+      },
+      "stbTotal": 23,
+      "holes": [
+        {
+          "hole": 1,
+          "par": 5,
+          "strokes": 12,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 7,
+          "type": "OTHER"
+        },
+        {
+          "hole": 2,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 3,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 7,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 6,
+          "par": 5,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 7,
+          "par": 3,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 8,
+          "par": 4,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 3,
+          "pickedUp": false,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 9,
+          "par": 5,
+          "strokes": 7,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 10,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 11,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 12,
+          "par": 3,
+          "strokes": 4,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 13,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 8,
+          "hcpStrokes": 2,
+          "stb": 1,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 5,
+          "hcpStrokes": 1,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 1,
+          "type": "BOGEY"
+        },
+        {
+          "hole": 16,
+          "par": 3,
+          "strokes": 6,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 3,
+          "type": "TRIPLE BOGEY"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "hcpStrokes": 2,
+          "stb": 2,
+          "pickedUp": false,
+          "relativeToPar": 2,
+          "type": "DOUBLE BOGEY"
+        },
+        {
+          "hole": 18,
+          "par": 5,
+          "strokes": 11,
+          "hcpStrokes": 1,
+          "stb": 0,
+          "pickedUp": false,
+          "relativeToPar": 6,
+          "type": "OTHER"
+        }
+      ]
+    }
+  ]
+}

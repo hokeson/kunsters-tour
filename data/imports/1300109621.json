@@ -1,0 +1,293 @@
+{
+  "generatedAt": "2026-11-22T23:16:39.212Z",
+  "tournamentId": 1300109621,
+  "categoryId": 98070,
+  "tournament": {
+    "name": "KUNSTERS CUP 2020",
+    "venue": "Golf Resort Lázně Bohdaneč",
+    "date": "22. 05. 2020",
+    "category": "Společná HCP 0 - 54",
+    "format": "Stableford",
+    "withHcp": "Ano",
+    "hcpAdjusted": "Ano"
+  },
+  "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-kategorie?id=1300109621&categoryId=98070",
+  "players": [],
+  "warnings": [
+    {
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 58652,
+      "name": "OPATRNÝ Tomáš",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 58652,
+      "name": "OPATRNÝ Tomáš",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 58652,
+      "name": "OPATRNÝ Tomáš",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 58652,
+      "name": "OPATRNÝ Tomáš",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 58652,
+      "name": "OPATRNÝ Tomáš",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 67223,
+      "name": "KRACÍK Marek",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 67223,
+      "name": "KRACÍK Marek",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 67223,
+      "name": "KRACÍK Marek",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 67223,
+      "name": "KRACÍK Marek",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 67223,
+      "name": "KRACÍK Marek",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 166389,
+      "name": "PLAČEK Michal",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 166389,
+      "name": "PLAČEK Michal",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 166389,
+      "name": "PLAČEK Michal",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 166389,
+      "name": "PLAČEK Michal",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 166389,
+      "name": "PLAČEK Michal",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 175098,
+      "name": "KLIMENT Tomáš",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 175098,
+      "name": "KLIMENT Tomáš",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 175098,
+      "name": "KLIMENT Tomáš",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 175098,
+      "name": "KLIMENT Tomáš",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 175098,
+      "name": "KLIMENT Tomáš",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "problem": "karta skóre nenalezena"
+    },
+    {
+      "golferId": 198677,
+      "name": "POŘÍZ Lukáš",
+      "problem": "hráč nenalezen ve výsledkové listině"
+    },
+    {
+      "golferId": 198677,
+      "name": "POŘÍZ Lukáš",
+      "problem": "údaj „club“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 198677,
+      "name": "POŘÍZ Lukáš",
+      "problem": "údaj „playingHcp“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 198677,
+      "name": "POŘÍZ Lukáš",
+      "problem": "údaj „tee“ nenalezen na kartě hráče"
+    },
+    {
+      "golferId": 198677,
+      "name": "POŘÍZ Lukáš",
+      "problem": "karta skóre nenalezena"
+    }
+  ]
+}

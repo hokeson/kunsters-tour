@@ -1,0 +1,11 @@
+{
+  "name": "kunsters-tour",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:finale1": "node scripts/import-cgf.js --tournament 1300152020 --category 377389 --dry-run",
+    "import": "node scripts/import-cgf.js"
+  },
+  "dependencies": {"playwright": "^1.49.0"}
+}

@@ -1,0 +1,4 @@
+{
+  "2026": {"placePoints":[50,35,25,20,15,10,5,3],"par":2,"birdie":5,"eagle":15,"albatross":30,"holeInOne":50,"stbPenalties":[{"max":9,"points":-20},{"max":14,"points":-10},{"max":19,"points":-5}],"coefficients":{"final1":1.25,"final2":1.5}},
+  "2027": {"placePoints":[50,35,25,20,15,10,5,3],"par":1.5,"birdie":5,"eagle":15,"albatross":30,"holeInOne":50,"stbPenalties":[{"max":9,"points":-20},{"max":14,"points":-10},{"max":19,"points":-5}],"coefficients":{"karlovyVaryJune":1.25,"final1":1.25,"final2":1.5},"provisional":true}
+}

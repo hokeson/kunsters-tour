@@ -1,0 +1,6 @@
+{
+  "note": "Replace/extend with confirmed 22 members exported from KUNSTERS_CUP_MASTER.xlsx. golferIds are the authoritative matching key; Tomáš Kliment historical golferId 181073 maps to 175098; Jan Šíp 168119 is NOT the member and must be ignored.",
+  "aliases": {"181073":175098},
+  "ignoredGolferIds":[168119],
+  "members":[]
+}

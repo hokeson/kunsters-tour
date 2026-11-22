@@ -7,8 +7,8 @@ const categoryId = Number(arg('category'));
 const dryRun = process.argv.includes('--dry-run');
 if (!tournamentId || !categoryId) throw new Error('Use --tournament ID --category ID');
 
-// Normalizace popisku řádku: malá písmena, bez diakritiky, sjednocené mezery (vč. nezlomitelných)
-const norm = s => (s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[\s\u00a0]+/g,' ').trim().toLowerCase();
+// Normalizace popisku řádku: bez skrytých znaků (např. měkké dělení ve „Stable­ford“), malá písmena, bez diakritiky, sjednocené mezery (vč. nezlomitelných)
+const norm = s => (s||'').replace(/[\u00ad\u200b-\u200d\u2060\ufeff]/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[\s\u00a0]+/g,' ').trim().toLowerCase();
 // Pomlčka / prázdná buňka = škrtnutá (zvednutá) jamka
 const isPickup = v => v==null || /^[\s\-\u2010-\u2015\u2212]*$/.test(v);
 const num = v => { if (isPickup(v)) return null; const n=Number(String(v).replace(',','.').trim()); return Number.isFinite(n) ? n : null; };

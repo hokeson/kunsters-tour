@@ -1,41 +1,58 @@
 {
- "imports": [
-  {
-   "tournament_id": "1300148408",
-   "category_id": "366996"
-  },
-  {
-   "tournament_id": "1300149137",
-   "category_id": "368765"
-  },
-  {
-   "tournament_id": "1300149524",
-   "category_id": "369968"
-  },
-  {
-   "tournament_id": "1300149654",
-   "category_id": "370382"
-  },
-  {
-   "tournament_id": "1300148961",
-   "category_id": "368188"
-  },
-  {
-   "tournament_id": "1300148961",
-   "category_id": "368189"
-  },
-  {
-   "tournament_id": "1300151437",
-   "category_id": "375698"
-  },
-  {
-   "tournament_id": "1300151299",
-   "category_id": "375313"
-  },
-  {
-   "tournament_id": "1300152021",
-   "category_id": "377390"
-  }
- ],
- "note": "Zmena tohoto souboru automaticky spusti import turnaju z CGF. Muze obsahovat jeden turnaj (tournament_id, category_id) nebo seznam imports."
+  "imports": [
+    { "tournament_id": "1300087677", "category_id": "156752" },
+    { "tournament_id": "1300086117", "category_id": "160555" },
+    { "tournament_id": "1300091184", "category_id": "146837" },
+    { "tournament_id": "1300086125", "category_id": "160547" },
+    { "tournament_id": "1300091375", "category_id": "146275" },
+    { "tournament_id": "1300093919", "category_id": "139831" },
+    { "tournament_id": "1300093835", "category_id": "140049" },
+    { "tournament_id": "1300094446", "category_id": "138264" },
+    { "tournament_id": "1300101732", "category_id": "119163" },
+    { "tournament_id": "1300102507", "category_id": "116991" },
+    { "tournament_id": "1300104543", "category_id": "111396" },
+    { "tournament_id": "1300106249", "category_id": "106843" },
+    { "tournament_id": "1300106951", "category_id": "104969" },
+    { "tournament_id": "1300106959", "category_id": "104948" },
+    { "tournament_id": "1300109621", "category_id": "98070" },
+    { "tournament_id": "1300108878", "category_id": "96469" },
+    { "tournament_id": "1300113476", "category_id": "87661" },
+    { "tournament_id": "1300113136", "category_id": "87629" },
+    { "tournament_id": "1300119260", "category_id": "71872" },
+    { "tournament_id": "1300119261", "category_id": "71870" },
+    { "tournament_id": "1300120765", "category_id": "68447" },
+    { "tournament_id": "1300122768", "category_id": "62998" },
+    { "tournament_id": "1300123038", "category_id": "62266" },
+    { "tournament_id": "1300122440", "category_id": "63848" },
+    { "tournament_id": "1300125598", "category_id": "55169" },
+    { "tournament_id": "1300125599", "category_id": "55167" },
+    { "tournament_id": "1300129532", "category_id": "45078" },
+    { "tournament_id": "1300129560", "category_id": "45010" },
+    { "tournament_id": "1300129943", "category_id": "43884" },
+    { "tournament_id": "1300132121", "category_id": "37802" },
+    { "tournament_id": "1300132122", "category_id": "37800" },
+    { "tournament_id": "1300134690", "category_id": "31445" },
+    { "tournament_id": "1300134832", "category_id": "31046" },
+    { "tournament_id": "1300135732", "category_id": "28608" },
+    { "tournament_id": "1300136613", "category_id": "26100" },
+    { "tournament_id": "1300142340", "category_id": "11111" },
+    { "tournament_id": "1300142795", "category_id": "9371" },
+    { "tournament_id": "1300140869", "category_id": "8419" },
+    { "tournament_id": "1300142404", "category_id": "10948" },
+    { "tournament_id": "1300144561", "category_id": "4950" },
+    { "tournament_id": "1300144934", "category_id": "3610" },
+    { "tournament_id": "1300145196", "category_id": "3254" },
+    { "tournament_id": "1300145197", "category_id": "3252" },
+    { "tournament_id": "1300148408", "category_id": "366996" },
+    { "tournament_id": "1300149137", "category_id": "368765" },
+    { "tournament_id": "1300149524", "category_id": "369968" },
+    { "tournament_id": "1300149654", "category_id": "370382" },
+    { "tournament_id": "1300148961", "category_id": "368188" },
+    { "tournament_id": "1300148961", "category_id": "368189" },
+    { "tournament_id": "1300151437", "category_id": "375697" },
+    { "tournament_id": "1300151299", "category_id": "375313" },
+    { "tournament_id": "1300152020", "category_id": "377388" },
+    { "tournament_id": "1300152021", "category_id": "377390" }
+  ],
+  "note": "Zmena tohoto souboru automaticky spusti import turnaju z CGF. Muze obsahovat jeden turnaj (tournament_id, category_id) nebo seznam imports."
 }

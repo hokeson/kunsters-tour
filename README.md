@@ -21,3 +21,13 @@ Actions > Import CGF tournament > Run workflow. Zadejte Tournament ID a Category
 5. Importovat historii a vytvořit Pages dashboard.
 
 Pozn.: 2027 pravidla v `rules.json` jsou označena jako provisional, dokud nebudou finální propozice.
+
+dalsi co udelame
+
+na kartě sezóny v tabulce. Konečné pořadí budeme kromě HCP chtít mít HCP na začátku sezony a HCP na konci sezony. Handicap.  A budeme tam chtít zlepšení handicapu zlepšení budou plusové hodnoty a zhoršení bude v závorkách. u sezón jednotlivejch je jsou turnaje sezóny a tam máme 1 sloupek, kde je hodně ran AU toho by mělo bejt jméno toho kdo nejméně ran dosáhl.
+
+Asi kdekoliv, kde je nejméně ran tak uveď kdo nejméně ran měl?
+
+v rekordech chybi nejvic eaglu. pridej nejvic skrtlych jamek, nejvic ran.
+
+Tam, kde je největší snížení handicapu v turnaji na stránky se s recordama, tak tam přidej datum. Toho turnaje.	

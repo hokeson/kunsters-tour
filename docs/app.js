@@ -35,9 +35,9 @@ function table(cols,rows,opt={}){
 
 // Statistiky ze skórkaret ČGF podle členského čísla
 async function cgfStats(){
-  const idx=await IDX();const m={};
+  const idx=await IDX();const m={};const al=await ALM();const mem=new Set(al.results.map(r=>String(r.reg||'').replace(/^0+/,'')).filter(Boolean));
   for(const t of idx.tournaments){try{const d=await getJSON(tUrl(t.tournamentId));
-    d.players.forEach(p=>{const k=String(p.memberNumber||'').replace(/^0+/,'');const s=m[k]||(m[k]={rounds:0,eagles:0,birdies:0,pars:0,hio:0,eagleList:[]});m['n:'+slug(p.name)]=s;s.rounds++;s.name=s.name||p.name;
+    d.players.forEach(p=>{const k=String(p.memberNumber||'').replace(/^0+/,'');if(!mem.has(k))return;const s=m[k]||(m[k]={rounds:0,eagles:0,birdies:0,pars:0,hio:0,eagleList:[]});m['n:'+slug(p.name)]=s;s.rounds++;s.name=s.name||p.name;
       p.holes.forEach(h=>{const r=h.relativeToPar;if(r==null)return;if(h.type==='HOLE IN ONE')s.hio++;if(r<=-2){s.eagles++;s.eagleList.push({d,p,h});}else if(r===-1)s.birdies++;else if(r===0)s.pars++;});});}catch(e){}}
   return m;
 }

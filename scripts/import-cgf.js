@@ -147,7 +147,7 @@ for (const link of uniq) {
     const rel=(S!=null&&P!=null)?S-P:null;
     let type=null;
     if(pickedUp) type='PICKED UP';
-    else if(S===1) type='HOLE IN ONE'; else if(rel===-3) type='ALBATROS'; else if(rel===-2) type='EAGLE'; else if(rel===-1) type='BIRDIE'; else if(rel===0) type='PAR';
+    else if(S===1) type='HOLE IN ONE'; else if(rel===-3) type='ALBATROS'; else if(rel===-2) type='EAGLE'; else if(rel===-1) type='BIRDIE'; else if(rel===0) type='PAR'; else if(rel===1) type='BOGEY'; else if(rel===2) type='DOUBLE BOGEY'; else if(rel===3) type='TRIPLE BOGEY'; else if(rel!==null&&rel!==undefined&&!Number.isNaN(rel)) type='OTHER';
     return {hole:i+1,par:P,strokes:S,hcpStrokes:H,stb:ST,pickedUp,relativeToPar:rel,type};
   });
   const stbTotal = holes.every(h=>h.stb==null) ? null : holes.reduce((a,h)=>a+(h.stb||0),0);

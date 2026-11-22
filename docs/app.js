@@ -49,7 +49,7 @@ async function home(){
   const eag=[...new Set(Object.values(cs))].reduce((x,s)=>x+s.eagles,0);
   const list=[...idx.tournaments].sort((x,y)=>parseDate(y.date)-parseDate(x.date));
   app.innerHTML='<h1>'+esc(a.title)+'</h1><p class="muted">Desetiletý almanach Kunsters Cupu</p>'+
-   '<div class="kpis">'+a.overview.map(o=>{const k={'Celkem birdie':'birdie','Celkem parů':'par','Turnaje':'turnaje','Evidovaní hráči':'hraci','Ročníky':'sezony'}[o.label];return k?kpiA(k==='turnaje'||k==='hraci'||k==='sezony'?'#/'+k:'#/rekord/'+k,esc(fmt(o.value)),esc(o.label)):kpi(esc(fmt(o.value)),esc(o.label));}).join('')+kpiA('#/rekord/eagle',eag,'Eagle (ze skórkaret ČGF)')+'</div>'+
+   (()=>{const K={'Celkem birdie':'birdie','Celkem parů':'par','Turnaje':'turnaje','Evidovaní hráči':'hraci','Ročníky':'sezony'};const card=o=>{const k=K[o.label];return k?kpiA(k==='turnaje'||k==='hraci'||k==='sezony'?'#/'+k:'#/rekord/'+k,esc(fmt(o.value)),esc(o.label)):kpi(esc(fmt(o.value)),esc(o.label));};const g=l=>a.overview.find(o=>o.label===l);const play=['Celkem birdie','Celkem parů'];return '<div class="kpis">'+a.overview.filter(o=>!play.includes(o.label)).map(card).join('')+'</div><div class="kpis">'+kpiA('#/rekord/eagle',eag,'Eagle (ze skórkaret ČGF)')+(g('Celkem birdie')?card(g('Celkem birdie')):'')+(g('Celkem parů')?card(g('Celkem parů')):'')+'</div>';})()+
    '<div class="two"><div><h2>Mistři sezón</h2>'+table([{k:'year',label:'Rok',f:r=>'<a href="#/sezona/'+r.year+'">'+r.year+'</a>'},{k:'player',label:'Mistr',f:r=>pLink(r.player)}],a.champions.slice().reverse())+'</div>'+
    '<div><h2>Historická TOP 10</h2>'+table([{k:'player',label:'Hráč',f:r=>pLink(r.player)},{k:'titles',label:'Tituly',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'tournaments',label:'Turnaje',n:1}],a.top10)+'</div></div>'+
    '<h2>Rekordy</h2><div class="kpis">'+a.records.map(r=>kpiA('#/rekord/'+recKey(r),esc(fmt(r.value))+' <small>'+esc(r.unit)+'</small>',esc(r.record)+': '+esc(r.holder))).join('')+kpiA('#/rekord/eagle',eag+' <small>eagle</small>','Eagle: '+esc([...new Set(Object.values(cs))].filter(x=>x.eagles).map(x=>x.name).join(', ')||'–'))+'</div><p><a href="#/rekordy">Všechny rekordy →</a></p>'+
@@ -192,7 +192,7 @@ async function recordDetail(key){
 
 /* ---------- PRAVIDLA (z PDF propozic) ---------- */
 const RULES=[
- {year:2017,planned:5,plannedNote:'5 (finále 13.–14. 10. dvoudenní = 6 výsledků)',plannedN:6,counted:4,drop:2,place:'40/30/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále ×2',fee:'zdarma (jen fee)',tie:'–',note:'Finále 13. 10. s přespáním a přesahem do soboty – v almanachu jako 2 výsledky.'},
+ {year:2017,planned:6,counted:4,drop:2,place:'40/30/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále ×2',fee:'zdarma (jen fee)',tie:'–'},
  {year:2018,planned:6,counted:4,drop:2,place:'45/30/20/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'zdarma (jen fee)',tie:'–'},
  {year:2019,planned:7,counted:4,drop:3,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'–',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'zdarma (jen fee)',tie:'Kunratice, pak horší HCP vyhrává'},
  {year:2020,planned:7,counted:5,drop:2,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'2 000 Kč',tie:'Kunratice, pak horší HCP vyhrává',note:'Plus INDOOR turnaj 28. 2. 2020 (mimo 7 turnajů). Dvoudenní finále 2.–3. 10.'},
@@ -203,7 +203,7 @@ const RULES=[
  {year:2025,planned:9,counted:6,drop:3,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 500 Kč',tie:'nižší HCP vyhrává'},
  {year:2026,planned:9,counted:5,drop:4,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 500 Kč',tie:'nižší HCP vyhrává'}];
 const CHANGES=[
- [2017,'První ročník: 5 turnajů (finále 13. 10. s přespáním a přesahem do soboty, takže v almanachu 6 výsledků), počítají se 4 nejlepší výsledky. Body za 1.–5. místo (40/30/15/10/5), za par 2, birdie 10, eagle 30, hole-in-one 40. Majkl Cup ×1,5 a finále ×2. Účast zdarma.'],
+ [2017,'První ročník: 6 turnajů (finále 13. 10. s přespáním a přesahem do soboty), počítají se 4 nejlepší výsledky. Body za 1.–5. místo (40/30/15/10/5), za par 2, birdie 10, eagle 30, hole-in-one 40. Majkl Cup ×1,5 a finále ×2. Účast zdarma.'],
  [2018,'Finále je dvoudenní: první den ×1,75, druhý den ×2. Body se dávají za 1.–6. místo (45/30/20/15/10/5).'],
  [2019,'Body za 1.–8. místo (50/35/25/20/15/10/5/3). Par nově za 3 body, přibyl albatros (35) a hole-in-one stoupl na 50. Pravidlo pro rovnost: nejdřív trvalé bydliště v Kunraticích, pak vyhrává hráč s horším HCP.'],
  [2020,'7 turnajů (plus INDOOR), počítá se 5 nejlepších – škrtají se 2. Nově srážky za mizernou hru: 19–15 STB −5 bodů, 14–10 STB −10, 9 STB a méně −20. Vítěz turnaje dočasně získává zelené sako Kunsters, musí v něm přijet na další turnaj, a rozděluje 10 bodů ostatním. Startovné 2 000 Kč. Říjnové finále dvoudenní s přespáním.'],

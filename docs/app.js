@@ -30,13 +30,23 @@ function table(cols,rows,opt={}){
    rows.map(r=>'<tr>'+cols.map(c=>'<td class="'+(c.n?'n ':'')+(c.hs?'hide-s':'')+'">'+(c.f?c.f(r):esc(fmt(r[c.k])))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
 }
 
+// Statistiky ze skórkaret ČGF podle členského čísla
+async function cgfStats(){
+  const idx=await IDX();const m={};
+  for(const t of idx.tournaments){try{const d=await getJSON(tUrl(t.tournamentId));
+    d.players.forEach(p=>{const k=String(p.memberNumber||'').replace(/^0+/,'');const s=m[k]||(m[k]={rounds:0,eagles:0,birdies:0,pars:0,hio:0,eagleList:[]});m['n:'+slug(p.name)]=s;s.rounds++;
+      p.holes.forEach(h=>{const r=h.relativeToPar;if(r==null)return;if(h.type==='HOLE IN ONE')s.hio++;if(r<=-2){s.eagles++;s.eagleList.push({d,p,h});}else if(r===-1)s.birdies++;else if(r===0)s.pars++;});});}catch(e){}}
+  return m;
+}
+const regKey=r=>String(r||'').replace(/^0+/,'');
+
 /* ---------- ALMANACH ---------- */
 async function home(){
-  const [a,idx]=await Promise.all([ALM(),IDX()]);
-  const ov=Object.fromEntries(a.overview.map(o=>[o.label,o.value]));
+  const [a,idx,cs]=await Promise.all([ALM(),IDX(),cgfStats()]);
+  const eag=Object.values(cs).reduce((x,s)=>x+s.eagles,0);
   const list=[...idx.tournaments].sort((x,y)=>parseDate(y.date)-parseDate(x.date));
   app.innerHTML='<h1>'+esc(a.title)+'</h1><p class="muted">Desetiletý almanach Kunsters Cupu</p>'+
-   '<div class="kpis">'+a.overview.map(o=>kpi(esc(fmt(o.value)),esc(o.label))).join('')+'</div>'+
+   '<div class="kpis">'+a.overview.map(o=>kpi(esc(fmt(o.value)),esc(o.label))).join('')+kpi(eag,'Eagle (ze skórkaret ČGF)')+'</div>'+
    '<div class="two"><div><h2>Mistři sezón</h2>'+table([{k:'year',label:'Rok',f:r=>'<a href="#/sezona/'+r.year+'">'+r.year+'</a>'},{k:'player',label:'Mistr',f:r=>pLink(r.player)}],a.champions.slice().reverse())+'</div>'+
    '<div><h2>Historická TOP 10</h2>'+table([{k:'player',label:'Hráč',f:r=>pLink(r.player)},{k:'titles',label:'Tituly',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'tournaments',label:'Turnaje',n:1}],a.top10)+'</div></div>'+
    '<h2>Rekordy</h2><div class="kpis">'+a.records.map(r=>kpi(esc(fmt(r.value))+' <small>'+esc(r.unit)+'</small>',esc(r.record)+': '+pLink(r.holder))).join('')+'</div><p><a href="#/rekordy">Všechny rekordy →</a></p>'+
@@ -83,9 +93,10 @@ async function tournamentHist(y,no){
 
 /* ---------- HRÁČI ---------- */
 async function players(){
-  const a=await ALM();
+  const [a0,cs]=await Promise.all([ALM(),cgfStats()]);
+  const a=Object.assign({},a0,{players:a0.players.map(p=>Object.assign({},p,{eagles:(cs[regKey(p.reg)]||cs['n:'+slug(p.player)]||{}).eagles||0}))});
   app.innerHTML='<h1>Hráči</h1><p class="muted">'+a.players.length+' evidovaných hráčů. Kliknutím na záhlaví sloupce seřadíte.</p>'+
-   table([{k:'player',label:'Hráč',f:r=>pLink(r.player)},{k:'seasons',label:'Sezóny',n:1},{k:'tournaments',label:'Turnaje',n:1},{k:'titles',label:'Tituly',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'avgStb',label:'Průměr STB',n:1},{k:'bestStb',label:'Nejlepší STB',n:1},{k:'avgStrokes',label:'Průměr ran',n:1,hs:1},{k:'bestStrokes',label:'Nejméně ran',n:1,hs:1},{k:'pars',label:'Par',n:1,hs:1},{k:'birdies',label:'Birdie',n:1,hs:1}],a.players);
+   table([{k:'player',label:'Hráč',f:r=>pLink(r.player)},{k:'seasons',label:'Sezóny',n:1},{k:'tournaments',label:'Turnaje',n:1},{k:'titles',label:'Tituly',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'avgStb',label:'Průměr STB',n:1},{k:'bestStb',label:'Nejlepší STB',n:1},{k:'avgStrokes',label:'Průměr ran',n:1,hs:1},{k:'bestStrokes',label:'Nejméně ran',n:1,hs:1},{k:'pars',label:'Par',n:1,hs:1},{k:'birdies',label:'Birdie',n:1,hs:1},{k:'eagles',label:'Eagle*',n:1}],a.players)+'<p class="muted small">* Eagle se počítá ze skórkaret naimportovaných z ČGF (almanach eagle neevidoval).</p>';
 }
 async function playerProfile(s){
   const [a,idx]=await Promise.all([ALM(),IDX()]);
@@ -96,13 +107,15 @@ async function playerProfile(s){
   yrs.forEach(y=>{y.finalRank=fin[y.year]?.rank;y.hcp=fin[y.year]?.hcp;});
   const res=a.results.filter(x=>x.player===p.player).sort((x,y)=>y.year-x.year||y.no-x.no);
   const titles=a.champions.filter(c=>c.player===p.player).map(c=>c.year);
+  const css=await cgfStats();const cs=css[regKey(p.reg)]||css['n:'+s]||{eagles:0,eagleList:[]};
   // ČGF scorecards for this player (by registration number or name)
   const cgf=[];
   for(const t of idx.tournaments){try{const d=await getJSON(tUrl(t.tournamentId));const pl=d.players.find(x=>String(x.memberNumber)===String(p.reg)||slug(x.name)===s);if(pl)cgf.push({d,pl});}catch(e){}}
   const maxStb=Math.max(...yrs.map(y=>y.avgStb||0),1);
   app.innerHTML=crumbs('<a href="#/hraci">Hráči</a>',esc(p.player))+'<h1>'+esc(p.player)+'</h1>'+
    '<div class="meta"><span class="pill">Sezóny '+p.firstYear+'–'+p.lastYear+'</span>'+(titles.length?'<span class="pill">🏆 Mistr '+titles.join(', ')+'</span>':'')+'</div>'+
-   '<div class="kpis">'+kpi(p.tournaments,'Turnajů')+kpi(p.wins,'Vítězství')+kpi(p.podiums,'Pódií')+kpi(p.titles,'Titulů')+kpi(fmt(p.avgStb),'Průměr STB')+kpi(p.bestStb,'Nejlepší STB')+kpi(fmt(p.bestStrokes),'Nejméně ran')+kpi(p.pars+' / '+p.birdies,'Par / Birdie')+'</div>'+
+   '<div class="kpis">'+kpi(p.tournaments,'Turnajů')+kpi(p.wins,'Vítězství')+kpi(p.podiums,'Pódií')+kpi(p.titles,'Titulů')+kpi(fmt(p.avgStb),'Průměr STB')+kpi(p.bestStb,'Nejlepší STB')+kpi(fmt(p.bestStrokes),'Nejméně ran')+kpi(p.pars+' / '+p.birdies+' / '+cs.eagles,'Par / Birdie / Eagle*')+'</div>'+
+   (cs.eagleList.length?'<p>🦅 Eagle: '+cs.eagleList.map(x=>'<a href="#/t/'+x.d.tournamentId+'/p/'+x.p.golferId+'">'+esc(x.d.tournament.name)+', jamka '+x.h.hole+' (par '+x.h.par+', '+x.h.strokes+' rány)</a>').join('; ')+'</p>':'')+
    (cgf.length?'<h2>Skórkarty z ČGF</h2><div class="cards">'+cgf.map(({d,pl})=>'<a class="card" href="#/t/'+d.tournamentId+'/p/'+pl.golferId+'"><div class="t">'+esc(d.tournament.name)+'</div><div class="m">'+esc(d.tournament.date)+' · '+pl.rank+'. místo · '+pl.officialScore+' b.</div><div class="m">HCP '+fmt(pl.hcpBefore)+' → '+fmt(pl.hcpAfter)+'</div></a>').join('')+'</div>':'')+
    '<h2>Vývoj po sezónách</h2><div class="bars">'+yrs.map(y=>'<span>'+y.year+'</span><div class="bar" style="background:var(--g);width:'+(100*(y.avgStb||0)/maxStb).toFixed(1)+'%"></div><span>'+fmt(y.avgStb)+'</span>').join('')+'</div><p class="muted small">Průměr STB bodů v sezóně</p>'+
    table([{k:'year',label:'Rok',n:1,f:r=>'<a href="#/sezona/'+r.year+'">'+r.year+'</a>'},{k:'finalRank',label:'Konečné pořadí',n:1},{k:'hcp',label:'HCP',n:1,hs:1},{k:'tournaments',label:'Turnaje',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'avgStb',label:'Průměr STB',n:1},{k:'bestStb',label:'Nejlepší STB',n:1},{k:'avgStrokes',label:'Průměr ran',n:1,hs:1},{k:'pars',label:'Par',n:1,hs:1},{k:'birdies',label:'Birdie',n:1,hs:1}],yrs)+
@@ -183,7 +196,7 @@ async function tournament(id){
 async function player(id,gid){
   const [d,a]=await Promise.all([getJSON(tUrl(id)),ALM().catch(()=>null)]);const p=d.players.find(x=>String(x.golferId)===String(gid));
   if(!p){app.innerHTML='<p>Hráč nenalezen. <a href="#/t/'+id+'">Zpět</a></p>';return;}
-  const ap=a&&a.players.find(x=>String(x.reg)===String(p.memberNumber));
+  const ap=a&&(a.players.find(x=>regKey(x.reg)===regKey(p.memberNumber))||a.players.find(x=>slug(x.player)===slug(p.name)));
   const r=p.round||{};const H=p.holes;
   const seg=(a,b)=>H.slice(a,b);
   const sum=(arr,k)=>arr.reduce((s,h)=>s+(h[k]||0),0);

@@ -63,3 +63,9 @@ th.sortable:hover{background:#e4ece8}
 .small{font-size:13px}
 h3{font-size:15px;margin:18px 0 8px}
 .wrap{white-space:normal;display:block;min-width:220px}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand .logo{width:40px;height:40px;background:#fff;border-radius:50%;padding:2px}
+body{background:#f6f8f7 url(img/logo-512.png) no-repeat fixed right -120px bottom -120px;background-size:520px}
+body::before{content:"";position:fixed;inset:0;background:rgba(246,248,247,.90);pointer-events:none;z-index:-1}
+main,.foot{position:relative}
+@media (max-width:640px){body{background-size:300px;background-position:right -80px bottom -80px}}

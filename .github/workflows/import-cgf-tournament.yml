@@ -8,6 +8,13 @@ on:
       category_id:
         description: CGF Category ID
         required: true
+  push:
+    branches: [main]
+    paths:
+      - data/import-request.json
+concurrency:
+  group: import-cgf
+  cancel-in-progress: false
 jobs:
   import:
     runs-on: ubuntu-latest
@@ -15,16 +22,35 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+      - name: Select tournament
+        id: ids
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            T="${{ inputs.tournament_id }}"
+            C="${{ inputs.category_id }}"
+          else
+            T=$(jq -r '.tournament_id // empty' data/import-request.json)
+            C=$(jq -r '.category_id // empty' data/import-request.json)
+          fi
+          T=$(echo "$T" | tr -cd '0-9')
+          C=$(echo "$C" | tr -cd '0-9')
+          if [ -z "$T" ] || [ -z "$C" ]; then
+            echo "Missing tournament_id or category_id"; exit 1
+          fi
+          echo "Tournament $T, category $C"
+          echo "tournament=$T" >> "$GITHUB_OUTPUT"
+          echo "category=$C" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: npm install
       - run: npx playwright install --with-deps chromium
-      - run: node scripts/import-cgf.js --tournament "${{ inputs.tournament_id }}" --category "${{ inputs.category_id }}"
+      - run: node scripts/import-cgf.js --tournament "${{ steps.ids.outputs.tournament }}" --category "${{ steps.ids.outputs.category }}"
       - name: Commit imported data
         run: |
           git config user.name "kunsters-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/imports
-          git diff --cached --quiet || git commit -m "Import CGF tournament ${{ inputs.tournament_id }}"
+          git diff --cached --quiet || git commit -m "Import CGF tournament ${{ steps.ids.outputs.tournament }}"
+          git pull --rebase
           git push

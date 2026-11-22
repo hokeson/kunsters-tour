@@ -49,3 +49,10 @@ jobs:
           path: _site
       - id: deployment
         uses: actions/deploy-pages@v5
+        continue-on-error: true
+      - name: Wait and retry deploy (GitHub sometimes does not see the artifact yet)
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+      - id: deployment2
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v5

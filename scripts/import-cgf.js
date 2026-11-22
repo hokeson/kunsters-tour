@@ -158,5 +158,19 @@ for (const link of uniq) {
 await browser.close();
 const payload={generatedAt:new Date().toISOString(),tournamentId,categoryId,tournament,source:listUrl,players:out};
 if(warnings.length) payload.warnings=warnings;
-if(dryRun) console.log(JSON.stringify(payload,null,2)); else { await fs.mkdir('data/imports',{recursive:true}); await fs.writeFile(`data/imports/${tournamentId}.json`,JSON.stringify(payload,null,2)); }
+if(dryRun) console.log(JSON.stringify(payload,null,2)); else {
+  await fs.mkdir('data/imports',{recursive:true});
+  const file=`data/imports/${tournamentId}.json`;
+  // Vice kategorii jednoho turnaje (napr. Bitozeves 0-20 a 20,1-54) se slouci do jednoho souboru
+  try{
+    const prev=JSON.parse(await fs.readFile(file,'utf8'));
+    const cats=[...new Set([...(prev.categories||[prev.categoryId]),categoryId])];
+    if(prev.categoryId!==categoryId||(prev.categories&&prev.categories.length>1)){
+      const keep=prev.players.filter(p=>p.categoryId!==categoryId&&!out.some(o=>o.golferId===p.golferId));
+      payload.players=[...keep,...out];payload.categories=cats;payload.categoryId=cats[0];
+      console.log('Merged categories',cats.join(','),'players',payload.players.length);
+    }
+  }catch(e){}
+  await fs.writeFile(file,JSON.stringify(payload,null,2));
+}
 if(warnings.length) console.warn('VAROVÁNÍ:', JSON.stringify(warnings,null,2));

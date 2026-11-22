@@ -22,35 +22,38 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Select tournament
-        id: ids
+      - name: Select tournaments
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            T="${{ inputs.tournament_id }}"
-            C="${{ inputs.category_id }}"
+            echo "${{ inputs.tournament_id }} ${{ inputs.category_id }}" > /tmp/list.txt
           else
-            T=$(jq -r '.tournament_id // empty' data/import-request.json)
-            C=$(jq -r '.category_id // empty' data/import-request.json)
+            jq -r 'if .imports then .imports[] | "\(.tournament_id) \(.category_id)" else "\(.tournament_id) \(.category_id)" end' data/import-request.json > /tmp/list.txt
           fi
-          T=$(echo "$T" | tr -cd '0-9')
-          C=$(echo "$C" | tr -cd '0-9')
-          if [ -z "$T" ] || [ -z "$C" ]; then
-            echo "Missing tournament_id or category_id"; exit 1
-          fi
-          echo "Tournament $T, category $C"
-          echo "tournament=$T" >> "$GITHUB_OUTPUT"
-          echo "category=$C" >> "$GITHUB_OUTPUT"
+          sed -i 's/[^0-9 ]//g' /tmp/list.txt
+          cat /tmp/list.txt
+          [ -s /tmp/list.txt ] || { echo "Missing tournament_id or category_id"; exit 1; }
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: npm install
       - run: npx playwright install --with-deps chromium
-      - run: node scripts/import-cgf.js --tournament "${{ steps.ids.outputs.tournament }}" --category "${{ steps.ids.outputs.category }}"
+      - name: Import
+        run: |
+          FAIL=0
+          while read -r T C; do
+            [ -z "$T" ] && continue
+            echo "=== Tournament $T category $C"
+            node scripts/import-cgf.js --tournament "$T" --category "$C" || { echo "FAILED $T"; FAIL=1; }
+          done < /tmp/list.txt
+          echo "fail=$FAIL" >> "$GITHUB_ENV"
       - name: Commit imported data
         run: |
           git config user.name "kunsters-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/imports
-          git diff --cached --quiet || git commit -m "Import CGF tournament ${{ steps.ids.outputs.tournament }}"
+          git diff --cached --quiet || git commit -m "Import CGF tournaments"
           git pull --rebase
           git push
+      - name: Report failures
+        if: env.fail == '1'
+        run: exit 1

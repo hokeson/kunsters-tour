@@ -1,0 +1,2310 @@
+{
+ "year": 2026,
+ "source": "KUNSTERS CUP 2026_TURNAJE FINAL FINAL 2026.xlsx (list 4.10.26 2.finále a odpocty)",
+ "asOf": "2026-11-18",
+ "counted": 5,
+ "tournaments": [
+  {
+   "no": 1,
+   "date": "2026-04-24",
+   "name": "Loreta Pyšely",
+   "coef": 1,
+   "cgfId": 1300148408,
+   "cgfCategory": 366996
+  },
+  {
+   "no": 2,
+   "date": "2026-05-15",
+   "name": "Poděbrady",
+   "coef": 1,
+   "cgfId": 1300149137,
+   "cgfCategory": 368765
+  },
+  {
+   "no": 3,
+   "date": "2026-05-29",
+   "name": "Čertovo Břemeno",
+   "coef": 1,
+   "cgfId": 1300149524,
+   "cgfCategory": 369968
+  },
+  {
+   "no": 4,
+   "date": "2026-06-05",
+   "name": "Malevil + Majklova chalupa",
+   "coef": 1,
+   "cgfId": 1300149654,
+   "cgfCategory": 370382
+  },
+  {
+   "no": 5,
+   "date": "2026-06-19",
+   "name": "Bítozeves 2x9 – Rotary charita golf",
+   "coef": 1,
+   "cgfId": 1300148961,
+   "cgfCategory": 368188,
+   "cgfCategories": [
+    368189,
+    368188
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2026-08-28",
+   "name": "Telč",
+   "coef": 1,
+   "cgfId": 1300151437,
+   "cgfCategory": 375698
+  },
+  {
+   "no": 7,
+   "date": "2026-09-18",
+   "name": "Česká Lípa",
+   "coef": 1,
+   "cgfId": 1300151299,
+   "cgfCategory": 375313
+  },
+  {
+   "no": 8,
+   "date": "2026-10-03",
+   "name": "Finále 1. den Haugschlag",
+   "coef": 1.25,
+   "cgfId": 1300152020,
+   "cgfCategory": 377389
+  },
+  {
+   "no": 9,
+   "date": "2026-10-04",
+   "name": "Finále 2. den Haugschlag",
+   "coef": 1.5,
+   "cgfId": 1300152021,
+   "cgfCategory": 377390
+  }
+ ],
+ "players": [
+  {
+   "name": "Opatrný Tomáš",
+   "rank": 1,
+   "reg": "18001251",
+   "hcp": 13.8,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 85.0,
+     "strokesNote": null,
+     "stb": 38.0,
+     "pars": 9.0,
+     "birdies": 0.0,
+     "placePts": 20.0,
+     "parPts": 18,
+     "birdiePts": 0,
+     "total": 38,
+     "place": 4
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 90.0,
+     "strokesNote": null,
+     "stb": 30.0,
+     "pars": 4.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 8,
+     "birdiePts": 0,
+     "total": 13,
+     "place": 7
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 85.0,
+     "strokesNote": null,
+     "stb": 34.0,
+     "pars": 8.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 16,
+     "birdiePts": 0,
+     "total": 31,
+     "place": 5
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 94.0,
+     "strokesNote": null,
+     "stb": 28.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 3.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 9,
+     "place": 8
+    },
+    {
+     "no": 6,
+     "played": false
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 82.0,
+     "strokesNote": null,
+     "stb": 39.0,
+     "pars": 8.0,
+     "birdies": 1.0,
+     "placePts": 50.0,
+     "parPts": 16,
+     "birdiePts": 5,
+     "total": 71,
+     "place": 1
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 87.0,
+     "strokesNote": null,
+     "stb": 32.0,
+     "pars": 8.0,
+     "birdies": 0.0,
+     "placePts": 25.0,
+     "parPts": 16,
+     "birdiePts": 0,
+     "total": 41,
+     "bonus": 51.25,
+     "place": 3
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 81.0,
+     "strokesNote": null,
+     "stb": 37.0,
+     "pars": 9.0,
+     "birdies": 1.0,
+     "placePts": 50.0,
+     "parPts": 18,
+     "birdiePts": 5,
+     "total": 73,
+     "bonus": 109.5,
+     "place": 1
+    }
+   ],
+   "totalAll": 322.75,
+   "best": 300.75,
+   "bestRank": 1,
+   "bestPicked": [
+    38.0,
+    31.0,
+    71.0,
+    51.25,
+    109.5
+   ]
+  },
+  {
+   "name": "Kerzel Jan",
+   "rank": 2,
+   "reg": "18002978",
+   "hcp": 28.5,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 24.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 13
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 100.0,
+     "strokesNote": null,
+     "stb": 34.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 25.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 31,
+     "place": 3
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 94.0,
+     "strokesNote": null,
+     "stb": 43.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 45,
+     "place": 2
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": 100.0,
+     "strokesNote": null,
+     "stb": 40.0,
+     "pars": 4.0,
+     "birdies": 1.0,
+     "placePts": 25.0,
+     "parPts": 8,
+     "birdiePts": 5,
+     "total": 38,
+     "place": 3
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 95.0,
+     "strokesNote": null,
+     "stb": 42.0,
+     "pars": 2.0,
+     "birdies": 1.0,
+     "placePts": 50.0,
+     "parPts": 4,
+     "birdiePts": 5,
+     "total": 59,
+     "place": 1
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": 104.0,
+     "strokesNote": null,
+     "stb": 37.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 25.0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 35,
+     "place": 3
+    },
+    {
+     "no": 7,
+     "played": false
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 36.0,
+     "pars": 1.0,
+     "birdies": 1.0,
+     "placePts": 50.0,
+     "parPts": 2,
+     "birdiePts": 5,
+     "total": 57,
+     "bonus": 71.25,
+     "place": 1
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 100.0,
+     "strokesNote": null,
+     "stb": 33.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 25.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 29,
+     "bonus": 43.5,
+     "place": 3
+    }
+   ],
+   "totalAll": 322.75,
+   "best": 256.75,
+   "bestRank": 2,
+   "bestPicked": [
+    45.0,
+    38.0,
+    59.0,
+    71.25,
+    43.5
+   ]
+  },
+  {
+   "name": "Temr Honza",
+   "rank": 3,
+   "reg": "06801757",
+   "hcp": 16.7,
+   "results": [
+    {
+     "no": 1,
+     "played": false
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 90.0,
+     "strokesNote": null,
+     "stb": 34.0,
+     "pars": 7.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 14,
+     "birdiePts": 0,
+     "total": 49,
+     "place": 2
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 95.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 6.0,
+     "birdies": 1.0,
+     "placePts": 3.0,
+     "parPts": 12,
+     "birdiePts": 5,
+     "total": 20,
+     "place": 8
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": 97.0,
+     "strokesNote": null,
+     "stb": 27.0,
+     "pars": 3.0,
+     "birdies": 1.0,
+     "placePts": 5.0,
+     "parPts": 6,
+     "birdiePts": 5,
+     "total": 16,
+     "place": 7
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 88.0,
+     "strokesNote": null,
+     "stb": 38.0,
+     "pars": 6.0,
+     "birdies": 1.0,
+     "placePts": 25.0,
+     "parPts": 12,
+     "birdiePts": 5,
+     "total": 42,
+     "place": 3
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 29.0,
+     "pars": 3.0,
+     "birdies": 1.0,
+     "placePts": 3.0,
+     "parPts": 6,
+     "birdiePts": 5,
+     "total": 14,
+     "place": 8
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 96.0,
+     "strokesNote": null,
+     "stb": 34.0,
+     "pars": 5.0,
+     "birdies": 1.0,
+     "placePts": 25.0,
+     "parPts": 10,
+     "birdiePts": 5,
+     "total": 40,
+     "place": 3
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 100.0,
+     "strokesNote": null,
+     "stb": 28.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 20.0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 30,
+     "bonus": 37.5,
+     "place": 4
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 98.0,
+     "strokesNote": null,
+     "stb": 32.0,
+     "pars": 6.0,
+     "birdies": 1.0,
+     "placePts": 20.0,
+     "parPts": 12,
+     "birdiePts": 5,
+     "total": 37,
+     "bonus": 55.5,
+     "place": 4
+    }
+   ],
+   "totalAll": 274,
+   "best": 224,
+   "bestRank": 3,
+   "bestPicked": [
+    49.0,
+    42.0,
+    40.0,
+    37.5,
+    55.5
+   ]
+  },
+  {
+   "name": "Janeček Karel",
+   "rank": 4,
+   "reg": "18004287",
+   "hcp": 30.4,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 103.0,
+     "strokesNote": null,
+     "stb": 40.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 50.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 54,
+     "place": 1
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 119.0,
+     "strokesNote": null,
+     "stb": 18.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": -3,
+     "place": 17
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 107.0,
+     "strokesNote": null,
+     "stb": 35.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 20.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 22,
+     "place": 4
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": 97.0,
+     "strokesNote": null,
+     "stb": 43.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 50.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 52,
+     "place": 1
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 98.0,
+     "strokesNote": null,
+     "stb": 41.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 37,
+     "place": 2
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": 97.0,
+     "strokesNote": null,
+     "stb": 45.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 50.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 54,
+     "place": 1
+    },
+    {
+     "no": 7,
+     "played": false
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 28.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 17,
+     "bonus": 21.25,
+     "place": 5
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 28.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 9,
+     "bonus": 13.5,
+     "place": 7
+    }
+   ],
+   "totalAll": 250.75,
+   "best": 219,
+   "bestRank": 4,
+   "bestPicked": [
+    54.0,
+    22.0,
+    52.0,
+    37.0,
+    54.0
+   ]
+  },
+  {
+   "name": "Sudík Jan",
+   "rank": 5,
+   "reg": "01008672",
+   "hcp": 11.5,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 81.0,
+     "strokesNote": null,
+     "stb": 39.0,
+     "pars": 11.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 22,
+     "birdiePts": 0,
+     "total": 57,
+     "place": 2
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 84.0,
+     "strokesNote": null,
+     "stb": 32.0,
+     "pars": 6.0,
+     "birdies": 1.0,
+     "placePts": 20.0,
+     "parPts": 12,
+     "birdiePts": 5,
+     "total": 37,
+     "place": 4
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 17.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": -1,
+     "place": 12
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 25.0,
+     "pars": 4.0,
+     "birdies": 1.0,
+     "placePts": 3.0,
+     "parPts": 8,
+     "birdiePts": 5,
+     "total": 16,
+     "place": 8
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": 86.0,
+     "strokesNote": null,
+     "stb": 37.0,
+     "pars": 8.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 16,
+     "birdiePts": 0,
+     "total": 51,
+     "place": 2
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 32.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 25,
+     "place": 5
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 19.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 1,
+     "bonus": 1.25,
+     "place": 13
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 95.0,
+     "strokesNote": null,
+     "stb": 26.0,
+     "pars": 3.0,
+     "birdies": 1.0,
+     "placePts": 0,
+     "parPts": 6,
+     "birdiePts": 5,
+     "total": 11,
+     "bonus": 16.5,
+     "place": "10.0"
+    }
+   ],
+   "totalAll": 202.75,
+   "best": 186.5,
+   "bestRank": 5,
+   "bestPicked": [
+    57.0,
+    37.0,
+    51.0,
+    25.0,
+    16.5
+   ]
+  },
+  {
+   "name": "Majer Josef",
+   "rank": 6,
+   "reg": "18002444",
+   "hcp": 23.0,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 102.0,
+     "strokesNote": null,
+     "stb": 32.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 9,
+     "place": 7
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 102.0,
+     "strokesNote": null,
+     "stb": 29.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 3.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 5,
+     "place": 8
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 89.0,
+     "strokesNote": null,
+     "stb": 43.0,
+     "pars": 6.0,
+     "birdies": 0.0,
+     "placePts": 50.0,
+     "parPts": 12,
+     "birdiePts": 0,
+     "total": 62,
+     "place": 1
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": 98.0,
+     "strokesNote": null,
+     "stb": 34.0,
+     "pars": 6.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 12,
+     "birdiePts": 0,
+     "total": 27,
+     "place": 5
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": false
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 101.0,
+     "strokesNote": null,
+     "stb": 33.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 20.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 24,
+     "place": 4
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 97.0,
+     "strokesNote": null,
+     "stb": 33.0,
+     "pars": 4.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 8,
+     "birdiePts": 0,
+     "total": 43,
+     "bonus": 53.75,
+     "place": 2
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 27.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 4,
+     "bonus": 6,
+     "place": 9
+    }
+   ],
+   "totalAll": 186.75,
+   "best": 175.75,
+   "bestRank": 6,
+   "bestPicked": [
+    9.0,
+    62.0,
+    27.0,
+    24.0,
+    53.75
+   ]
+  },
+  {
+   "name": "Hruška Petr",
+   "rank": 7,
+   "reg": "18001564",
+   "hcp": 19.4,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 100.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 3.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 9,
+     "place": 8
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 103.0,
+     "strokesNote": null,
+     "stb": 25.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 6,
+     "place": 13
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 31.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 6,
+     "place": 10
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": 89.0,
+     "strokesNote": null,
+     "stb": 40.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 45,
+     "place": 2
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": 97.0,
+     "strokesNote": null,
+     "stb": 36.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 20.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 24,
+     "place": 4
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 93.0,
+     "strokesNote": null,
+     "stb": 38.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 45,
+     "place": 2
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 109.0,
+     "strokesNote": null,
+     "stb": 21.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "bonus": 2.5,
+     "place": 11
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 96.0,
+     "strokesNote": null,
+     "stb": 30.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 21,
+     "bonus": 31.5,
+     "place": 5
+    }
+   ],
+   "totalAll": 169,
+   "best": 154.5,
+   "bestRank": 7,
+   "bestPicked": [
+    9.0,
+    45.0,
+    24.0,
+    45.0,
+    31.5
+   ]
+  },
+  {
+   "name": "Polák Tomáš",
+   "rank": 8,
+   "reg": "18001262",
+   "hcp": 17.4,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 94.0,
+     "strokesNote": null,
+     "stb": 33.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 10.0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 20,
+     "place": 6
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 87.0,
+     "strokesNote": null,
+     "stb": 37.0,
+     "pars": 3.0,
+     "birdies": 2.0,
+     "placePts": 50.0,
+     "parPts": 6,
+     "birdiePts": 10,
+     "total": 66,
+     "place": 1
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 93.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 5.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 10,
+     "birdiePts": 0,
+     "total": 10,
+     "place": 9
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": 95.0,
+     "strokesNote": null,
+     "stb": 34.0,
+     "pars": 6.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 12,
+     "birdiePts": 0,
+     "total": 17,
+     "place": 7
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 98.0,
+     "strokesNote": null,
+     "stb": 28.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 3.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 9,
+     "place": 8
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 99.0,
+     "strokesNote": null,
+     "stb": 27.0,
+     "pars": 4.0,
+     "birdies": 0.0,
+     "placePts": 10.0,
+     "parPts": 8,
+     "birdiePts": 0,
+     "total": 18,
+     "bonus": 22.5,
+     "place": 6
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 99.0,
+     "strokesNote": null,
+     "stb": 27.0,
+     "pars": 4.0,
+     "birdies": 0.0,
+     "placePts": 3.0,
+     "parPts": 8,
+     "birdiePts": 0,
+     "total": 11,
+     "bonus": 16.5,
+     "place": 8
+    }
+   ],
+   "totalAll": 161,
+   "best": 142,
+   "bestRank": 8,
+   "bestPicked": [
+    20.0,
+    66.0,
+    17.0,
+    22.5,
+    16.5
+   ]
+  },
+  {
+   "name": "Rozínek Martin",
+   "rank": 9,
+   "reg": "21300356",
+   "hcp": 25.2,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 111.0,
+     "strokesNote": null,
+     "stb": 28.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 11
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 108.0,
+     "strokesNote": null,
+     "stb": 27.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 11
+    },
+    {
+     "no": 3,
+     "played": false
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 103.0,
+     "strokesNote": null,
+     "stb": 32.0,
+     "pars": 4.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 8,
+     "birdiePts": 0,
+     "total": 23,
+     "place": 5
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": 101.0,
+     "strokesNote": null,
+     "stb": 35.0,
+     "pars": 3.0,
+     "birdies": 1.0,
+     "placePts": 10.0,
+     "parPts": 6,
+     "birdiePts": 5,
+     "total": 21,
+     "place": 6
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 105.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 10.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 16,
+     "place": 6
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 17.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": -5,
+     "bonus": -6.25,
+     "place": 15
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 100.0,
+     "strokesNote": null,
+     "stb": 30.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 10.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 16,
+     "bonus": 24,
+     "place": 6
+    }
+   ],
+   "totalAll": 77.75,
+   "best": 84,
+   "bestRank": 9,
+   "bestPicked": [
+    23.0,
+    21.0,
+    16.0,
+    24.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Kracík Marek",
+   "rank": 10,
+   "reg": "09805544",
+   "hcp": 28.5,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 102.0,
+     "strokesNote": null,
+     "stb": 39.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 25.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 27,
+     "place": 3
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 105.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 10.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 14,
+     "place": 6
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 97.0,
+     "strokesNote": null,
+     "stb": 42.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 25.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 29,
+     "place": 3
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 25.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "place": 9
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 29.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 9
+    },
+    {
+     "no": 7,
+     "played": false
+    },
+    {
+     "no": 8,
+     "played": false
+    },
+    {
+     "no": 9,
+     "played": false
+    }
+   ],
+   "totalAll": 72,
+   "best": 72,
+   "bestRank": 10,
+   "bestPicked": [
+    27.0,
+    14.0,
+    29.0,
+    2.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Šíp Jan",
+   "rank": 11,
+   "reg": "18002809",
+   "hcp": 33.9,
+   "results": [
+    {
+     "no": 1,
+     "played": false
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 16.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": -5,
+     "place": 18
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 34.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 10.0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 10,
+     "place": 6
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": false
+    },
+    {
+     "no": 7,
+     "played": false
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 22.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "bonus": 0,
+     "place": 10
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 113.0,
+     "strokesNote": null,
+     "stb": 34.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 35.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 41,
+     "bonus": 61.5,
+     "place": 2
+    }
+   ],
+   "totalAll": 66.5,
+   "best": 71.5,
+   "bestRank": 11,
+   "bestPicked": [
+    10.0,
+    61.5,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Wagner Arnošt",
+   "rank": 12,
+   "reg": "05100928",
+   "hcp": 15.5,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 105.0,
+     "strokesNote": null,
+     "stb": 23.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "place": 14
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 90.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 21,
+     "place": 5
+    },
+    {
+     "no": 3,
+     "played": false
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": 93.0,
+     "strokesNote": null,
+     "stb": 35.0,
+     "pars": 1.0,
+     "birdies": 1.0,
+     "placePts": 15.0,
+     "parPts": 2,
+     "birdiePts": 5,
+     "total": 22,
+     "place": 5
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 102.0,
+     "strokesNote": null,
+     "stb": 24.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 11
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 100.0,
+     "strokesNote": null,
+     "stb": 27.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 11,
+     "bonus": 13.75,
+     "place": 7
+    },
+    {
+     "no": 9,
+     "played": false
+    }
+   ],
+   "totalAll": 58.75,
+   "best": 58.75,
+   "bestRank": 12,
+   "bestPicked": [
+    2.0,
+    21.0,
+    22.0,
+    13.75,
+    0.0
+   ]
+  },
+  {
+   "name": "Bauer Michal",
+   "rank": 13,
+   "reg": "18001030",
+   "hcp": 22.0,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 25.0,
+     "pars": 2.0,
+     "birdies": 1.0,
+     "placePts": 0,
+     "parPts": 4,
+     "birdiePts": 5,
+     "total": 9,
+     "place": 12
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 102.0,
+     "strokesNote": null,
+     "stb": 28.0,
+     "pars": 3.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 6,
+     "birdiePts": 0,
+     "total": 6,
+     "place": 9
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": 101.0,
+     "strokesNote": null,
+     "stb": 32.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 9,
+     "place": 7
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": 108.0,
+     "strokesNote": null,
+     "stb": 28.0,
+     "pars": 2.0,
+     "birdies": 1.0,
+     "placePts": 10.0,
+     "parPts": 4,
+     "birdiePts": 5,
+     "total": 19,
+     "place": 6
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 106.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 10.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 14,
+     "place": 6
+    },
+    {
+     "no": 6,
+     "played": false
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 106.0,
+     "strokesNote": null,
+     "stb": 26.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 10
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 115.0,
+     "strokesNote": null,
+     "stb": 19.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": -3,
+     "bonus": -3.75,
+     "place": 12
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 120.0,
+     "strokesNote": null,
+     "stb": 14.0,
+     "pars": 0.0,
+     "birdies": 1.0,
+     "placePts": -10.0,
+     "parPts": 0,
+     "birdiePts": 5,
+     "total": -5,
+     "bonus": -7.5,
+     "place": 14
+    }
+   ],
+   "totalAll": 45.75,
+   "best": 57,
+   "bestRank": 13,
+   "bestPicked": [
+    9.0,
+    6.0,
+    9.0,
+    19.0,
+    14.0
+   ]
+  },
+  {
+   "name": "Hlavatý Jan",
+   "rank": 14,
+   "reg": "18001214",
+   "hcp": 25.2,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": 102.0,
+     "strokesNote": null,
+     "stb": 35.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 15.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 17,
+     "place": 5
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 22.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "place": 15
+    },
+    {
+     "no": 3,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 25.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 4,
+     "place": 11
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": false,
+     "note": "odstoupil"
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 105.0,
+     "strokesNote": null,
+     "stb": 31.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 9,
+     "place": 7
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 109.0,
+     "strokesNote": null,
+     "stb": 25.0,
+     "pars": 2.0,
+     "birdies": 0.0,
+     "placePts": 3.0,
+     "parPts": 4,
+     "birdiePts": 0,
+     "total": 7,
+     "bonus": 8.75,
+     "place": 8
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 109.0,
+     "strokesNote": null,
+     "stb": 25.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "bonus": 3,
+     "place": 11
+    }
+   ],
+   "totalAll": 43.75,
+   "best": 41.75,
+   "bestRank": 14,
+   "bestPicked": [
+    17.0,
+    4.0,
+    9.0,
+    8.75,
+    3.0
+   ]
+  },
+  {
+   "name": "Čermák Jan",
+   "rank": 15,
+   "reg": "18001546",
+   "hcp": 36.7,
+   "results": [
+    {
+     "no": 1,
+     "played": false
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": 118.0,
+     "strokesNote": null,
+     "stb": 27.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "place": 12
+    },
+    {
+     "no": 3,
+     "played": false
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 116.0,
+     "strokesNote": null,
+     "stb": 33.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 20.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 22,
+     "place": 4
+    },
+    {
+     "no": 6,
+     "played": false
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": 129.0,
+     "strokesNote": null,
+     "stb": 26.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 9
+    },
+    {
+     "no": 8,
+     "played": false
+    },
+    {
+     "no": 9,
+     "played": false
+    }
+   ],
+   "totalAll": 24,
+   "best": 24,
+   "bestRank": 15,
+   "bestPicked": [
+    2.0,
+    22.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Plaček Michal",
+   "rank": 16,
+   "reg": "01005739",
+   "hcp": 35.4,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 31.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 9
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 27.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 10
+    },
+    {
+     "no": 3,
+     "played": false
+    },
+    {
+     "no": 4,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 35.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 20.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 22,
+     "place": 4
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": false
+    },
+    {
+     "no": 7,
+     "played": false
+    },
+    {
+     "no": 8,
+     "played": false
+    },
+    {
+     "no": 9,
+     "played": false
+    }
+   ],
+   "totalAll": 22,
+   "best": 22,
+   "bestRank": 16,
+   "bestPicked": [
+    22.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Schreiber Pavel",
+   "rank": 17,
+   "reg": "18000371",
+   "hcp": 37.7,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 22.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "place": 15
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 21.0,
+     "pars": 0.0,
+     "birdies": 1.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 5,
+     "total": 5,
+     "place": 16
+    },
+    {
+     "no": 3,
+     "played": false
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": true,
+     "strokes": 121.0,
+     "strokesNote": null,
+     "stb": 30.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 5.0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 5,
+     "place": 7
+    },
+    {
+     "no": 6,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 26.0,
+     "pars": 0.0,
+     "birdies": 1.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 5,
+     "total": 5,
+     "place": 10
+    },
+    {
+     "no": 7,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 21.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 12
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": 130.0,
+     "strokesNote": null,
+     "stb": 23.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "bonus": 0,
+     "place": 9
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": 125.0,
+     "strokesNote": null,
+     "stb": 24.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "bonus": 0,
+     "place": 12
+    }
+   ],
+   "totalAll": 17,
+   "best": 17,
+   "bestRank": 17,
+   "bestPicked": [
+    2.0,
+    5.0,
+    5.0,
+    5.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Bareš Roman",
+   "rank": 18,
+   "reg": "05002515",
+   "hcp": 38.6,
+   "results": [
+    {
+     "no": 1,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 30.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": 0,
+     "place": 10
+    },
+    {
+     "no": 2,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 24.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": 0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": 2,
+     "place": 14
+    },
+    {
+     "no": 3,
+     "played": false
+    },
+    {
+     "no": 4,
+     "played": false
+    },
+    {
+     "no": 5,
+     "played": false
+    },
+    {
+     "no": 6,
+     "played": false
+    },
+    {
+     "no": 7,
+     "played": false
+    },
+    {
+     "no": 8,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 18.0,
+     "pars": 1.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 2,
+     "birdiePts": 0,
+     "total": -3,
+     "bonus": -3.75,
+     "place": 14
+    },
+    {
+     "no": 9,
+     "played": true,
+     "strokes": null,
+     "strokesNote": "x",
+     "stb": 16.0,
+     "pars": 0.0,
+     "birdies": 0.0,
+     "placePts": -5.0,
+     "parPts": 0,
+     "birdiePts": 0,
+     "total": -5,
+     "bonus": -7.5,
+     "place": 13
+    }
+   ],
+   "totalAll": -9.25,
+   "best": 2,
+   "bestRank": 18,
+   "bestPicked": [
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "deductions": {
+  "Opatrný Tomáš": {
+   "all": 322.75,
+   "best": 300.75,
+   "deduct": 22
+  },
+  "Kerzel Jan": {
+   "all": 322.75,
+   "best": 256.75,
+   "deduct": 66
+  },
+  "Temr Honza": {
+   "all": 274,
+   "best": 224.0,
+   "deduct": 50
+  },
+  "Janeček Karel": {
+   "all": 250.75,
+   "best": 219.0,
+   "deduct": 31.75
+  },
+  "Sudík Jan": {
+   "all": 202.75,
+   "best": 186.5,
+   "deduct": 16.25
+  },
+  "Majer Josef": {
+   "all": 186.75,
+   "best": 175.75,
+   "deduct": 11
+  },
+  "Hruška Petr": {
+   "all": 169,
+   "best": 154.5,
+   "deduct": 14.5
+  },
+  "Polák Tomáš": {
+   "all": 161,
+   "best": 142.0,
+   "deduct": 19
+  },
+  "Rozínek Martin": {
+   "all": 77.75,
+   "best": 84.0,
+   "deduct": -6.25
+  },
+  "Kracík Marek": {
+   "all": 72,
+   "best": 72.0,
+   "deduct": 0
+  },
+  "Šíp Jan": {
+   "all": 66.5,
+   "best": 71.5,
+   "deduct": -5
+  },
+  "Wagner Arnošt": {
+   "all": 58.75,
+   "best": 58.75,
+   "deduct": 0
+  },
+  "Bauer Michal": {
+   "all": 45.75,
+   "best": 57.0,
+   "deduct": -11.25
+  },
+  "Hlavatý Jan": {
+   "all": 43.75,
+   "best": 41.75,
+   "deduct": 2
+  },
+  "Čermák Jan": {
+   "all": 24,
+   "best": 24.0,
+   "deduct": 0
+  },
+  "Plaček Michal": {
+   "all": 22,
+   "best": 22.0,
+   "deduct": 0
+  },
+  "Schreiber Pavel": {
+   "all": 17,
+   "best": 17.0,
+   "deduct": 0
+  },
+  "Bareš Roman": {
+   "all": -9.25,
+   "best": 2.0,
+   "deduct": -11.25
+  }
+ }
+}

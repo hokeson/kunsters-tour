@@ -71,8 +71,53 @@ async function season(y){
   const py=Object.fromEntries(a.playerYears.filter(p=>p.year===y).map(p=>[p.player,p]));
   const rows=st.map(s=>Object.assign({},py[s.player]||{},s));
   app.innerHTML=crumbs('<a href="#/sezony">Sezóny</a>',String(y))+'<h1>Sezóna '+y+'</h1>'+(()=>{const r=RULES.find(x=>x.year===y);return r?(r.missing?'<p class="muted">Propozice pro tento ročník nemáme.</p>':'<div class="rulebox"><b>Pravidla '+y+':</b> do pořadí se počítá <b>'+r.counted+' nejlepších</b> výsledků z '+r.planned+' turnajů · par '+r.par+' b., birdie '+r.birdie+' b. · '+r.coef+' · <a href="#/pravidla">vývoj pravidel →</a></div>'):'';})()+
-   '<h2>Konečné pořadí</h2>'+table([{k:'rank',label:'#',n:1},{k:'player',label:'Hráč',f:r=>pLink(r.player)},{k:'hcp',label:'HCP',n:1},{k:'tournaments',label:'Turnaje',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'avgStb',label:'Průměr STB',n:1,hs:1},{k:'bestStb',label:'Nejlepší STB',n:1,hs:1}],rows)+
+   (await seasonOfficial(y))+'<h2>'+(y===2026?'Konečné pořadí (almanach)':'Konečné pořadí')+'</h2>'+table([{k:'rank',label:'#',n:1},{k:'player',label:'Hráč',f:r=>pLink(r.player)},{k:'hcp',label:'HCP',n:1},{k:'tournaments',label:'Turnaje',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'avgStb',label:'Průměr STB',n:1,hs:1},{k:'bestStb',label:'Nejlepší STB',n:1,hs:1}],rows)+
    '<h2>Turnaje sezóny</h2>'+table([{k:'no',label:'#',n:1},{k:'name',label:'Turnaj',f:r=>'<a href="#/turnaj/'+r.year+'/'+r.no+'">'+esc(r.name)+'</a>'},{k:'participants',label:'Hráčů',n:1},{k:'winner',label:'Vítěz',f:r=>pLink(r.winner)},{k:'bestStb',label:'Nejlepší STB',n:1},{k:'avgStb',label:'Průměr STB',n:1,hs:1},{k:'bestStrokes',label:'Nejméně ran',n:1,hs:1}],ts);
+}
+
+
+/* ---------- OFICIÁLNÍ VÝSLEDKY SEZÓNY (replika Excelu) ---------- */
+const SEAS=y=>getJSON('data/seasons/'+y+'.json');
+async function seasonCtx(y){
+  const s=await SEAS(y);const a=await ALM();
+  const byReg={};a.results.forEach(r=>{if(r.reg)byReg[regKey(r.reg)]=r.player;});
+  s.players.forEach(p=>{p.display=byReg[regKey(p.reg)]||p.name;
+    const vals=p.results.map((r,i)=>({i,v:r.played?(r.bonus??r.total??0):null})).filter(x=>x.v!=null).sort((x,y)=>y.v-x.v);
+    const keep=new Set(vals.slice(0,s.counted).map(x=>x.i));p.results.forEach((r,i)=>{r.pts=r.played?(r.bonus??r.total??0):null;r.counted=keep.has(i);});});
+  const imp={};
+  for(const t of s.tournaments){if(t.cgfId){try{imp[t.no]=await getJSON(tUrl(t.cgfId));}catch(e){}}}
+  return {s,a,imp};
+}
+const ptsCell=(r,href)=>!r.played?'<span class="muted">'+(r.note||'–')+'</span>':'<a href="'+href+'" class="'+(r.counted?'cnt':'drop')+'">'+fmt(r.pts)+'</a>';
+async function seasonOfficial(y){
+  let ctx;try{ctx=await seasonCtx(y);}catch(e){return '';}
+  const {s}=ctx;
+  const head='<tr><th class="n">#</th><th>Hráč</th><th class="n">HCP</th>'+s.tournaments.map(t=>'<th class="n tcol"><a href="#/sezona/'+y+'/turnaj/'+t.no+'">'+t.no+'. '+esc(t.name.replace(/ – .*$/,''))+'</a><div class="small muted">'+t.date.split('-').reverse().slice(0,2).map(Number).join('. ')+'.'+(t.coef!==1?' ×'+fmt(t.coef):'')+'</div></th>').join('')+'<th class="n">Celkem vše</th><th class="n">'+s.counted+' nejlepších</th></tr>';
+  const rows=s.players.map(p=>'<tr><td class="n">'+fmt(p.bestRank)+'.</td><td>'+pLink(p.display)+'</td><td class="n">'+fmt(p.hcp)+'</td>'+p.results.map((r,i)=>'<td class="n">'+ptsCell(r,'#/sezona/'+y+'/turnaj/'+(i+1))+'</td>').join('')+'<td class="n">'+fmt(p.totalAll)+'</td><td class="n big">'+fmt(p.best)+'</td></tr>').join('');
+  return '<h2>Výsledky '+y+' – body Kunsters</h2><p class="muted small">Replika výsledkové tabulky (Excel „'+esc(s.source.split(' (')[0])+'“, stav k '+s.asOf.split('-').reverse().map(Number).join('. ')+'). Do pořadí se počítá '+s.counted+' nejlepších výsledků; <span class="drop">přeškrtnuté</span> výsledky se nezapočítávají. Kliknutím na turnaj zobrazíte detail (rány, STB, par, birdie, body). · <a href="#/sezona/'+y+'/odpocty">Odpočty bodů →</a></p>'+
+   '<div class="fit"><table class="season"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div>';
+}
+async function seasonDeductions(y){
+  y=+y;const {s}=await seasonCtx(y);
+  const rows=s.players.map(p=>{const d=s.deductions[p.name]||{};return '<tr><td>'+pLink(p.display)+'</td>'+p.results.map((r,i)=>'<td class="n">'+ptsCell(r,'#/sezona/'+y+'/turnaj/'+(i+1))+'</td>').join('')+'<td class="n">'+fmt(d.all??p.totalAll)+'</td><td class="n big">'+fmt(d.best??p.best)+'</td><td class="n '+((d.deduct??0)>0?'neg':'')+'">'+fmt(d.deduct)+'</td></tr>';}).join('');
+  app.innerHTML=crumbs('<a href="#/sezony">Sezóny</a>','<a href="#/sezona/'+y+'">'+y+'</a>','Odpočty')+'<h1>Odpočty bodů '+y+'</h1><p class="muted">Kolik bodů hráč ztratil tím, že se počítá jen '+s.counted+' nejlepších výsledků. Odečet = celkem za všechny turnaje − '+s.counted+' nejlepších. Záporný odečet znamená, že se škrtly záporné výsledky (srážky za slabé STB) a hráči to pomohlo.</p>'+
+   '<div class="fit"><table class="season"><thead><tr><th>Hráč</th>'+s.tournaments.map(t=>'<th class="n tcol"><a href="#/sezona/'+y+'/turnaj/'+t.no+'">'+esc(t.name.replace(/ – .*$/,''))+'</a></th>').join('')+'<th class="n">Celkem bodů za všechny turnaje</th><th class="n">'+s.counted+' nejlepších výsledků</th><th class="n">Odečet bodů</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+}
+async function seasonTournament(y,no){
+  y=+y;no=+no;const {s,imp}=await seasonCtx(y);const t=s.tournaments.find(x=>x.no===no);const d=imp[no];
+  const cg={};if(d)d.players.forEach(p=>cg[regKey(p.memberNumber)]=p);
+  const st=p=>{if(!p)return null;let pars=0,bir=0,eag=0;p.holes.forEach(h=>{const r=h.relativeToPar;if(r==null)return;if(r===0)pars++;else if(r===-1)bir++;else if(r<=-2)eag++;});return {stb:p.stbTotal??p.officialScore,pars,bir,eag,strokes:p.holes.every(h=>h.strokes!=null)?p.holes.reduce((a,h)=>a+h.strokes,0):null};};
+  const rows=s.players.filter(p=>p.results[no-1].played).map(p=>Object.assign({p},p.results[no-1])).sort((a,b)=>(typeof a.place==='number'?a.place:99)-(typeof b.place==='number'?b.place:99));
+  const fin=t.coef!==1;
+  const chk=(x,v)=>v==null||x==null||+x===+v?'':' <span class="warn" title="Skórkarta ČGF: '+v+'">⚠ ČGF '+v+'</span>';
+  const body=rows.map(r=>{const c=cg[regKey(r.p.reg)];const q=st(c);
+    return '<tr><td class="n">'+fmt(r.place)+'.</td><td>'+pLink(r.p.display)+'</td><td class="n">'+(r.strokes==null?'<span class="muted" title="neúplný počet ran (škrtnutá jamka)">x</span>':fmt(r.strokes))+'</td><td class="n">'+fmt(r.stb)+(q?chk(r.stb,q.stb):'')+'</td><td class="n">'+fmt(r.pars)+(q?chk(r.pars,q.pars):'')+'</td><td class="n">'+fmt(r.birdies)+(q?chk(r.birdies,q.bir+q.eag):'')+'</td><td class="n">'+fmt(r.placePts)+'</td><td class="n">'+fmt(r.parPts)+'</td><td class="n">'+fmt(r.birdiePts)+'</td><td class="n'+(fin?'':' big')+'">'+fmt(r.total)+'</td>'+(fin?'<td class="n big">'+fmt(r.bonus)+'</td>':'')+'<td>'+(c?'<a href="#/t/'+d.tournamentId+'/p/'+c.golferId+'">skórkarta</a>':'<span class="muted">–</span>')+'</td></tr>';}).join('');
+  const nPlayed=rows.length;
+  app.innerHTML=crumbs('<a href="#/sezony">Sezóny</a>','<a href="#/sezona/'+y+'">'+y+'</a>',no+'. turnaj')+'<h1>'+no+'. '+esc(t.name)+'</h1><p class="muted">'+t.date.split('-').reverse().map(Number).join('. ')+' · '+nPlayed+' hráčů Kunsters'+(fin?' · body se násobí koeficientem ×'+fmt(t.coef):'')+(d?' · <a href="#/t/'+d.tournamentId+'">výsledky a skórkarty z ČGF</a>':' · skórkarty z ČGF zatím nejsou naimportované')+'</p>'+
+   '<div class="kpis">'+(()=>{const w=rows[0];return kpi(w?pLink(w.p.display):'–','Vítěz turnaje')+kpi(fmt(Math.max(...rows.map(r=>r.stb||0))),'Nejlepší STB')+kpi(rows.reduce((a,r)=>a+(r.pars||0),0),'Parů celkem')+kpi(rows.reduce((a,r)=>a+(r.birdies||0),0),'Birdie celkem');})()+'</div>'+
+   '<div class="fit"><table class="season"><thead><tr><th class="n">Pořadí</th><th>Hráč</th><th class="n">Rány</th><th class="n">STB</th><th class="n">Par</th><th class="n">Birdie</th><th class="n">Body za pořadí dle STB</th><th class="n">Body par</th><th class="n">Body birdie</th><th class="n">Celkem</th>'+(fin?'<th class="n">Bonus ×'+fmt(t.coef)+'</th>':'')+'<th>Skórkarta</th></tr></thead><tbody>'+body+'</tbody></table></div>'+
+   '<p class="muted small">Údaje z výsledkové tabulky Kunsters. Pokud se par, birdie nebo STB liší od skórkarty na ČGF, je u čísla ⚠ s hodnotou z ČGF. „x“ u ran = hráč měl škrtnutou jamku, celkový počet ran se nepočítá. Srážky za slabé STB: 19–15 STB −5 b., 14–10 STB −10 b., ≤9 STB −20 b.</p>'+
+   '<p>'+(no>1?'<a href="#/sezona/'+y+'/turnaj/'+(no-1)+'">← předchozí turnaj</a> · ':'')+'<a href="#/sezona/'+y+'">celé pořadí</a>'+(no<s.tournaments.length?' · <a href="#/sezona/'+y+'/turnaj/'+(no+1)+'">další turnaj →</a>':'')+'</p>';
 }
 
 /* ---------- TURNAJE (historie) ---------- */
@@ -301,11 +346,13 @@ function paint(sec,h){const y=(h[0]==='sezona'||h[0]==='turnaj')&&YC[h[1]]?+h[1]
 function nav(cur){const n=document.getElementById('nav');if(n)n.innerHTML=NAV.map(([k,l])=>'<a href="#/'+k+'"'+(cur===k?' class="on"':'')+'>'+l+'</a>').join('');}
 async function route(){
   const h=location.hash.replace(/^#\/?/,'').split('/');
-  const sec={t:'',sezona:'sezony',turnaj:'turnaje',hrac:'hraci',rekord:'rekordy'}[h[0]]??h[0];nav(sec);paint(sec,h);if(document.body)document.body.classList.toggle('wide',h[0]==='pravidla');
+  const sec={t:'',sezona:'sezony',turnaj:'turnaje',hrac:'hraci',rekord:'rekordy'}[h[0]]??h[0];nav(sec);paint(sec,h);if(document.body)document.body.classList.toggle('wide',h[0]==='pravidla'||h[0]==='sezona');
   try{
     if(h[0]==='t'&&h[1]&&h[2]==='p') await player(h[1],h[3]);
     else if(h[0]==='t'&&h[1]) await tournament(h[1]);
     else if(h[0]==='sezony') await seasons();
+    else if(h[0]==='sezona'&&h[2]==='odpocty') await seasonDeductions(h[1]);
+    else if(h[0]==='sezona'&&h[2]==='turnaj') await seasonTournament(h[1],h[3]);
     else if(h[0]==='sezona') await season(h[1]);
     else if(h[0]==='turnaje') await tournamentsAll();
     else if(h[0]==='turnaj') await tournamentHist(h[1],h[2]);

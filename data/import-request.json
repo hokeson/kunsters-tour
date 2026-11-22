@@ -1,5 +1,41 @@
 {
-  "tournament_id": "1300145197",
-  "category_id": "3253",
-  "note": "Zmena tohoto souboru automaticky spusti import turnaje z CGF."
+ "imports": [
+  {
+   "tournament_id": "1300148408",
+   "category_id": "366996"
+  },
+  {
+   "tournament_id": "1300149137",
+   "category_id": "368765"
+  },
+  {
+   "tournament_id": "1300149524",
+   "category_id": "369968"
+  },
+  {
+   "tournament_id": "1300149654",
+   "category_id": "370382"
+  },
+  {
+   "tournament_id": "1300148961",
+   "category_id": "368188"
+  },
+  {
+   "tournament_id": "1300148961",
+   "category_id": "368189"
+  },
+  {
+   "tournament_id": "1300151437",
+   "category_id": "375698"
+  },
+  {
+   "tournament_id": "1300151299",
+   "category_id": "375313"
+  },
+  {
+   "tournament_id": "1300152021",
+   "category_id": "377390"
+  }
+ ],
+ "note": "Zmena tohoto souboru automaticky spusti import turnaju z CGF. Muze obsahovat jeden turnaj (tournament_id, category_id) nebo seznam imports."
 }

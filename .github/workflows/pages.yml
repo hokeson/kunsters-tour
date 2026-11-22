@@ -38,6 +38,7 @@ jobs:
           cp -r docs/. _site/
           cp -r data/imports _site/data/imports
           cp data/almanac.json _site/data/almanac.json
+          cp data/members.json _site/data/members.json
           if [ -d data/seasons ]; then cp -r data/seasons _site/data/seasons; fi
           node scripts/build-index.cjs _site/data/imports
           for f in _site/img/*.b64; do [ -e "$f" ] && base64 -d "$f" > "${f%.b64}" && rm "$f"; done

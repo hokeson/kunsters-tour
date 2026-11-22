@@ -70,7 +70,7 @@ async function season(y){
   const ts=a.tournaments.filter(t=>t.year===y).sort((p,q)=>p.no-q.no);
   const py=Object.fromEntries(a.playerYears.filter(p=>p.year===y).map(p=>[p.player,p]));
   const rows=st.map(s=>Object.assign({},py[s.player]||{},s));
-  app.innerHTML=crumbs('<a href="#/sezony">Sezóny</a>',String(y))+'<h1>Sezóna '+y+'</h1>'+
+  app.innerHTML=crumbs('<a href="#/sezony">Sezóny</a>',String(y))+'<h1>Sezóna '+y+'</h1>'+(()=>{const r=RULES.find(x=>x.year===y);return r?(r.missing?'<p class="muted">Propozice pro tento ročník nemáme.</p>':'<div class="rulebox"><b>Pravidla '+y+':</b> do pořadí se počítá <b>'+r.counted+' nejlepších</b> výsledků z '+r.planned+' turnajů · par '+r.par+' b., birdie '+r.birdie+' b. · '+r.coef+' · <a href="#/pravidla">vývoj pravidel →</a></div>'):'';})()+
    '<h2>Konečné pořadí</h2>'+table([{k:'rank',label:'#',n:1},{k:'player',label:'Hráč',f:r=>pLink(r.player)},{k:'hcp',label:'HCP',n:1},{k:'tournaments',label:'Turnaje',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'avgStb',label:'Průměr STB',n:1,hs:1},{k:'bestStb',label:'Nejlepší STB',n:1,hs:1}],rows)+
    '<h2>Turnaje sezóny</h2>'+table([{k:'no',label:'#',n:1},{k:'name',label:'Turnaj',f:r=>'<a href="#/turnaj/'+r.year+'/'+r.no+'">'+esc(r.name)+'</a>'},{k:'participants',label:'Hráčů',n:1},{k:'winner',label:'Vítěz',f:r=>pLink(r.winner)},{k:'bestStb',label:'Nejlepší STB',n:1},{k:'avgStb',label:'Průměr STB',n:1,hs:1},{k:'bestStrokes',label:'Nejméně ran',n:1,hs:1}],ts);
 }
@@ -190,6 +190,41 @@ async function recordDetail(key){
   app.innerHTML=html;
 }
 
+/* ---------- PRAVIDLA (z PDF propozic) ---------- */
+const RULES=[
+ {year:2017,planned:5,counted:4,drop:1,place:'40/30/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále ×2',fee:'zdarma (jen fee)',tie:'–'},
+ {year:2018,planned:6,counted:4,drop:2,place:'45/30/20/15/10/5',par:2,birdie:10,eagle:30,alb:null,hio:40,low:'–',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'zdarma (jen fee)',tie:'–'},
+ {year:2019,planned:7,counted:4,drop:3,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'–',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'zdarma (jen fee)',tie:'Kunratice, pak horší HCP vyhrává'},
+ {year:2020,missing:1},
+ {year:2021,planned:7,counted:5,drop:2,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'2 000 Kč',tie:'Kunratice, pak horší HCP vyhrává'},
+ {year:2022,planned:8,counted:5,drop:3,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'2 500 Kč',tie:'Kunratice, pak horší HCP vyhrává'},
+ {year:2023,planned:8,counted:5,drop:3,place:'50/35/25/20/15/10/5/3',par:3,birdie:10,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Majkl Cup ×1,5; Finále 1 ×1,75; Finále 2 ×2',fee:'3 000 Kč',tie:'Kunratice, pak horší HCP vyhrává'},
+ {year:2024,planned:8,counted:5,drop:3,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 000 Kč',tie:'nižší HCP vyhrává'},
+ {year:2025,planned:9,counted:6,drop:3,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 500 Kč',tie:'nižší HCP vyhrává'},
+ {year:2026,planned:9,counted:5,drop:4,place:'50/35/25/20/15/10/5/3',par:2,birdie:5,eagle:30,alb:35,hio:50,low:'−5 / −10 / −20',coef:'Finále 1 ×1,25; Finále 2 ×1,5',fee:'3 500 Kč',tie:'nižší HCP vyhrává'}];
+const CHANGES=[
+ [2017,'První ročník: 5 turnajů, počítají se 4 nejlepší výsledky. Body za 1.–5. místo (40/30/15/10/5), za par 2, birdie 10, eagle 30, hole-in-one 40. Majkl Cup ×1,5 a finále ×2. Účast zdarma.'],
+ [2018,'Finále je dvoudenní: první den ×1,75, druhý den ×2. Body se dávají za 1.–6. místo (45/30/20/15/10/5).'],
+ [2019,'Body za 1.–8. místo (50/35/25/20/15/10/5/3). Par nově za 3 body, přibyl albatros (35) a hole-in-one stoupl na 50. Pravidlo pro rovnost: nejdřív trvalé bydliště v Kunraticích, pak vyhrává hráč s horším HCP.'],
+ [2020,'Propozice pro rok 2020 nemáme k dispozici.'],
+ [2021,'Počítá se 5 nejlepších výsledků. Nově srážky za slabý výsledek: 19–15 STB −5 bodů, 14–10 STB −10, 9 STB a méně −20. Vítěz turnaje rozděluje 10 bodů ostatním. Startovné 2 000 Kč. Kromě 7 turnajů ještě INDOOR.'],
+ [2022,'8 turnajů, počítá se 5 nejlepších (škrtají se 3). Startovné 2 500 Kč. Buggy jen ze zdravotních důvodů.'],
+ [2023,'Startovné 3 000 Kč. Putovní kokarda hrdosti pro vítěze a prasátko potupy pro posledního. Rozdělování 10 bodů vítězem už v propozicích není.'],
+ [2024,'Méně bodů za hru: par 2, birdie 5. Majkl Cup už bez koeficientu, finále jen ×1,25 a ×1,5. Pravidlo pro rovnost se otočilo: lepší umístění má hráč s nižším HCP a kritérium Kunratic zmizelo.'],
+ [2025,'9 turnajů, počítá se 6 nejlepších. Startovné 3 500 Kč.'],
+ [2026,'Jubilejní 10. ročník: 9 turnajů, ale počítá se jen 5 nejlepších (škrtají se 4).']];
+async function rulesPage(){
+  const a=await ALM();const cnt={};a.tournaments.forEach(t=>cnt[t.year]=(cnt[t.year]||0)+1);
+  const rows=RULES.map(r=>Object.assign({played:cnt[r.year]},r));
+  const v=x=>x==null?'–':String(x);
+  app.innerHTML='<h1>Vývoj pravidel</h1><p class="muted">Podle PDF propozic jednotlivých ročníků. Do ročníkového pořadí se započítávají jen nejlepší výsledky, ostatní se škrtají.</p>'+
+   '<div class="scroll"><table class="rules"><thead><tr><th>Rok</th><th class="n">Turnajů v propozicích</th><th class="n">Odehráno (almanach)</th><th class="n">Počítá se nejlepších</th><th class="n">Škrtá se</th><th>Body za umístění</th><th class="n">Par</th><th class="n">Birdie</th><th class="n">Eagle</th><th class="n">Albatros</th><th class="n">HIO</th><th>Srážky za STB 19–15 / 14–10 / ≤9</th><th>Koeficienty</th><th>Startovné</th><th>Při rovnosti</th></tr></thead><tbody>'+
+   rows.map(r=>r.missing?'<tr><td><a href="#/sezona/'+r.year+'">'+r.year+'</a></td><td class="n">?</td><td class="n">'+v(r.played)+'</td><td colspan="12" class="muted">Propozice nejsou k dispozici</td></tr>':
+    '<tr><td><a href="#/sezona/'+r.year+'">'+r.year+'</a></td><td class="n">'+r.planned+'</td><td class="n'+(r.played!==r.planned?' warn':'')+'">'+v(r.played)+'</td><td class="n big">'+r.counted+'</td><td class="n">'+r.drop+'</td><td>'+r.place+'</td><td class="n">'+r.par+'</td><td class="n">'+r.birdie+'</td><td class="n">'+r.eagle+'</td><td class="n">'+v(r.alb)+'</td><td class="n">'+r.hio+'</td><td>'+r.low+'</td><td>'+r.coef+'</td><td>'+r.fee+'</td><td>'+r.tie+'</td></tr>').join('')+
+   '</tbody></table></div><p class="muted small">„Škrtá se“ = kolik nejhorších výsledků škrtne hráč, který odehraje všechny turnaje z propozic. Zvýrazněný počet odehraných turnajů se liší od plánu v propozicích.</p>'+
+   '<h2>Co se kdy měnilo</h2><div class="timeline">'+CHANGES.map(([y,t])=>'<div class="tl"><div class="y">'+y+'</div><div>'+esc(t)+'</div></div>').join('')+'</div>';
+}
+
 async function methodology(){
   const a=await ALM();
   app.innerHTML='<h1>Metodika almanachu</h1><p class="muted">Zdroj: '+esc(a.source)+'</p>'+
@@ -258,11 +293,15 @@ async function player(id,gid){
 }
 
 /* ---------- ROUTER ---------- */
-const NAV=[['','Almanach'],['sezony','Sezóny'],['turnaje','Turnaje'],['hraci','Hráči'],['rekordy','Rekordy'],['metodika','Metodika']];
+const NAV=[['','Almanach'],['sezony','Sezóny'],['turnaje','Turnaje'],['hraci','Hráči'],['rekordy','Rekordy'],['pravidla','Pravidla'],['metodika','Metodika']];
+// barvy pozadí převzaté z PDF propozic jednotlivých ročníků
+const YC={2017:'#e3d5b9',2018:'#738e1e',2019:'#9fb185',2020:'#8f9f86',2021:'#87998c',2022:'#9cb1bc',2023:'#64968d',2024:'#98975c',2025:'#efd6c2',2026:'#d8dbc5'};
+const SC={'':2021,sezony:2019,turnaje:2022,hraci:2023,rekordy:2024,pravidla:2018,metodika:2026,t:2025};
+function paint(sec,h){const y=(h[0]==='sezona'||h[0]==='turnaj')&&YC[h[1]]?+h[1]:SC[sec]??2021;if(document.body)document.body.style.setProperty('--bg',YC[y]);}
 function nav(cur){const n=document.getElementById('nav');if(n)n.innerHTML=NAV.map(([k,l])=>'<a href="#/'+k+'"'+(cur===k?' class="on"':'')+'>'+l+'</a>').join('');}
 async function route(){
   const h=location.hash.replace(/^#\/?/,'').split('/');
-  const sec={t:'',sezona:'sezony',turnaj:'turnaje',hrac:'hraci',rekord:'rekordy'}[h[0]]??h[0];nav(sec);
+  const sec={t:'',sezona:'sezony',turnaj:'turnaje',hrac:'hraci',rekord:'rekordy'}[h[0]]??h[0];nav(sec);paint(sec,h);
   try{
     if(h[0]==='t'&&h[1]&&h[2]==='p') await player(h[1],h[3]);
     else if(h[0]==='t'&&h[1]) await tournament(h[1]);
@@ -275,6 +314,7 @@ async function route(){
     else if(h[0]==='rekordy') await records();
     else if(h[0]==='rekord') await recordDetail(h[1]);
     else if(h[0]==='metodika') await methodology();
+    else if(h[0]==='pravidla') await rulesPage();
     else await home();
     window.scrollTo(0,0);
   }catch(e){app.innerHTML='<p>Data se nepodařilo načíst. ('+esc(e.message)+')</p>';}

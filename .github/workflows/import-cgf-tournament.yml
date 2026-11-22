@@ -1,0 +1,31 @@
+name: Import CGF tournament
+on:
+  workflow_dispatch:
+    inputs:
+      tournament_id:
+        description: CGF Tournament ID
+        required: true
+      category_id:
+        description: CGF Category ID
+        required: true
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/import-cgf.js --tournament "${{ inputs.tournament_id }}" --category "${{ inputs.category_id }}"
+      - name: Commit imported data
+        run: |
+          git config user.name "kunsters-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/imports
+          git diff --cached --quiet || git commit -m "Import CGF tournament ${{ inputs.tournament_id }}"
+          git push

@@ -50,3 +50,16 @@ tr.click:hover td{background:#f4faf6}
 .kpi .v{font-size:22px;font-weight:700}
 .kpi .l{color:var(--mut);font-size:13px}
 @media (max-width:640px){.hide-s{display:none}h1{font-size:21px}}
+.top{flex-wrap:wrap}
+#nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+#nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px;font-size:14px;opacity:.9}
+#nav a:hover{background:rgba(255,255,255,.15)}
+#nav a.on{background:#fff;color:var(--g);opacity:1;font-weight:600}
+th.sortable{cursor:pointer;user-select:none}
+th.sortable:hover{background:#e4ece8}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:800px){.two{grid-template-columns:1fr}}
+.kpi small{font-size:13px;font-weight:400;color:var(--mut)}
+.small{font-size:13px}
+h3{font-size:15px;margin:18px 0 8px}
+.wrap{white-space:normal;display:block;min-width:220px}

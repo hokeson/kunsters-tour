@@ -36,6 +36,7 @@ jobs:
           mkdir -p _site/data
           cp -r docs/. _site/
           cp -r data/imports _site/data/imports
+          cp data/almanac.json _site/data/almanac.json
           node scripts/build-index.cjs _site/data/imports
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5

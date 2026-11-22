@@ -69,3 +69,6 @@ body{background:#f6f8f7 url(img/logo-512.png) no-repeat fixed right -120px botto
 body::before{content:"";position:fixed;inset:0;background:rgba(246,248,247,.90);pointer-events:none;z-index:-1}
 main,.foot{position:relative}
 @media (max-width:640px){body{background-size:300px;background-position:right -80px bottom -80px}}
+a.kpi.click{display:block;color:inherit;text-decoration:none;transition:box-shadow .15s,border-color .15s}
+a.kpi.click:hover{border-color:var(--g);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+a.kpi.click .l::after{content:" ›";color:var(--g)}

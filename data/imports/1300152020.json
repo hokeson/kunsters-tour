@@ -1,0 +1,2302 @@
+{
+  "generatedAt": "2026-11-22T10:58:28.889Z",
+  "tournamentId": 1300152020,
+  "categoryId": 377389,
+  "players": [
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 174213,
+      "name": "KERZEL Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=174213",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": null,
+          "stb": null,
+          "relativeToPar": null,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 2,
+          "stb": null,
+          "relativeToPar": -1,
+          "type": "BIRDIE"
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 174857,
+      "name": "MAJER Josef",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=174857",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 58652,
+      "name": "OPATRNÝ Tomáš",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=58652",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 170678,
+      "name": "TEMR Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=170678",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 197634,
+      "name": "JANEČEK Karel",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=197634",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": null,
+          "stb": null,
+          "relativeToPar": null,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 5,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 39830,
+      "name": "POLÁK Tomáš",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=39830",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 2051,
+      "name": "WAGNER Arnošt",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=2051",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 3,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 8713,
+      "name": "HLAVATÝ Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=8713",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 5,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 50743,
+      "name": "SCHREIBER Pavel",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=50743",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 13,
+          "stb": null,
+          "relativeToPar": 8,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 165216,
+      "name": "ŠÍP Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=165216",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 11,
+          "stb": null,
+          "relativeToPar": 6,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 11,
+          "stb": null,
+          "relativeToPar": 6,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": null,
+          "stb": null,
+          "relativeToPar": null,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 48759,
+      "name": "HRUŠKA Petr",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=48759",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 611,
+      "name": "BAUER Michal",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=611",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 10,
+          "stb": null,
+          "relativeToPar": 6,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 5,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 158187,
+      "name": "SUDÍK Jan",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=158187",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": null,
+          "stb": null,
+          "relativeToPar": null,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 214190,
+      "name": "BAREŠ Roman",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=214190",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 10,
+          "stb": null,
+          "relativeToPar": 5,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 0,
+          "type": "PAR"
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": null,
+          "stb": null,
+          "relativeToPar": null,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 5,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": null,
+          "stb": null,
+          "relativeToPar": null,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 10,
+          "stb": null,
+          "relativeToPar": 6,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 5,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        }
+      ]
+    },
+    {
+      "tournamentId": 1300152020,
+      "categoryId": 377389,
+      "golferId": 225111,
+      "name": "ROZÍNEK Martin",
+      "source": "https://www.cgf.cz/cz/turnaje/turnaje-vyhledavani/turnaj/vysledkova-listina-hrace?id=1300152020&categoryId=377389&golferId=225111",
+      "holes": [
+        {
+          "hole": 1,
+          "par": 4,
+          "strokes": 8,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 2,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 3,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 4,
+          "par": 3,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 5,
+          "par": 4,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 3,
+          "type": null
+        },
+        {
+          "hole": 6,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 7,
+          "par": 5,
+          "strokes": 7,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 8,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 9,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 10,
+          "par": 5,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 11,
+          "par": 4,
+          "strokes": 6,
+          "stb": null,
+          "relativeToPar": 2,
+          "type": null
+        },
+        {
+          "hole": 12,
+          "par": 4,
+          "strokes": null,
+          "stb": null,
+          "relativeToPar": null,
+          "type": null
+        },
+        {
+          "hole": 13,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 14,
+          "par": 5,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 4,
+          "type": null
+        },
+        {
+          "hole": 15,
+          "par": 4,
+          "strokes": 9,
+          "stb": null,
+          "relativeToPar": 5,
+          "type": null
+        },
+        {
+          "hole": 16,
+          "par": 4,
+          "strokes": 5,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        },
+        {
+          "hole": 17,
+          "par": 4,
+          "strokes": 10,
+          "stb": null,
+          "relativeToPar": 6,
+          "type": null
+        },
+        {
+          "hole": 18,
+          "par": 3,
+          "strokes": 4,
+          "stb": null,
+          "relativeToPar": 1,
+          "type": null
+        }
+      ]
+    }
+  ]
+}

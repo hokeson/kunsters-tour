@@ -1,4 +1,5 @@
 name: Import CGF tournament
+
 on:
   workflow_dispatch:
     inputs:
@@ -8,21 +9,31 @@ on:
       category_id:
         description: CGF Category ID
         required: true
+      dry_run:
+        description: Test only - do not modify or commit imported data
+        required: true
+        default: true
+        type: boolean
   push:
     branches: [main]
     paths:
       - data/import-request.json
+
 concurrency:
   group: import-cgf
   cancel-in-progress: false
+
 jobs:
   import:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Select tournaments
+        shell: bash
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "${{ inputs.tournament_id }} ${{ inputs.category_id }}" > /tmp/list.txt
@@ -32,21 +43,82 @@ jobs:
           sed -i 's/[^0-9 ]//g' /tmp/list.txt
           cat /tmp/list.txt
           [ -s /tmp/list.txt ] || { echo "Missing tournament_id or category_id"; exit 1; }
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - run: npm install
       - run: npx playwright install --with-deps chromium
-      - name: Import
+
+      - name: Import or dry run
+        shell: bash
         run: |
           FAIL=0
+          DRY_RUN="false"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            DRY_RUN="true"
+          fi
+
           while read -r T C; do
             [ -z "$T" ] && continue
-            echo "=== Tournament $T category $C"
-            node scripts/import-cgf.js --tournament "$T" --category "$C" || { echo "FAILED $T"; FAIL=1; }
+            echo "=== Tournament $T category $C (dry_run=$DRY_RUN) ==="
+
+            if [ "$DRY_RUN" = "true" ]; then
+              OUT="/tmp/dry-run-${T}-${C}.json"
+              if node scripts/import-cgf.js --tournament "$T" --category "$C" --dry-run > "$OUT"; then
+                echo "--- Dry-run validation summary ---"
+                jq '{
+                  tournamentId,
+                  categoryId,
+                  tournament: .tournament.name,
+                  participants: (.players | length),
+                  kunstersMembers: ([.players[] | select(.isKunstersMember == true)] | length),
+                  nonMembers: ([.players[] | select(.isKunstersMember != true)] | length),
+                  playersWithScorecards: ([.players[] | select((.holes // []) | length > 0)] | length),
+                  memberScorecards: ([.players[] | select(.isKunstersMember == true and ((.holes // []) | length > 0))] | length),
+                  nonMemberScorecards: ([.players[] | select(.isKunstersMember != true and ((.holes // []) | length > 0))] | length),
+                  ignoredGolfer168119: ([.players[] | select(.golferId == 168119) | {golferId, name, isKunstersMember, hasScorecard: (((.holes // []) | length) > 0)}]),
+                  warnings: (.warnings // [])
+                }' "$OUT"
+
+                NON_MEMBER_SCORECARDS=$(jq '[.players[] | select(.isKunstersMember != true and ((.holes // []) | length > 0))] | length' "$OUT")
+                if [ "$NON_MEMBER_SCORECARDS" -ne 0 ]; then
+                  echo "ERROR: non-KUNSTERS scorecards were downloaded"
+                  FAIL=1
+                fi
+
+                BAD_IGNORED=$(jq '[.players[] | select(.golferId == 168119 and (.isKunstersMember == true or ((.holes // []) | length > 0)))] | length' "$OUT")
+                if [ "$BAD_IGNORED" -ne 0 ]; then
+                  echo "ERROR: ignored golferId 168119 was treated as a KUNSTERS member or received a scorecard"
+                  FAIL=1
+                fi
+              else
+                echo "FAILED $T"
+                FAIL=1
+              fi
+            else
+              node scripts/import-cgf.js --tournament "$T" --category "$C" || { echo "FAILED $T"; FAIL=1; }
+            fi
           done < /tmp/list.txt
+
           echo "fail=$FAIL" >> "$GITHUB_ENV"
+          echo "dry_run=$DRY_RUN" >> "$GITHUB_ENV"
+
+      - name: Verify dry run did not modify imports
+        if: env.dry_run == 'true'
+        shell: bash
+        run: |
+          if ! git diff --quiet -- data/imports; then
+            echo "ERROR: dry run modified data/imports"
+            git diff -- data/imports
+            exit 1
+          fi
+          echo "Dry run did not modify data/imports."
+
       - name: Commit imported data
+        if: env.dry_run != 'true'
+        shell: bash
         run: |
           git config user.name "kunsters-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -54,6 +126,7 @@ jobs:
           git diff --cached --quiet || git commit -m "Import CGF tournaments"
           git pull --rebase
           git push
+
       - name: Report failures
         if: env.fail == '1'
         run: exit 1

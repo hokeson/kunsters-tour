@@ -46,12 +46,17 @@ const tournamentName = clean(await page.locator('h1').first().textContent().catc
 const venueLine = listTokens.find(t => /\d{1,2}\.\s*\d{1,2}\.\s*\d{4}/.test(t) && t.includes(',')) || null;
 const tournament = { name: tournamentName, venue: venueLine ? clean(venueLine.split(',')[0]) : null, date: (venueLine?.match(/\d{1,2}\.\s*\d{1,2}\.\s*\d{4}/) || [null])[0]?.replace(/\s+/g, ' ') ?? null, category: field(listTokens, 'Název'), format: field(listTokens, 'Hrací systém'), withHcp: field(listTokens, 'Hra s HCP'), hcpAdjusted: field(listTokens, 'S úpravou HCP') };
 
-// Capture every row of the result-list table, not only rows with player detail links.
+// Include result-list tables identified by player-detail links or result-specific headers.
 const listRows = await page.evaluate(() => {
   const out = [];
+  const normalize = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s\u00a0]+/g, ' ').trim().toLowerCase();
   for (const table of document.querySelectorAll('table')) {
     const headRow = table.querySelector('thead tr') || table.querySelector('tr');
     const headers = headRow ? [...headRow.querySelectorAll('th,td')].map(c => (c.textContent || '').trim()) : [];
+    const headerKeys = headers.map(normalize);
+    const hasDetailLink = !!table.querySelector('a[href*="vysledkova-listina-hrace"]');
+    const hasResultHeaders = headerKeys.some(h => h === 'poradi') && headerKeys.some(h => h === 'hrac' || h === 'jmeno' || h.includes('jmeno a prijmeni'));
+    if (!hasDetailLink && !hasResultHeaders) continue;
     for (const tr of table.querySelectorAll('tr')) {
       const cells = [...tr.querySelectorAll('td,th')];
       if (!cells.length) continue;
@@ -137,19 +142,22 @@ for (const result of results) {
   if (!stb) warnings.push({ golferId, name, problem: 'řádek Stableford netto nenalezen', rowsFound: [...metric.keys()] });
   if (!hcp) warnings.push({ golferId, name, problem: 'řádek HCP rány nenalezen', rowsFound: [...metric.keys()] });
 
-  const usableScoreCell = value => num(value) != null || (value != null && String(value).trim() !== '' && isPickup(value));
-  const hasUsableScore = !!score && positions.some(p => usableScoreCell(score[p]) && score[p] != null);
-  const hasUsablePar = !!par && positions.some(p => num(par[p]) != null);
-  if (!hasUsableScore || !hasUsablePar) {
+  const usableScoreCell = value => value != null && (num(value) != null || (String(value).trim() !== '' && isPickup(value)));
+  const validHolePositions = positions.filter(p => par && num(par[p]) != null && score && usableScoreCell(score[p]));
+  if (!par || !score || validHolePositions.length === 0) {
     warnings.push({ golferId, name, problem: 'karta skóre neobsahuje použitelné jamkové řádky PAR i skóre; jamky nebyly importovány', rowsFound: [...metric.keys()] });
     out.push({ ...player, round });
     continue;
   }
+  if (validHolePositions.length < positions.length) {
+    warnings.push({ golferId, name, problem: `neúplná karta skóre: importováno ${validHolePositions.length} z 18 jamek` });
+  }
 
-  const holes = positions.map((p, i) => {
-    const P = par ? num(par[p]) : null;
-    const raw = score ? score[p] : null;
-    const pickedUp = score ? isPickup(raw) : false;
+  const holes = validHolePositions.map(p => {
+    const hole = p <= 9 ? p : p - 1;
+    const P = num(par[p]);
+    const raw = score[p];
+    const pickedUp = isPickup(raw);
     const S = pickedUp ? null : num(raw);
     let ST = stb ? num(stb[p]) : null;
     if (pickedUp && ST == null) ST = 0;
@@ -157,7 +165,7 @@ for (const result of results) {
     const rel = S !== null && P !== null ? S - P : null;
     let type = null;
     if (pickedUp) type = 'PICKED UP'; else if (S === 1) type = 'HOLE IN ONE'; else if (rel === -3) type = 'ALBATROS'; else if (rel === -2) type = 'EAGLE'; else if (rel === -1) type = 'BIRDIE'; else if (rel === 0) type = 'PAR'; else if (rel === 1) type = 'BOGEY'; else if (rel === 2) type = 'DOUBLE BOGEY'; else if (rel === 3) type = 'TRIPLE BOGEY'; else if (rel != null && !Number.isNaN(rel)) type = 'OTHER';
-    return { hole: i + 1, par: P, strokes: S, hcpStrokes: H, stb: ST, pickedUp, relativeToPar: rel, type };
+    return { hole, par: P, strokes: S, hcpStrokes: H, stb: ST, pickedUp, relativeToPar: rel, type };
   });
   const stbTotal = holes.every(h => h.stb == null) ? null : holes.reduce((a, h) => a + (h.stb || 0), 0);
   const cardStablefordTotal = stb ? (num(stb[20]) ?? null) : null;

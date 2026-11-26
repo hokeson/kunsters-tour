@@ -138,8 +138,12 @@ for (const result of results) {
   const par = getRow('par');
   const score = getRow('skore', 'score');
   const hcp = getRow('hcp ran', 'hcp strokes');
-  const stb = getRow('stableford netto', 'stableford');
-  if (!stb) warnings.push({ golferId, name, problem: 'řádek Stableford netto nenalezen', rowsFound: [...metric.keys()] });
+  // Only the exact "Stableford netto" row is authoritative; never fall back to brutto or a generic Stableford row.
+  const isStablefordNettoLabel = label => norm(label).replace(/[^a-z0-9]+/g, ' ').trim() === 'stableford netto';
+  const stbRows = rows.filter(r => r.length && isStablefordNettoLabel(r[0]));
+  const stb = stbRows.length === 1 ? stbRows[0] : null;
+  if (stbRows.length === 0) warnings.push({ golferId, name, problem: 'řádek Stableford netto nenalezen; hodnoty Stableford jamek nebyly importovány', rowsFound: [...metric.keys()] });
+  else if (stbRows.length > 1) warnings.push({ golferId, name, problem: `řádek Stableford netto není jednoznačný (nalezeno ${stbRows.length}×); hodnoty Stableford jamek nebyly importovány`, rowsFound: [...metric.keys()] });
   if (!hcp) warnings.push({ golferId, name, problem: 'řádek HCP rány nenalezen', rowsFound: [...metric.keys()] });
 
   const usableScoreCell = value => value != null && (num(value) != null || (String(value).trim() !== '' && isPickup(value)));
@@ -147,6 +151,11 @@ for (const result of results) {
   if (!par || !score || validHolePositions.length === 0) {
     warnings.push({ golferId, name, problem: 'karta skóre neobsahuje použitelné jamkové řádky PAR i skóre; jamky nebyly importovány', rowsFound: [...metric.keys()] });
     out.push({ ...player, round });
+    continue;
+  }
+  if (!validHolePositions.some(p => !isPickup(score[p]) && num(score[p]) != null)) {
+    warnings.push({ golferId, name, problem: 'karta skóre neobsahuje žádnou skutečnou číselnou hodnotu ran (jen škrty/pomlčky); jamky nebyly importovány a stbTotal nebyl vypočten' });
+    out.push({ ...player, round, stbTotal: null });
     continue;
   }
   if (validHolePositions.length < positions.length) {
@@ -159,18 +168,29 @@ for (const result of results) {
     const raw = score[p];
     const pickedUp = isPickup(raw);
     const S = pickedUp ? null : num(raw);
-    let ST = stb ? num(stb[p]) : null;
-    if (pickedUp && ST == null) ST = 0;
+    // A genuinely picked-up hole scores 0 Stableford points by rule; a normally played hole needs a real netto value.
+    const ST = pickedUp
+      ? 0
+      : (stb ? num(stb[p]) : null);
     const H = hcp ? num(hcp[p]) : null;
     const rel = S !== null && P !== null ? S - P : null;
     let type = null;
     if (pickedUp) type = 'PICKED UP'; else if (S === 1) type = 'HOLE IN ONE'; else if (rel === -3) type = 'ALBATROS'; else if (rel === -2) type = 'EAGLE'; else if (rel === -1) type = 'BIRDIE'; else if (rel === 0) type = 'PAR'; else if (rel === 1) type = 'BOGEY'; else if (rel === 2) type = 'DOUBLE BOGEY'; else if (rel === 3) type = 'TRIPLE BOGEY'; else if (rel != null && !Number.isNaN(rel)) type = 'OTHER';
     return { hole, par: P, strokes: S, hcpStrokes: H, stb: ST, pickedUp, relativeToPar: rel, type };
   });
-  const stbTotal = holes.every(h => h.stb == null) ? null : holes.reduce((a, h) => a + (h.stb || 0), 0);
-  const cardStablefordTotal = stb ? (num(stb[20]) ?? null) : null;
-  if (stbTotal != null && cardStablefordTotal != null && stbTotal !== cardStablefordTotal) warnings.push({ golferId, name, problem: `součet Stableford netto z jamek (${stbTotal}) nesedí s celkem na skórekartě (${cardStablefordTotal})` });
-  out.push({ ...player, round, stbTotal, cardStablefordTotal, holes });
+  // stbTotal only from all 18 individual Stableford netto hole values; never treat a missing value as zero.
+  const missingStbHoles = holes.filter(h => !Number.isFinite(h.stb)).map(h => h.hole);
+  let stbTotal = null;
+  if (holes.length !== positions.length) {
+    warnings.push({ golferId, name, problem: `stbTotal nebyl vypočten: importováno ${holes.length} z 18 jamek` });
+  } else if (!stb) {
+    warnings.push({ golferId, name, problem: 'stbTotal nebyl vypočten: chybí jednoznačný řádek Stableford netto' });
+  } else if (missingStbHoles.length) {
+    warnings.push({ golferId, name, problem: `stbTotal nebyl vypočten: chybí nebo je neplatná hodnota Stableford netto na jamkách ${missingStbHoles.join(', ')}` });
+  } else {
+    stbTotal = holes.reduce((a, h) => a + h.stb, 0);
+  }
+  out.push({ ...player, round, stbTotal, holes });
 }
 await browser.close();
 const payload = { generatedAt: new Date().toISOString(), tournamentId, categoryId, tournament, source: listUrl, players: out };

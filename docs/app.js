@@ -34,15 +34,42 @@ function table(cols,rows,opt={}){
    rows.map((r,ri)=>'<tr'+(opt.rowCls&&(S==null||opt.sepOn===S)?' class="'+opt.rowCls(r,ri,rows)+'"':'')+'>'+(opt.rowNum?'<td class="n rn">'+(ri+1)+'.</td>':'')+cols.map((c,i)=>'<td class="'+(c.n?'n ':'')+(c.hs?'hide-s':'')+sc(i)+'">'+(c.f?c.f(r):esc(fmt(r[c.k])))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
 }
 
-// Členové tour (hosté a cizí hráči z kategorií ČGF se do statistik a rekordů nepočítají)
+// Členové tour: jediným autoritativním zdrojem je data/members.json.
+// golferId má přednost; cgfNumbers se použijí jen pokud golferId ve zdroji chybí.
+// Jméno je poslední fallback pouze pro záznamy bez obou identifikátorů.
 let _mem=null;
-async function MEM(){if(_mem)return _mem;const [m,a]=await Promise.all([getJSON('data/members.json').catch(()=>({members:[]})),ALM()]);
-  const ign=new Set((m.ignoredGolferIds||[]).map(Number));const ids=new Set(),nums=new Set(),name={};
-  (m.members||[]).forEach(x=>{[x.golferId,...(x.historicalGolferIds||[])].forEach(g=>ids.add(+g));(x.cgfNumbers||[]).forEach(n=>nums.add(regKey(n)));});
-  Object.keys(m.aliases||{}).forEach(k=>ids.add(+k));
-  a.results.forEach(r=>{if(r.reg){nums.add(regKey(r.reg));name[regKey(r.reg)]=r.player;}});
-  a.players.forEach(p=>{if(p.reg)name[regKey(p.reg)]=p.player;});
-  _mem={is:p=>!ign.has(+p.golferId)&&(ids.has(+p.golferId)||nums.has(regKey(p.memberNumber))),name:p=>name[regKey(p.memberNumber)]||p.name};return _mem;}
+const memberNameKey=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[.,]/g,' ').replace(/\s+/g,' ').trim().toUpperCase();
+const memberGolferId=v=>{const n=Number(v);return Number.isInteger(n)&&n>0?n:null;};
+async function MEM(){
+  if(_mem)return _mem;
+  const m=await getJSON('data/members.json').catch(()=>({members:[]}));
+  const members=Array.isArray(m.members)?m.members:[];
+  const ignored=new Set((m.ignoredGolferIds||[]).map(memberGolferId).filter(Boolean));
+  const aliases=new Map(Object.entries(m.aliases||{}).map(([from,to])=>[memberGolferId(from),memberGolferId(to)]).filter(([from,to])=>from&&to));
+  const byId=new Map(),byNumber=new Map(),byName=new Map();
+  members.forEach(member=>{
+    const canonical=memberGolferId(member.golferId);
+    if(canonical)byId.set(canonical,member);
+    (member.historicalGolferIds||[]).forEach(v=>{const id=memberGolferId(v);if(id)byId.set(id,member);});
+    (member.cgfNumbers||[]).forEach(v=>{const n=regKey(v);if(n)byNumber.set(n,member);});
+    const nk=memberNameKey(member.name);if(nk){const a=byName.get(nk)||[];a.push(member);byName.set(nk,a);}
+  });
+  const resolve=p=>{
+    if(!p)return null;
+    const rawId=memberGolferId(p.golferId??p.playerId??p.cgfGolferId);
+    if(rawId){
+      if(ignored.has(rawId))return null;
+      const id=aliases.get(rawId)||rawId;
+      return byId.get(id)||null;
+    }
+    const number=regKey(p.memberNumber??p.reg??p.registrationNumber??p.cgfNumber);
+    if(number)return byNumber.get(number)||null;
+    const matches=byName.get(memberNameKey(p.name))||[];
+    return matches.length===1?matches[0]:null;
+  };
+  _mem={members,resolve,is:p=>Boolean(resolve(p)),name:p=>resolve(p)?.name||p?.name||'',canonicalGolferId:p=>resolve(p)?.golferId??null};
+  return _mem;
+}
 // Statistiky ze skórkaret ČGF podle členského čísla (jen členové tour)
 async function cgfStats(){
   const idx=await IDX();const m={};const M=await MEM();
@@ -175,7 +202,7 @@ async function playerProfile(s){
    '<div class="meta"><span class="pill">Sezóny '+p.firstYear+'–'+p.lastYear+'</span>'+(titles.length?'<span class="pill">🏆 Mistr '+titles.join(', ')+'</span>':'')+'</div>'+
    '<div class="kpis">'+kpi(p.tournaments,'Turnajů')+kpi(p.wins,'Vítězství')+kpi(p.podiums,'Pódií')+kpi(p.titles,'Titulů')+kpi(fmt(p.avgStb),'Průměr STB')+kpi(p.bestStb,'Nejlepší STB')+kpi(fmt(p.bestStrokes),'Nejméně ran')+kpiA('#/rekord/birdie',p.pars+' / '+p.birdies+' / '+cs.eagles,'Par / Birdie / Eagle*')+'</div>'+
    (cs.eagleList.length?'<p>🦅 Eagle: '+cs.eagleList.map(x=>'<a href="#/t/'+x.d.tournamentId+'/p/'+x.p.golferId+'">'+esc(x.d.tournament.name)+', jamka '+x.h.hole+' (par '+x.h.par+', '+x.h.strokes+' rány)</a>').join('; ')+'</p>':'')+
-   (cgf.length?'<h2>Skórkarty z ČGF</h2><div class="cards">'+cgf.map(({d,pl})=>'<a class="card" href="#/t/'+d.tournamentId+'/p/'+pl.golferId+'"><div class="t">'+esc(d.tournament.name)+'</div><div class="m">'+esc(d.tournament.date)+' · '+pl.rank+'. místo · '+pl.officialScore+' b.</div><div class="m">HCP '+fmt(pl.hcpBefore)+' → '+fmt(pl.hcpAfter)+'</div></a>').join('')+'</div>':'')+
+   (cgf.length?'<h2>Skórkarty z ČGF</h2><div class="cards">'+cgf.map(({d,pl})=>'<a class="card" href="#/t/'+d.tournamentId+'/p/'+pl.golferId+'"><div class="t">'+esc(d.tournament.name)+'</div><div class="m">'+esc(d.tournament.date)+' · '+pl.rank+'. místo · '+fmt(pl.stbTotal)+' netto STB</div><div class="m">HCP '+fmt(pl.hcpBefore)+' → '+fmt(pl.hcpAfter)+'</div></a>').join('')+'</div>':'')+
    '<h2>Vývoj po sezónách</h2><div class="bars">'+yrs.map(y=>'<span>'+y.year+'</span><div class="bar" style="background:var(--g);width:'+(100*(y.avgStb||0)/maxStb).toFixed(1)+'%"></div><span>'+fmt(y.avgStb)+'</span>').join('')+'</div><p class="muted small">Průměr STB bodů v sezóně</p>'+
    table([{k:'year',label:'Rok',n:1,f:r=>'<a href="#/sezona/'+r.year+'">'+r.year+'</a>'},{k:'finalRank',label:'Konečné pořadí',n:1},{k:'hcp',label:'HCP',n:1,hs:1},{k:'tournaments',label:'Turnaje',n:1},{k:'wins',label:'Vítězství',n:1},{k:'podiums',label:'Pódia',n:1},{k:'avgStb',label:'Průměr STB',n:1},{k:'bestStb',label:'Nejlepší STB',n:1},{k:'avgStrokes',label:'Průměr ran',n:1,hs:1},{k:'pars',label:'Par',n:1,hs:1},{k:'birdies',label:'Birdie',n:1,hs:1}],yrs)+
    '<h2>Všechny výsledky ('+res.length+')</h2>'+
@@ -300,29 +327,31 @@ function legend(){return '<div class="legend">'+TYPES.map(([k,l])=>'<span><span 
 const nameLink=(p)=>'<a href="#/t/'+p.tournamentId+'/p/'+p.golferId+'">'+esc(p.name)+'</a>';
 
 async function tournament(id){
-  const d=await getJSON(tUrl(id));const t=d.tournament;
+  const d=await getJSON(tUrl(id));const t=d.tournament;const M=await MEM();
   const ps=[...d.players].sort((a,b)=>(a.rank??999)-(b.rank??999));
-  const counts={};ps.forEach(p=>p.holes.forEach(h=>{counts[h.type]=(counts[h.type]||0)+1}));
+  const members=ps.filter(M.is);
+  const scorecards=members.filter(p=>Array.isArray(p.holes)&&p.holes.length>0);
+  const counts={};scorecards.forEach(p=>p.holes.forEach(h=>{counts[h.type]=(counts[h.type]||0)+1}));
   const total=Object.values(counts).reduce((a,b)=>a+b,0);
-  const best=ps.slice().sort((a,b)=>(b.officialScore??0)-(a.officialScore??0))[0];
-  const hcpDrop=ps.filter(p=>p.hcpBefore!=null&&p.hcpAfter!=null).sort((a,b)=>(a.hcpAfter-a.hcpBefore)-(b.hcpAfter-b.hcpBefore))[0];
-  let worst=null;ps.forEach(p=>p.holes.forEach(h=>{if(h.relativeToPar!=null&&(!worst||h.relativeToPar>worst.h.relativeToPar))worst={p,h};}));
-  const birdies=ps.reduce((a,p)=>a+p.holes.filter(h=>h.relativeToPar!=null&&h.relativeToPar<0).length,0);
+  const best=members.filter(p=>p.stbTotal!=null).slice().sort((a,b)=>(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity))[0];
+  const hcpDrop=members.filter(p=>p.hcpBefore!=null&&p.hcpAfter!=null).sort((a,b)=>(a.hcpAfter-a.hcpBefore)-(b.hcpAfter-b.hcpBefore))[0];
+  let worst=null;scorecards.forEach(p=>p.holes.forEach(h=>{if(h.relativeToPar!=null&&(!worst||h.relativeToPar>worst.h.relativeToPar))worst={p,h};}));
+  const birdies=scorecards.reduce((a,p)=>a+p.holes.filter(h=>h.relativeToPar!=null&&h.relativeToPar<0).length,0);
   app.innerHTML=crumbs('<a href="#/">Almanach</a>',esc(t.name))+
    '<h1>'+esc(t.name)+'</h1><div class="meta"><span class="pill">📅 '+esc(t.date)+'</span><span class="pill">📍 '+esc(t.venue)+'</span><span class="pill">'+esc(t.format)+(t.withHcp==='Ano'?' s HCP':'')+'</span><span class="pill">'+ps.length+' hráčů</span><a class="pill" href="'+esc(d.source)+'" target="_blank" rel="noopener">Výsledky na ČGF ↗</a></div>'+
    '<div class="kpis">'+
-     kpi(best?best.officialScore:'–','Vítěz: '+(best?nameLink(best):''))+
+     kpi(best?best.stbTotal:'–','Nejvyšší netto STB: '+(best?nameLink(best):''))+
      (hcpDrop?kpi(fmt(+(hcpDrop.hcpAfter-hcpDrop.hcpBefore).toFixed(1)),'Největší snížení HCP: '+nameLink(hcpDrop)):'')+
      kpi(birdies,'Birdie a lepší')+
      (worst?kpi('+'+worst.h.relativeToPar,'Nejvíc nad par: '+nameLink(worst.p)+', jamka '+worst.h.hole):'')+
    '</div>'+
-   '<h2>Výsledková listina</h2><div class="scroll"><table><thead><tr><th class="n">#</th><th>Hráč</th><th class="hide-s">Klub</th><th class="n">HCP před</th><th class="n">HCP po</th><th class="n hide-s">Hrací HCP</th><th class="n hide-s">Odpaliště</th><th class="n">Body</th></tr></thead><tbody>'+
-   ps.map(p=>'<tr class="click" data-g="'+p.golferId+'"><td class="n">'+esc(p.rankLabel||p.rank)+'</td><td>'+nameLink(p)+'</td><td class="hide-s" title="'+esc(p.club)+'">'+esc(p.clubCode||p.club)+'</td><td class="n">'+fmt(p.hcpBefore)+'</td><td class="n">'+fmt(p.hcpAfter)+'</td><td class="n hide-s">'+fmt(p.playingHcp)+'</td><td class="n hide-s">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class="n big">'+fmt(p.officialScore??p.stbTotal)+'</td></tr>').join('')+
+   '<h2>Výsledková listina</h2><div class="scroll"><table><thead><tr><th class="n">#</th><th>Hráč</th><th class="hide-s">Klub</th><th class="n">HCP před</th><th class="n">HCP po</th><th class="n hide-s">Hrací HCP</th><th class="n hide-s">Odpaliště</th><th class="n">Netto STB</th></tr></thead><tbody>'+
+   ps.map(p=>'<tr class="click" data-g="'+p.golferId+'"><td class="n">'+esc(p.rankLabel||p.rank)+'</td><td>'+nameLink(p)+'</td><td class="hide-s" title="'+esc(p.club)+'">'+esc(p.clubCode||p.club)+'</td><td class="n">'+fmt(p.hcpBefore)+'</td><td class="n">'+fmt(p.hcpAfter)+'</td><td class="n hide-s">'+fmt(p.playingHcp)+'</td><td class="n hide-s">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class="n big">'+fmt(p.stbTotal)+'</td></tr>').join('')+
    '</tbody></table></div>'+
-   '<h2>Jamky všech hráčů</h2>'+legend()+
+   '<h2>Jamky hráčů KUNSTERS</h2>'+legend()+
    '<div class="scroll"><table class="sc"><thead><tr><th>Hráč</th>'+Array.from({length:18},(_,i)=>'<th>'+(i+1)+'</th>').join('')+'<th class="sum">B</th></tr>'+
-   '<tr><th class="muted">Par</th>'+Array.from({length:18},(_,i)=>'<th class="muted">'+(ps[0]?.holes[i]?.par??'')+'</th>').join('')+'<th></th></tr></thead><tbody>'+
-   ps.map(p=>'<tr class="click" data-g="'+p.golferId+'"><td>'+esc(p.name)+'</td>'+Array.from({length:18},(_,i)=>holeCell(p.holes[i])).join('')+'<td class="sum">'+fmt(p.stbTotal)+'</td></tr>').join('')+
+   '<tr><th class="muted">Par</th>'+Array.from({length:18},(_,i)=>'<th class="muted">'+(scorecards[0]?.holes[i]?.par??'')+'</th>').join('')+'<th></th></tr></thead><tbody>'+
+   scorecards.map(p=>'<tr class="click" data-g="'+p.golferId+'"><td>'+esc(p.name)+'</td>'+Array.from({length:18},(_,i)=>holeCell(p.holes[i])).join('')+'<td class="sum">'+fmt(p.stbTotal)+'</td></tr>').join('')+
    '</tbody></table></div>'+
    '<h2>Rozložení výsledků na jamkách</h2><div class="bars">'+
    TYPES.filter(([k])=>counts[k]).map(([k,l])=>'<span>'+l+'</span><div class="bar '+cls(k)+'" style="width:'+(100*counts[k]/total).toFixed(1)+'%"></div><span>'+counts[k]+'</span>').join('')+'</div>';
@@ -339,7 +368,7 @@ async function player(id,gid){
   const row=(label,fn,o,i,tot)=>'<tr><td>'+label+'</td>'+seg(0,9).map(fn).join('')+'<td class="sum">'+o+'</td>'+seg(9,18).map(fn).join('')+'<td class="sum">'+i+'</td><td class="sum">'+tot+'</td></tr>';
   const st=a=>a.some(h=>h.pickedUp)?'–':sum(a,'strokes');
   app.innerHTML=crumbs('<a href="#/">Almanach</a>','<a href="#/t/'+id+'">'+esc(d.tournament.name)+'</a>',esc(p.name))+
-   '<h1>'+esc(p.name)+'</h1><div class="meta"><span class="pill">'+esc(p.club)+'</span><span class="pill">Pořadí: '+esc(p.rankLabel||p.rank)+'.</span><span class="pill">'+fmt(p.officialScore)+' bodů</span><a class="pill" href="'+esc(p.source)+'" target="_blank" rel="noopener">Skórkarta na ČGF ↗</a>'+(ap?'<a class="pill" href="#/hrac/'+slug(ap.player)+'">Profil v almanachu →</a>':'')+'</div>'+
+   '<h1>'+esc(p.name)+'</h1><div class="meta"><span class="pill">'+esc(p.club)+'</span><span class="pill">Pořadí: '+esc(p.rankLabel||p.rank)+'.</span><span class="pill">'+fmt(p.stbTotal)+' netto STB</span><a class="pill" href="'+esc(p.source)+'" target="_blank" rel="noopener">Skórkarta na ČGF ↗</a>'+(ap?'<a class="pill" href="#/hrac/'+slug(ap.player)+'">Profil v almanachu →</a>':'')+'</div>'+
    '<div class="kpis">'+kpi(fmt(p.hcpBefore)+' → '+fmt(p.hcpAfter),'HCP před / po')+kpi(fmt(p.playingHcp),'Hrací HCP')+kpi(esc(TEE[r.tee]||r.tee||'–'),'Odpaliště (CR '+fmt(r.cr)+' / SR '+fmt(r.sr)+')')+kpi(esc(r.course||'–'),'Hřiště · par '+fmt(r.par)+' · PCC '+fmt(r.pcc))+'</div>'+
    '<h2>Skórkarta</h2>'+legend()+
    '<div class="scroll"><table class="sc"><thead><tr><th>Jamka</th>'+Array.from({length:9},(_,i)=>'<th>'+(i+1)+'</th>').join('')+'<th class="sum">Out</th>'+Array.from({length:9},(_,i)=>'<th>'+(i+10)+'</th>').join('')+'<th class="sum">In</th><th class="sum">Celkem</th></tr></thead><tbody>'+

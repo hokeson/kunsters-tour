@@ -60,6 +60,8 @@ const listRows = await page.evaluate(() => {
     for (const tr of table.querySelectorAll('tr')) {
       const cells = [...tr.querySelectorAll('td,th')];
       if (!cells.length) continue;
+      // Skip the table's own header row. It can contain cells such as "Pořadí" and "Jméno" but is not a participant.
+      if (tr === headRow) continue;
       const a = tr.querySelector('a[href*="vysledkova-listina-hrace"]');
       out.push({ href: a?.getAttribute('href') || null, name: a ? (a.textContent || '').trim() : null, headers, nameIdx: a ? cells.findIndex(c => c.contains(a)) : -1, cells: cells.map(c => (c.textContent || '').trim()) });
     }

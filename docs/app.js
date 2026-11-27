@@ -326,12 +326,6 @@ function holeCell(h){
 function legend(){return '<div class="legend">'+TYPES.map(([k,l])=>'<span><span class="h '+cls(k)+'">&nbsp;</span> '+l+'</span>').join('')+'</div>';}
 const nameLink=(p)=>'<a href="#/t/'+p.tournamentId+'/p/'+p.golferId+'">'+esc(p.name)+'</a>';
 
-const regKey = value =>
-  String(value ?? '')
-    .trim()
-    .replace(/\s+/g, '')
-    .toUpperCase();
-  
 async function tournament(id){
   const d=await getJSON(tUrl(id));const t=d.tournament;const M=await MEM();
   const ps=[...d.players].sort((a,b)=>(a.rank??999)-(b.rank??999)||(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity));

@@ -330,6 +330,10 @@ async function tournament(id){
   const d=await getJSON(tUrl(id));const t=d.tournament;const M=await MEM();
   const ps=[...d.players].sort((a,b)=>(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity)||(a.hcpBefore??Infinity)-(b.hcpBefore??Infinity)||(a.rank??999)-(b.rank??999));
   const members=ps.filter(M.is);
+  const eagleByGolfer=new Map(members.map(p=>[String(p.golferId),(p.holes||[]).filter(h=>h.relativeToPar!=null&&h.relativeToPar<=-2).length]));
+  const hasEagle=[...eagleByGolfer.values()].some(Boolean);
+  const kunstersPoints=[50,35,25,20,15,10,5,3];
+  const pointsByGolfer=new Map(members.map((p,i)=>[String(p.golferId),kunstersPoints[i]||0]));
   const scorecards=members.filter(p=>Array.isArray(p.holes)&&p.holes.length>0);
   const counts={};scorecards.forEach(p=>p.holes.forEach(h=>{counts[h.type]=(counts[h.type]||0)+1}));
   const total=Object.values(counts).reduce((a,b)=>a+b,0);
@@ -345,8 +349,8 @@ async function tournament(id){
      kpi(birdies,'Birdie a lepší')+
      (worst?kpi('+'+worst.h.relativeToPar,'Nejvíc nad par: '+nameLink(worst.p)+', jamka '+worst.h.hole):'')+
    '</div>'+
-   '<h2>Výsledková listina</h2><div class="scroll"><table><thead><tr><th class="n">#</th><th>Hráč</th><th class="hide-s">Klub</th><th class="n">HCP před</th><th class="n">HCP po</th><th class="n hide-s">Hrací HCP</th><th class="n hide-s">Odpaliště</th><th class="n">Netto STB</th></tr></thead><tbody>'+
-   ps.map(p=>'<tr class="click" data-g="'+p.golferId+'"><td class="n">'+esc(p.rankLabel||p.rank)+'</td><td>'+nameLink(p)+'</td><td class="hide-s" title="'+esc(p.club)+'">'+esc(p.clubCode||p.club)+'</td><td class="n">'+fmt(p.hcpBefore)+'</td><td class="n">'+fmt(p.hcpAfter)+'</td><td class="n hide-s">'+fmt(p.playingHcp)+'</td><td class="n hide-s">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class="n big">'+fmt(p.stbTotal)+'</td></tr>').join('')+
+   '<h2>Výsledková listina · seřazeno podle netto STB</h2><div class="scroll"><table><thead><tr><th class="n"># STB</th><th>Hráč</th><th class="hide-s">Klub</th><th class="n">HCP před</th><th class="n">HCP po</th><th class="n hide-s">Hrací HCP</th><th class="n hide-s">Odpaliště</th><th class="n">Netto STB ↓</th>'+(hasEagle?'<th class="n">Eagle</th>':'')+'<th class="n">Kunsters body</th></tr></thead><tbody>'+
+   ps.map((p,i)=>'<tr class="click" data-g="'+p.golferId+'"><td class="n">'+(i+1)+'.</td><td>'+nameLink(p)+'</td><td class="hide-s" title="'+esc(p.club)+'">'+esc(p.clubCode||p.club)+'</td><td class="n">'+fmt(p.hcpBefore)+'</td><td class="n">'+fmt(p.hcpAfter)+'</td><td class="n hide-s">'+fmt(p.playingHcp)+'</td><td class="n hide-s">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class="n big">'+fmt(p.stbTotal)+'</td>'+(hasEagle?'<td class="n">'+fmt(eagleByGolfer.get(String(p.golferId))||0)+'</td>':'')+'<td class="n big">'+(M.is(p)?fmt(pointsByGolfer.get(String(p.golferId))||0):'–')+'</td></tr>').join('')+
    '</tbody></table></div>'+
    '<h2>Jamky hráčů KUNSTERS</h2>'+legend()+
    '<div class="scroll"><table class="sc"><thead><tr><th>Hráč</th>'+Array.from({length:18},(_,i)=>'<th>'+(i+1)+'</th>').join('')+'<th class="sum">B</th></tr>'+

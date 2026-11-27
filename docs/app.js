@@ -328,12 +328,22 @@ const nameLink=(p)=>'<a href="#/t/'+p.tournamentId+'/p/'+p.golferId+'">'+esc(p.n
 
 async function tournament(id){
   const d=await getJSON(tUrl(id));const t=d.tournament;const M=await MEM();
-  const ps=[...d.players].sort((a,b)=>(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity)||(a.hcpBefore??Infinity)-(b.hcpBefore??Infinity)||(a.rank??999)-(b.rank??999));
+  const ps=[...d.players].sort((a,b)=>(a.rank??999)-(b.rank??999)||(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity));
   const members=ps.filter(M.is);
-  const eagleByGolfer=new Map(members.map(p=>[String(p.golferId),(p.holes||[]).filter(h=>h.relativeToPar!=null&&h.relativeToPar<=-2).length]));
-  const hasEagle=[...eagleByGolfer.values()].some(Boolean);
-  const kunstersPoints=[50,35,25,20,15,10,5,3];
-  const pointsByGolfer=new Map(members.map((p,i)=>[String(p.golferId),kunstersPoints[i]||0]));
+  const guestsData=await getJSON('data/guests.json').catch(()=>({guests:[]}));
+  const guestIds=new Set((guestsData.guests||[]).flatMap(g=>[g.golferId,...(g.historicalGolferIds||[])]).filter(Boolean).map(String));
+  const guestNumbers=new Set((guestsData.guests||[]).flatMap(g=>g.cgfNumbers||[]).map(regKey));
+  const isGuest=p=>guestIds.has(String(p.golferId))||guestNumbers.has(regKey(p.memberNumber));
+  let seasonTournament=null,seasonRule=null;
+  for(let year=2017;year<=2026&&!seasonTournament;year++){try{const x=await SEAS(year);const st=(x.tournaments||[]).find(q=>String(q.cgfId)===String(id));if(st){seasonTournament=st;seasonRule=RULES.find(r=>r.year===year);}}catch(e){}}
+  const tieLowerHcp=seasonRule&&seasonRule.year>=2024;
+  const kunstersOrder=members.slice().sort((a,b)=>(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity)||(tieLowerHcp?1:-1)*((a.hcpBefore??Infinity)-(b.hcpBefore??Infinity))||(a.rank??999)-(b.rank??999));
+  const placeScale=String(seasonRule?.place||'').split('/').map(Number).filter(Number.isFinite);
+  const holeStats=p=>{let par=0,birdie=0,eagle=0,albatros=0,hio=0;for(const h of p.holes||[]){if(h.type==='HOLE IN ONE')hio++;else if(h.relativeToPar===-3)albatros++;else if(h.relativeToPar===-2)eagle++;else if(h.relativeToPar===-1)birdie++;else if(h.relativeToPar===0)par++;}return {par,birdie,eagle,albatros,hio};};
+  const calculatedByGolfer=new Map(kunstersOrder.map((p,i)=>{const h=holeStats(p);const stb=Number(p.stbTotal);const low=stb<=9?-20:stb<=14?-10:stb<=19?-5:0;const raw=(placeScale[i]||0)+h.par*(seasonRule?.par||0)+h.birdie*(seasonRule?.birdie||0)+h.eagle*(seasonRule?.eagle||0)+h.albatros*(seasonRule?.alb||0)+h.hio*(seasonRule?.hio||0)+(seasonRule&&seasonRule.year>=2020?low:0);const coef=Number(seasonTournament?.coef||1);return [String(p.golferId),{rank:i+1,points:raw*coef,raw,coef,...h}];}));
+  const hasEagle=[...calculatedByGolfer.values()].some(x=>x.eagle>0);
+  const hasAlbatros=[...calculatedByGolfer.values()].some(x=>x.albatros>0);
+  const hasHio=[...calculatedByGolfer.values()].some(x=>x.hio>0);
   const scorecards=members.filter(p=>Array.isArray(p.holes)&&p.holes.length>0);
   const counts={};scorecards.forEach(p=>p.holes.forEach(h=>{counts[h.type]=(counts[h.type]||0)+1}));
   const total=Object.values(counts).reduce((a,b)=>a+b,0);
@@ -349,8 +359,8 @@ async function tournament(id){
      kpi(birdies,'Birdie a lepší')+
      (worst?kpi('+'+worst.h.relativeToPar,'Nejvíc nad par: '+nameLink(worst.p)+', jamka '+worst.h.hole):'')+
    '</div>'+
-   '<h2>Výsledková listina · seřazeno podle netto STB</h2><div class="scroll"><table><thead><tr><th class="n"># STB</th><th>Hráč</th><th class="hide-s">Klub</th><th class="n">HCP před</th><th class="n">HCP po</th><th class="n hide-s">Hrací HCP</th><th class="n hide-s">Odpaliště</th><th class="n">Netto STB ↓</th>'+(hasEagle?'<th class="n">Eagle</th>':'')+'<th class="n">Kunsters body</th></tr></thead><tbody>'+
-   ps.map((p,i)=>'<tr class="click" data-g="'+p.golferId+'"><td class="n">'+(i+1)+'.</td><td>'+nameLink(p)+'</td><td class="hide-s" title="'+esc(p.club)+'">'+esc(p.clubCode||p.club)+'</td><td class="n">'+fmt(p.hcpBefore)+'</td><td class="n">'+fmt(p.hcpAfter)+'</td><td class="n hide-s">'+fmt(p.playingHcp)+'</td><td class="n hide-s">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class="n big">'+fmt(p.stbTotal)+'</td>'+(hasEagle?'<td class="n">'+fmt(eagleByGolfer.get(String(p.golferId))||0)+'</td>':'')+'<td class="n big">'+(M.is(p)?fmt(pointsByGolfer.get(String(p.golferId))||0):'–')+'</td></tr>').join('')+
+   '<h2>Výsledková listina ČGF</h2><p class="muted small">Primární pořadí podle výsledků ČGF. KUNSTERS pořadí a body jsou druhotný výpočet pouze pro členy tour'+(seasonRule?' podle pravidel '+seasonRule.year:'; sezónní pravidla zatím nebyla spárována')+'.</p><div class="scroll"><table><thead><tr><th class="n">ČGF #</th><th>Hráč</th><th class="hide-s">Klub</th><th class="n">HCP před</th><th class="n">HCP po</th><th class="n hide-s">Hrací HCP</th><th class="n hide-s">Odpaliště</th><th class="n">Netto STB</th><th class="n">KUNSTERS #</th>'+(hasEagle?'<th class="n">Eagle</th>':'')+(hasAlbatros?'<th class="n">Albatros</th>':'')+(hasHio?'<th class="n">HIO</th>':'')+'<th class="n">Kunsters body</th></tr></thead><tbody>'+
+   ps.map(p=>{const c=calculatedByGolfer.get(String(p.golferId));const level=M.is(p)?'member':(isGuest(p)?'guest':'external');return '<tr class="click player-'+level+'" data-g="'+p.golferId+'"><td class="n">'+esc(p.rankLabel||p.rank)+'</td><td>'+nameLink(p)+(level==='guest'?' <span class="pill mini">host</span>':'')+'</td><td class="hide-s" title="'+esc(p.club)+'">'+esc(p.clubCode||p.club)+'</td><td class="n">'+fmt(p.hcpBefore)+'</td><td class="n">'+fmt(p.hcpAfter)+'</td><td class="n hide-s">'+fmt(p.playingHcp)+'</td><td class="n hide-s">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class="n big">'+fmt(p.stbTotal)+'</td><td class="n">'+(c?c.rank+'.':'–')+'</td>'+(hasEagle?'<td class="n">'+fmt(c?.eagle||0)+'</td>':'')+(hasAlbatros?'<td class="n">'+fmt(c?.albatros||0)+'</td>':'')+(hasHio?'<td class="n">'+fmt(c?.hio||0)+'</td>':'')+'<td class="n big">'+(c&&seasonRule?fmt(c.points):'–')+'</td></tr>';}).join('')+
    '</tbody></table></div>'+
    '<h2>Jamky hráčů KUNSTERS</h2>'+legend()+
    '<div class="scroll"><table class="sc"><thead><tr><th>Hráč</th>'+Array.from({length:18},(_,i)=>'<th>'+(i+1)+'</th>').join('')+'<th class="sum">B</th></tr>'+

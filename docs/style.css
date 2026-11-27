@@ -150,3 +150,18 @@ td.sorted{background:rgba(181,211,52,.14);font-weight:700}
  h1{font-size:23px}
  .fit{overflow-x:auto}
 }
+
+
+/* Historic statistics v2 responsive foundation */
+main{width:min(1460px,calc(100% - 48px));max-width:none;box-sizing:border-box}
+.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.two>div{min-width:0}
+.two .scroll{max-width:100%;overflow-x:auto}
+td,th{overflow-wrap:anywhere}
+.player-external{opacity:.48}
+.player-external:hover{opacity:.8}
+.player-guest{opacity:.78;background:rgba(255,255,255,.22)}
+.player-member{font-weight:600}
+.pill.mini{padding:1px 6px;font-size:.72em;vertical-align:middle}
+@media(max-width:1050px){.two{grid-template-columns:1fr}main{width:min(100% - 24px,900px)}}
+@media(max-width:650px){main{width:calc(100% - 12px);padding-left:14px;padding-right:14px}}

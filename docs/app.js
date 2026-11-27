@@ -328,7 +328,7 @@ const nameLink=(p)=>'<a href="#/t/'+p.tournamentId+'/p/'+p.golferId+'">'+esc(p.n
 
 async function tournament(id){
   const d=await getJSON(tUrl(id));const t=d.tournament;const M=await MEM();
-  const ps=[...d.players].sort((a,b)=>(a.rank??999)-(b.rank??999));
+  const ps=[...d.players].sort((a,b)=>(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity)||(a.hcpBefore??Infinity)-(b.hcpBefore??Infinity)||(a.rank??999)-(b.rank??999));
   const members=ps.filter(M.is);
   const scorecards=members.filter(p=>Array.isArray(p.holes)&&p.holes.length>0);
   const counts={};scorecards.forEach(p=>p.holes.forEach(h=>{counts[h.type]=(counts[h.type]||0)+1}));

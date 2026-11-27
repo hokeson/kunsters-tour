@@ -1,17 +1,8 @@
-<p align="center">
-  <img src="docs/img/logo-180.png" alt="KUNSTERS Golf Tour" width="150">
-</p>
+# ⛳ KUNSTERS Golf Tour
 
-<h1 align="center">KUNSTERS Golf Tour</h1>
+**Historický almanach, výsledky a statistiky kunratické golfové tour od roku 2017.**
 
-<p align="center">
-  <strong>Historický almanach, výsledky a statistiky kunratické golfové tour od roku 2017.</strong>
-</p>
-
-<p align="center">
-  <a href="https://hokeson.github.io/kunsters-tour/"><strong>⛳ Otevřít KUNSTERS Tour web</strong></a>
-</p>
-
+### 🟢 https://hokeson.github.io/kunsters-tour/
 ---
 
 ## O projektu

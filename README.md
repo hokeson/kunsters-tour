@@ -2,7 +2,8 @@
 
 **Historický almanach, výsledky a statistiky kunratické golfové tour od roku 2017.**
 
-### 🟢 https://<scrubbed-url-domain>/kunsters-tour/
+### 🟢 [Otevřít KUNSTERS Golf Tour](https://<scrubbed-url-domain>/kunsters-tour/)
+
 ---
 
 ## O projektu

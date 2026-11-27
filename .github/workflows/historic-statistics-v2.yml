@@ -61,3 +61,4 @@ jobs:
           git add docs/app.js docs/style.css docs/index.html docs/data/guests.json
           git diff --cached --quiet || git commit -m "Apply Historic statistics v2 foundation"
           git push
+# trigger: 2026-11-27T20:08:00Z

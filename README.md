@@ -1,40 +1,44 @@
-# KUNSTERS Golf Tour
+<p align="center">
+  <img src="docs/img/logo-180.png" alt="KUNSTERS Golf Tour" width="150">
+</p>
 
-Historický almanach, výsledky a statistiky kunratické golfové tour KUNSTERS Cup.
+<h1 align="center">KUNSTERS Golf Tour</h1>
 
-Web projektu: https://hokeson.github.io/kunsters-tour/
+<p align="center">
+  <strong>Historický almanach, výsledky a statistiky kunratické golfové tour od roku 2017.</strong>
+</p>
 
-## Co projekt obsahuje
+<p align="center">
+  <a href="https://hokeson.github.io/kunsters-tour/"><strong>⛳ Otevřít KUNSTERS Tour web</strong></a>
+</p>
 
-- sezóny a konečná pořadí od roku 2017,
+---
+
+## O projektu
+
+KUNSTERS Golf Tour je dlouhodobý golfový projekt, který spojuje historický almanach tour s výsledky a skórkartami z České golfové federace (ČGF). Cílem je mít na jednom místě kompletní historii KUNSTERS Cupu a zároveň postupně automatizovat zpracování nových turnajů.
+
+Projekt obsahuje zejména:
+
+- sezóny a konečná pořadí od roku **2017**,
 - historii jednotlivých turnajů,
 - hráčské profily a rekordy,
 - vývoj pravidel KUNSTERS Cupu,
-- import výsledků a skórkaret z České golfové federace (ČGF),
+- import výsledků a skórkaret z **ČGF**,
 - statistiky PAR / Birdie / Eagle / Albatros / HIO a škrtnutých jamek tam, kde jsou skórkarty k dispozici,
-- historii putovních headcoverů od sezóny 2023.
+- historii putovních headcoverů od sezóny **2023**.
 
-## Zdroje dat
+## Jak vzniká výsledek
 
-Projekt kombinuje několik zdrojů, které mají rozdílnou roli:
+### 1. Výsledek turnaje ČGF
 
-1. **ČGF** je primární zdroj výsledků jednotlivých golfových turnajů a skórkaret.
-2. **Historické KUNSTERS tabulky** jsou referenčním zdrojem pro již uzavřené sezóny a slouží také ke kontrole automatických výpočtů.
-3. **Propozice jednotlivých ročníků** určují bodování, koeficienty, počet započítávaných turnajů a historické tie-breaky.
-4. `docs/data/members.json` je autoritativní seznam členů KUNSTERS.
-5. `docs/data/guests.json` je samostatný seznam hostů. Host není člen tour a jeho skórkarta se nestahuje pro KUNSTERS statistiky.
+Pořadí konkrétního golfového turnaje vychází nejprve z výsledku ČGF. Primární je tedy výsledek soutěže a netto Stableford podle pravidel daného turnaje.
 
-## Princip výsledků
+### 2. KUNSTERS pořadí a body
 
-### Výsledek turnaje ČGF
+KUNSTERS pořadí je až druhá vrstva nad výsledkem turnaje. Do KUNSTERS pořadí vstupují pouze členové tour a následně se podle pravidel konkrétní sezóny vypočítají KUNSTERS body.
 
-Pořadí konkrétního turnaje vychází nejprve z výsledku ČGF, zejména z netto Stablefordu a pravidel dané soutěže.
-
-### KUNSTERS body
-
-KUNSTERS pořadí a body jsou až druhá vrstva nad výsledkem turnaje.
-
-Cílem projektu je počítat je automaticky ze skórkaret a pravidel příslušné sezóny, aby nebylo nutné turnajové body ručně přepočítávat.
+Cílem projektu je tento výpočet plně automatizovat ze skórkaret, aby pořadatelé po turnaji nemuseli body ručně přepočítávat.
 
 Výpočet musí respektovat dobová pravidla, například:
 
@@ -44,61 +48,87 @@ Výpočet musí respektovat dobová pravidla, například:
 - koeficient konkrétního turnaje,
 - tie-break platný v dané sezóně.
 
-Historické oficiální výsledky slouží jako testovací etalon. Automatický výpočet se považuje za důvěryhodný teprve po cross-checku proti známým výsledkům.
+Historické oficiální výsledky slouží jako **testovací etalon**. Automatický výpočet považujeme za ověřený až tehdy, když opakovaně reprodukuje známé historické výsledky.
+
+## Zdroje dat
+
+Projekt kombinuje několik zdrojů s rozdílnou rolí:
+
+1. **ČGF** – primární zdroj výsledků jednotlivých turnajů a skórkaret.
+2. **Historické KUNSTERS tabulky** – referenční zdroj uzavřených sezón a kontrola automatických výpočtů.
+3. **Propozice jednotlivých ročníků** – zdroj bodování, koeficientů, počtu započítávaných výsledků a historických tie-breaků.
+4. `docs/data/members.json` – autoritativní seznam členů KUNSTERS včetně historických ID a aliasů.
+5. `docs/data/guests.json` – samostatně potvrzení hosté tour.
 
 ## Členové, hosté a ostatní hráči
 
-Ve výsledkové listině ČGF mohou být zobrazeni všichni účastníci turnaje, ale KUNSTERS rozlišuje tři úrovně:
+Kompletní výsledková listina ČGF může zobrazovat všechny účastníky turnaje. Pro KUNSTERS ale rozlišujeme tři úrovně:
 
-- **člen KUNSTERS** – započítává se do KUNSTERS pořadí, bodů a statistik a může mít importovanou skórkartu,
-- **host** – eviduje se samostatně v `guests.json`, ale jeho skórkarta se pro KUNSTERS statistiky nestahuje,
-- **ostatní účastník ČGF** – zůstává pouze součástí kompletní výsledkové listiny turnaje.
+| Typ hráče | Výsledková listina | KUNSTERS pořadí a body | Skórkarta ve statistikách |
+|---|---:|---:|---:|
+| **Člen KUNSTERS** | ✅ | ✅ | ✅ |
+| **Host** | ✅ | ❌ | ❌ |
+| **Ostatní účastník ČGF** | ✅ | ❌ | ❌ |
 
-## Putovní headcovery
+Samotná účast na ČGF turnaji není důkazem, že je hráč hostem KUNSTERS. Hosté se potvrzují samostatně.
 
-Od sezóny 2023 tour eviduje putovní headcovery:
+## 🐯 🐷 Putovní headcovery
 
-- 🐯 **tygřík** pro vítěze turnaje,
-- 🐷 **prasátko** pro hráče s nejnižším Stablefordem.
+Od sezóny **2023** tour eviduje putovní headcovery:
 
-Při shodě je nutné použít tie-break platný v konkrétní sezóně.
+- 🐯 **tygřík** získává vítěz KUNSTERS turnaje,
+- 🐷 **prasátko** získává hráč s nejnižším Stablefordem.
 
-Headcovery se určují podle turnajového pořadí, nikoli podle celkových KUNSTERS bodů.
+Při shodném Stablefordu se používá tie-break platný v dané sezóně. Historická pravidla se proto nesmějí přepočítávat podle dnešního pravidla.
+
+Headcovery vycházejí z pořadí konkrétního turnaje, nikoli z celkových sezonních KUNSTERS bodů.
 
 ## Struktura repozitáře
 
-- `docs/` – GitHub Pages web,
-- `docs/app.js` – hlavní logika webu,
-- `docs/style.css` – vzhled a responsive layout,
-- `docs/data/imports/` – importované výsledky ČGF a skórkarty,
-- `docs/data/seasons/` – sezonní výsledky a KUNSTERS body,
-- `docs/data/members.json` – členové tour a historická ID,
-- `docs/data/guests.json` – potvrzení hosté,
-- `scripts/` – importní a validační skripty,
-- `.github/workflows/` – automatizace GitHub Actions.
+```text
+docs/
+├── index.html              GitHub Pages
+├── app.js                  hlavní logika webu
+├── style.css               vzhled a responsive layout
+├── img/                    logo a grafické podklady
+└── data/
+    ├── imports/            výsledky ČGF a skórkarty
+    ├── seasons/            sezonní výsledky a KUNSTERS body
+    ├── members.json        členové tour a historická ID
+    └── guests.json         potvrzení hosté
 
-## Zásady pro změny
+scripts/                    importní a validační skripty
+.github/workflows/          automatizace GitHub Actions
+```
 
-- Neměnit historická data bez ověření zdroje.
-- Při výpočtu Stablefordu používat netto STB ze skórkarty, ne zaměňovat jej za gross hodnotu z leaderboardu.
+## Zásady práce s daty
+
+- Historická data neměnit bez ověření zdroje.
+- Pro Stableford používat **netto STB ze skórkarty**, ne zaměňovat jej za gross hodnotu z leaderboardu.
 - Statistiky ze skórkaret počítat pouze pro potvrzené členy KUNSTERS.
-- Historické tie-breaky a bodování vyhodnocovat podle sezóny, ne podle jednoho univerzálního pravidla.
-- Před změnami v `main` ověřit syntaxi a pokud možno také konkrétní očekávané výsledky na reálných turnajích.
+- Historické tie-breaky, bodové stupnice a koeficienty vyhodnocovat podle konkrétní sezóny.
+- Škrtnutá jamka není totéž jako dokončená odehraná jamka.
+- Před změnou v `main` kontrolovat syntaxi a konkrétní očekávané výsledky na reálných turnajích.
 
-## Aktuální vývoj
+## 🚧 Aktuální vývoj: Historic statistics v2
 
-Probíhá **Historic statistics v2**:
+Aktuálně připravujeme další generaci historických statistik a automatizace:
 
-- automatický výpočet KUNSTERS bodů ze skórkaret,
-- oddělení ČGF a KUNSTERS pořadí,
-- přesnější Eagle / Albatros / HIO,
-- člen / host / ostatní účastník,
-- responsive tabulky a sticky hlavičky,
-- tygříci a prasátka napříč turnaji, sezónami, hráči, profily a rekordy,
-- následný audit historických rekordů a odehraných vs. škrtnutých jamek.
+- [ ] automatický výpočet KUNSTERS bodů ze skórkaret,
+- [ ] oddělení ČGF a KUNSTERS pořadí,
+- [ ] přesné rozlišení Eagle / Albatros / HIO,
+- [ ] člen / host / ostatní účastník,
+- [ ] responsive tabulky a sticky hlavičky,
+- [ ] 🐯 tygříci a 🐷 prasátka v turnajích, sezónách, hráčích, profilech a rekordech,
+- [ ] audit dokončených vs. škrtnutých jamek,
+- [ ] audit historických rekordů.
+
+Cílem je, aby po importu nového turnaje z ČGF vzniklo KUNSTERS pořadí, bodování a statistiky automaticky a historická data současně fungovala jako kontrola správnosti výpočtu.
 
 ---
 
-KUNSTERS Golf Tour vznikl v roce **2017**.
-
-**Chlapi sobě!**
+<p align="center">
+  <img src="docs/img/logo-180.png" alt="KUNSTERS Golf Tour" width="70"><br>
+  <strong>KUNSTERS Golf Tour · od roku 2017</strong><br>
+  <em>Chlapi sobě!</em>
+</p>

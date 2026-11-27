@@ -1,23 +1,31 @@
-name: Restore app.js
+name: Apply tournament results display update
 on:
-  workflow_dispatch:
   push:
     paths:
       - '.github/workflows/restore-app-js.yml'
 permissions:
   contents: write
 jobs:
-  restore:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Restore known-good app.js
+      - name: Update docs/app.js tournament result list
         run: |
-          git checkout cd5939e796eb0260d4ad4632581a225fef7967c7 -- docs/app.js
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('docs/app.js')
+          s=p.read_text()
+          s=s.replace("  const members=ps.filter(M.is);\n", "  const members=ps.filter(M.is);\n  const eagleByGolfer=new Map(members.map(p=>[String(p.golferId),(p.holes||[]).filter(h=>h.relativeToPar!=null&&h.relativeToPar<=-2).length]));\n  const hasEagle=[...eagleByGolfer.values()].some(Boolean);\n  const kunstersPoints=[50,35,25,20,15,10,5,3];\n  const pointsByGolfer=new Map(members.map((p,i)=>[String(p.golferId),kunstersPoints[i]||0]));\n")
+          old="   '<h2>Výsledková listina</h2><div class=\"scroll\"><table><thead><tr><th class=\"n\">#</th><th>Hráč</th><th class=\"hide-s\">Klub</th><th class=\"n\">HCP před</th><th class=\"n\">HCP po</th><th class=\"n hide-s\">Hrací HCP</th><th class=\"n hide-s\">Odpaliště</th><th class=\"n\">Netto STB</th></tr></thead><tbody>'+\n   ps.map(p=>'<tr class=\"click\" data-g=\"'+p.golferId+'\"><td class=\"n\">'+esc(p.rankLabel||p.rank)+'</td><td>'+nameLink(p)+'</td><td class=\"hide-s\" title=\"'+esc(p.club)+'\">'+esc(p.clubCode||p.club)+'</td><td class=\"n\">'+fmt(p.hcpBefore)+'</td><td class=\"n\">'+fmt(p.hcpAfter)+'</td><td class=\"n hide-s\">'+fmt(p.playingHcp)+'</td><td class=\"n hide-s\">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class=\"n big\">'+fmt(p.stbTotal)+'</td></tr>').join('')+\n"
+          new="   '<h2>Výsledková listina · seřazeno podle netto STB</h2><div class=\"scroll\"><table><thead><tr><th class=\"n\"># STB</th><th>Hráč</th><th class=\"hide-s\">Klub</th><th class=\"n\">HCP před</th><th class=\"n\">HCP po</th><th class=\"n hide-s\">Hrací HCP</th><th class=\"n hide-s\">Odpaliště</th><th class=\"n\">Netto STB ↓</th>'+(hasEagle?'<th class=\"n\">Eagle</th>':'')+'<th class=\"n\">Kunsters body</th></tr></thead><tbody>'+\n   ps.map((p,i)=>'<tr class=\"click\" data-g=\"'+p.golferId+'\"><td class=\"n\">'+(i+1)+'.</td><td>'+nameLink(p)+'</td><td class=\"hide-s\" title=\"'+esc(p.club)+'\">'+esc(p.clubCode||p.club)+'</td><td class=\"n\">'+fmt(p.hcpBefore)+'</td><td class=\"n\">'+fmt(p.hcpAfter)+'</td><td class=\"n hide-s\">'+fmt(p.playingHcp)+'</td><td class=\"n hide-s\">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class=\"n big\">'+fmt(p.stbTotal)+'</td>'+(hasEagle?'<td class=\"n\">'+fmt(eagleByGolfer.get(String(p.golferId))||0)+'</td>':'')+'<td class=\"n big\">'+(M.is(p)?fmt(pointsByGolfer.get(String(p.golferId))||0):'–')+'</td></tr>').join('')+\n"
+          if old not in s:
+              raise SystemExit('expected tournament table block not found')
+          p.write_text(s.replace(old,new))
+          PY
+          node --check docs/app.js
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/app.js
-          git diff --cached --quiet || git commit -m "Restore docs/app.js to known-good version"
+          git commit -m "Update tournament results display"
           git push

@@ -2,7 +2,7 @@
 
 **Historický almanach, výsledky a statistiky kunratické golfové tour od roku 2017.**
 
-### 🟢 https://hokeson.github.io/kunsters-tour/
+### 🟢 https://<scrubbed-url-domain>/kunsters-tour/
 ---
 
 ## O projektu
@@ -119,7 +119,7 @@ Cílem je, aby po importu nového turnaje z ČGF vzniklo KUNSTERS pořadí, bodo
 ---
 
 <p align="center">
-  <img src="docs/img/logo-180.png" alt="KUNSTERS Golf Tour" width="70"><br>
+  ⛳<br>
   <strong>KUNSTERS Golf Tour · od roku 2017</strong><br>
   <em>Chlapi sobě!</em>
 </p>

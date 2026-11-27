@@ -1,0 +1,63 @@
+name: Apply Historic statistics v2 foundation
+on:
+  push:
+    paths:
+      - '.github/workflows/historic-statistics-v2.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply calculation, player levels and layout fixes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          app=Path('docs/app.js')
+          s=app.read_text()
+          old="""  const ps=[...d.players].sort((a,b)=>(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity)||(a.hcpBefore??Infinity)-(b.hcpBefore??Infinity)||(a.rank??999)-(b.rank??999));
+  const members=ps.filter(M.is);
+  const eagleByGolfer=new Map(members.map(p=>[String(p.golferId),(p.holes||[]).filter(h=>h.relativeToPar!=null&&h.relativeToPar<=-2).length]));
+  const hasEagle=[...eagleByGolfer.values()].some(Boolean);
+  const kunstersPoints=[50,35,25,20,15,10,5,3];
+  const pointsByGolfer=new Map(members.map((p,i)=>[String(p.golferId),kunstersPoints[i]||0]));
+"""
+          new="""  const ps=[...d.players].sort((a,b)=>(a.rank??999)-(b.rank??999)||(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity));
+  const members=ps.filter(M.is);
+  const guestsData=await getJSON('data/guests.json').catch(()=>({guests:[]}));
+  const guestIds=new Set((guestsData.guests||[]).flatMap(g=>[g.golferId,...(g.historicalGolferIds||[])]).filter(Boolean).map(String));
+  const guestNumbers=new Set((guestsData.guests||[]).flatMap(g=>g.cgfNumbers||[]).map(regKey));
+  const isGuest=p=>guestIds.has(String(p.golferId))||guestNumbers.has(regKey(p.memberNumber));
+  let seasonData=null,seasonTournament=null,seasonRule=null;
+  for(let year=2017;year<=2026&&!seasonTournament;year++){try{const x=await SEAS(year);const st=(x.tournaments||[]).find(q=>String(q.cgfId)===String(id));if(st){seasonData=x;seasonTournament=st;seasonRule=RULES.find(r=>r.year===year);}}catch(e){}}
+  const tieLowerHcp=seasonRule&&seasonRule.year>=2024;
+  const kunstersOrder=members.slice().sort((a,b)=>(b.stbTotal??-Infinity)-(a.stbTotal??-Infinity)||(tieLowerHcp?1:-1)*((a.hcpBefore??Infinity)-(b.hcpBefore??Infinity))||(a.rank??999)-(b.rank??999));
+  const placeScale=String(seasonRule?.place||'').split('/').map(Number).filter(Number.isFinite);
+  const holeStats=p=>{let par=0,birdie=0,eagle=0,albatros=0,hio=0;for(const h of p.holes||[]){if(h.type==='HOLE IN ONE')hio++;else if(h.relativeToPar===-3)albatros++;else if(h.relativeToPar===-2)eagle++;else if(h.relativeToPar===-1)birdie++;else if(h.relativeToPar===0)par++;}return {par,birdie,eagle,albatros,hio};};
+  const calculatedByGolfer=new Map(kunstersOrder.map((p,i)=>{const h=holeStats(p);const low=p.stbTotal<=9?-20:p.stbTotal<=14?-10:p.stbTotal<=19?-5:0;const raw=(placeScale[i]||0)+h.par*(seasonRule?.par||0)+h.birdie*(seasonRule?.birdie||0)+h.eagle*(seasonRule?.eagle||0)+h.albatros*(seasonRule?.alb||0)+h.hio*(seasonRule?.hio||0)+(seasonRule&&seasonRule.year>=2020?low:0);const coef=Number(seasonTournament?.coef||1);return [String(p.golferId),{rank:i+1,points:raw*coef,raw,coef,...h}];}));
+  const hasEagle=[...calculatedByGolfer.values()].some(x=>x.eagle>0);
+  const hasAlbatros=[...calculatedByGolfer.values()].some(x=>x.albatros>0);
+  const hasHio=[...calculatedByGolfer.values()].some(x=>x.hio>0);
+"""
+          if old not in s: raise SystemExit('expected calculation block not found')
+          s=s.replace(old,new)
+          old2="""   '<h2>Výsledková listina · seřazeno podle netto STB</h2><div class=\"scroll\"><table><thead><tr><th class=\"n\"># STB</th><th>Hráč</th><th class=\"hide-s\">Klub</th><th class=\"n\">HCP před</th><th class=\"n\">HCP po</th><th class=\"n hide-s\">Hrací HCP</th><th class=\"n hide-s\">Odpaliště</th><th class=\"n\">Netto STB ↓</th>'+(hasEagle?'<th class=\"n\">Eagle</th>':'')+'<th class=\"n\">Kunsters body</th></tr></thead><tbody>'+\n   ps.map((p,i)=>'<tr class=\"click\" data-g=\"'+p.golferId+'\"><td class=\"n\">'+(i+1)+'.</td><td>'+nameLink(p)+'</td><td class=\"hide-s\" title=\"'+esc(p.club)+'\">'+esc(p.clubCode||p.club)+'</td><td class=\"n\">'+fmt(p.hcpBefore)+'</td><td class=\"n\">'+fmt(p.hcpAfter)+'</td><td class=\"n hide-s\">'+fmt(p.playingHcp)+'</td><td class=\"n hide-s\">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class=\"n big\">'+fmt(p.stbTotal)+'</td>'+(hasEagle?'<td class=\"n\">'+fmt(eagleByGolfer.get(String(p.golferId))||0)+'</td>':'')+'<td class=\"n big\">'+(M.is(p)?fmt(pointsByGolfer.get(String(p.golferId))||0):'–')+'</td></tr>').join('')+\n"""
+          new2="""   '<h2>Výsledková listina ČGF</h2><p class=\"muted small\">Primární pořadí podle výsledků ČGF. KUNSTERS pořadí a body jsou druhotný výpočet pouze pro členy tour'+(seasonRule?' podle pravidel '+seasonRule.year:'; sezónní pravidla zatím nebyla spárována')+'.</p><div class=\"scroll\"><table><thead><tr><th class=\"n\">ČGF #</th><th>Hráč</th><th class=\"hide-s\">Klub</th><th class=\"n\">HCP před</th><th class=\"n\">HCP po</th><th class=\"n hide-s\">Hrací HCP</th><th class=\"n hide-s\">Odpaliště</th><th class=\"n\">Netto STB</th><th class=\"n\">KUNSTERS #</th>'+(hasEagle?'<th class=\"n\">Eagle</th>':'')+(hasAlbatros?'<th class=\"n\">Albatros</th>':'')+(hasHio?'<th class=\"n\">HIO</th>':'')+'<th class=\"n\">Kunsters body</th></tr></thead><tbody>'+\n   ps.map(p=>{const c=calculatedByGolfer.get(String(p.golferId));const level=M.is(p)?'member':(isGuest(p)?'guest':'external');return '<tr class=\"click player-'+level+'\" data-g=\"'+p.golferId+'\"><td class=\"n\">'+esc(p.rankLabel||p.rank)+'</td><td>'+nameLink(p)+(level==='guest'?' <span class=\"pill mini\">host</span>':'')+'</td><td class=\"hide-s\" title=\"'+esc(p.club)+'\">'+esc(p.clubCode||p.club)+'</td><td class=\"n\">'+fmt(p.hcpBefore)+'</td><td class=\"n\">'+fmt(p.hcpAfter)+'</td><td class=\"n hide-s\">'+fmt(p.playingHcp)+'</td><td class=\"n hide-s\">'+esc(TEE[p.round?.tee]||p.round?.tee||'')+'</td><td class=\"n big\">'+fmt(p.stbTotal)+'</td><td class=\"n\">'+(c?c.rank+'.':'–')+'</td>'+(hasEagle?'<td class=\"n\">'+fmt(c?.eagle||0)+'</td>':'')+(hasAlbatros?'<td class=\"n\">'+fmt(c?.albatros||0)+'</td>':'')+(hasHio?'<td class=\"n\">'+fmt(c?.hio||0)+'</td>':'')+'<td class=\"n big\">'+(c&&seasonRule?fmt(c.points):'–')+'</td></tr>';}).join('')+\n"""
+          if old2 not in s: raise SystemExit('expected results table block not found')
+          app.write_text(s.replace(old2,new2))
+          guests=Path('docs/data/guests.json')
+          if not guests.exists(): guests.write_text(json.dumps({'guests':[],'candidateGuests':[],'notes':'Hosty potvrzovat ručně. Samotná účast na ČGF turnaji není důkaz statusu hosta. Guest scorecards se nestahují ani nezapočítávají do statistik.'},ensure_ascii=False,indent=2)+'\n')
+          css=Path('docs/style.css'); c=css.read_text(); marker='/* Historic statistics v2 responsive foundation */'
+          if marker not in c:
+            c+='''\n\n/* Historic statistics v2 responsive foundation */\nmain{width:min(1460px,calc(100% - 48px));max-width:none;box-sizing:border-box}\n.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}\n.two>div{min-width:0}\n.two .scroll{max-width:100%;overflow-x:auto}\ntd,th{overflow-wrap:anywhere}\n.player-external{opacity:.48}\n.player-external:hover{opacity:.8}\n.player-guest{opacity:.78;background:rgba(255,255,255,.22)}\n.player-member{font-weight:600}\n.pill.mini{padding:1px 6px;font-size:.72em;vertical-align:middle}\n@media(max-width:1050px){.two{grid-template-columns:1fr}main{width:min(100% - 24px,900px)}}\n@media(max-width:650px){main{width:calc(100% - 12px);padding-left:14px;padding-right:14px}}\n'''; css.write_text(c)
+          index=Path('docs/index.html'); h=index.read_text(); h=h.replace('style.css?v=18','style.css?v=19').replace('app.js?v=19','app.js?v=20'); index.write_text(h)
+          PY
+          node --check docs/app.js
+          python3 -m json.tool docs/data/guests.json >/dev/null
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/app.js docs/style.css docs/index.html docs/data/guests.json
+          git diff --cached --quiet || git commit -m "Apply Historic statistics v2 foundation"
+          git push
